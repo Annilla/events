@@ -26,9 +26,6 @@
             line-height: 1.5em;
         }
         .subTitleWrap {
-            @include screen(tb) {
-                width: 90%;
-            }
             @include screen(pcSmall){
                 width: 970px;
                 margin: 0 auto 30px auto;
@@ -40,8 +37,9 @@
                     margin: 20px $tb_gap;
                 }
                 @include screen(pcSmall){
-                    width: 49%;
-                    margin: 20px 0;
+                    width: 65%;
+                    margin: 20px auto;
+                    text-align: center;
                 }
             }
         }
