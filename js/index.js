@@ -354,161 +354,167 @@
 
     // gallery_01
     var gallery_01 = function() {
-        /*--------------------------
-        Jssor Slider
-        ----------------------------*/
-        var windowW = $(window).width(),
-            windowH = $(window).height(),
-            $banner = $('.gallery_01_slider'),
-            juksy_slider,
-            slide_aligan = (windowW - 800) / 2;
+        var $gallery01 = $('.gallery_01');
+        $gallery01.each(function(i) {
+            /*--------------------------
+            Jssor Slider
+            ----------------------------*/
+            var windowW = $(window).width(),
+                windowH = $(window).height(),
+                $banner = $(this).find('.gallery_01_slider'),
+                juksy_slider,
+                slide_aligan = (windowW - 800) / 2;
 
-        var mobile_options = {
-            $AutoPlay: true,
-            $Idle: 2000,
-            $ArrowNavigatorOptions: {
-                $Class: $JssorArrowNavigator$
-            },
-            $ThumbnailNavigatorOptions: {
-                $Class: $JssorThumbnailNavigator$,
-                $Cols: 5,
-                $SpacingX: 5,
-                $SpacingY: 5,
-            }
-        };
-
-        var desktop_options = {
-            $AutoPlay: false,
-            $Idle: 2000,
-            $PauseOnHover: 0,
-            $SlideWidth: 800,
-            $Cols: 3,
-            $Align: slide_aligan,
-            $SlideSpacing: 0,
-            $ArrowNavigatorOptions: {
-                $Class: $JssorArrowNavigator$
-            },
-            $ThumbnailNavigatorOptions: {
-                $Class: $JssorThumbnailNavigator$,
-                $Cols: 10,
-                $SpacingX: 5,
-                $SpacingY: 5,
-            }
-        };
-
-        //set image width and height
-        function setImage(imgW, imgH) {
-            var $imgWrap = $banner.find('.slides .img');
-            $imgWrap.each(function() {
-                var $img = $(this).find('img'),
-                    w = $img.data('width'),
-                    h = $img.data('height'),
-                    r = w / h;
-                if (r >= (4 / 3)) {
-                    $img.attr({
-                        width: imgW,
-                        height: "auto"
-                    });
-                } else {
-                    $img.attr({
-                        width: "auto",
-                        height: imgH
-                    });
-                }
-            });
-        }
-
-        //make slide
-        function makeSlider() {
-            if (windowW < 1024) {
-                setImage(320, 240);
-                juksy_slider = new $JssorSlider$("gallery_01_slider", mobile_options);
-            } else {
-                //set banner width
-                $banner.width(windowW);
-                $banner.find('.slides').width(windowW);
-                //set arrow width
-                var arrowW = (windowW-800-80)/2;//(window.width-slider.width-gap)/2
-                $banner.find('.jssora05l').width(arrowW);
-                $banner.find('.jssora05r').width(arrowW);
-                //set img
-                setImage(800, 600);
-                //set slider
-                juksy_slider = new $JssorSlider$("gallery_01_slider", desktop_options);
-            }
-        }
-        makeSlider();
-
-        //responsive code begin
-        //you can remove responsive code if you don't want the slider scales while window resizing
-        function ScaleSlider() {
-            var refSize = juksy_slider.$Elmt.parentNode.clientWidth;
-            if (refSize) {
-                juksy_slider.$ScaleWidth(refSize);
-            } else {
-                window.setTimeout(ScaleSlider, 30);
-            }
-        }
-        ScaleSlider();
-        $(window).bind("load", ScaleSlider);
-        $(window).bind("resize", ScaleSlider);
-        $(window).bind("orientationchange", ScaleSlider);
-        //responsive code end
-
-        // show ThumbnailNavigator
-        $banner.find('.showMore').on('click', function() {
-            $(this).hide();
-            $banner.find('.jssort01').fadeIn(); // change adding class
-        })
-        $banner.find('.jssort01').hide();
-
-        //transition when slide park
-        juksy_slider.$On($JssorSlider$.$EVT_PARK, function(slideIndex, fromIndex) {
-            $banner.find('.slide').eq(slideIndex).find('.img img').addClass('bigger');
-            $banner.find('.slide').eq(fromIndex).find('.img img').removeClass('bigger');
-        });
-
-        /*--------------------------
-        PhotoSwipe lightbox gallery
-        ----------------------------*/
-        var pswpElement = document.querySelectorAll('.pswp')[0];
-
-        // build items array
-        var pswpItems = [],
-            pswpLength = $banner.find('.slide').length;
-        for (var i = 0; i < pswpLength; i++) {
-            var $item = $banner.find('.slide').eq(i).find('.img img'),
-                iSrc = $item.attr('src'),
-                iW = $item.data('width'),
-                iH = $item.data('height'),
-                mSrc = iSrc;
-            pswpItems.push({
-                src: iSrc,
-                w: iW,
-                h: iH,
-                msrc: mSrc
-            });
-        }
-
-        var pswpoptions, // define options
-            gallery; // Initializes and opens PhotoSwipe
-
-        // click to open current lightbox
-        $banner.find('.slide .img img').on('click', function() {
-            var istart = $(this).parents('.slide').index();
-            // define options (if needed)
-            pswpoptions = {
-                index: istart - 1,
-                getThumbBoundsFn: function(istart) {
-                    var $thumb = $banner.find('.slide').eq(istart).find('.img img'),
-                        toff = $thumb.offset(),
-                        tw = $thumb.width();
-                    return { x: toff.left, y: toff.top, w: tw };
+            var mobile_options = {
+                $AutoPlay: true,
+                $Idle: 2000,
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$
+                },
+                $ThumbnailNavigatorOptions: {
+                    $Class: $JssorThumbnailNavigator$,
+                    $Cols: 5,
+                    $SpacingX: 5,
+                    $SpacingY: 5,
                 }
             };
-            // Initializes and opens PhotoSwip
-            gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, pswpItems, pswpoptions);
-            gallery.init();
+
+            var desktop_options = {
+                $AutoPlay: false,
+                $Idle: 2000,
+                $PauseOnHover: 0,
+                $SlideWidth: 800,
+                $Cols: 3,
+                $Align: slide_aligan,
+                $SlideSpacing: 0,
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$
+                },
+                $ThumbnailNavigatorOptions: {
+                    $Class: $JssorThumbnailNavigator$,
+                    $Cols: 10,
+                    $SpacingX: 5,
+                    $SpacingY: 5,
+                }
+            };
+            
+            //set id gallery_01_slider+i
+            $banner.attr('id','gallery_01_slider'+i);
+
+            //set image width and height
+            function setImage(imgW, imgH) {
+                var $imgWrap = $banner.find('.slides .img');
+                $imgWrap.each(function() {
+                    var $img = $(this).find('img'),
+                        w = $img.data('width'),
+                        h = $img.data('height'),
+                        r = w / h;
+                    if (r >= (4 / 3)) {
+                        $img.attr({
+                            width: imgW,
+                            height: "auto"
+                        });
+                    } else {
+                        $img.attr({
+                            width: "auto",
+                            height: imgH
+                        });
+                    }
+                });
+            }
+
+            //make slide
+            function makeSlider() {
+                if (windowW < 1024) {
+                    setImage(320, 240);
+                    juksy_slider = new $JssorSlider$("gallery_01_slider"+i, mobile_options);
+                } else {
+                    //set banner width
+                    $banner.width(windowW);
+                    $banner.find('.slides').width(windowW);
+                    //set arrow width
+                    var arrowW = (windowW-800-80)/2;//(window.width-slider.width-gap)/2
+                    $banner.find('.jssora05l').width(arrowW);
+                    $banner.find('.jssora05r').width(arrowW);
+                    //set img
+                    setImage(800, 600);
+                    //set slider
+                    juksy_slider = new $JssorSlider$("gallery_01_slider"+i, desktop_options);
+                }
+            }
+            makeSlider();
+
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizing
+            function ScaleSlider() {
+                var refSize = juksy_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    juksy_slider.$ScaleWidth(refSize);
+                } else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //responsive code end
+
+            // show ThumbnailNavigator
+            $banner.find('.showMore').on('click', function() {
+                $(this).hide();
+                $banner.find('.jssort01').fadeIn(); // change adding class
+            })
+            $banner.find('.jssort01').hide();
+
+            //transition when slide park
+            juksy_slider.$On($JssorSlider$.$EVT_PARK, function(slideIndex, fromIndex) {
+                $banner.find('.slide').eq(slideIndex).find('.img img').addClass('bigger');
+                $banner.find('.slide').eq(fromIndex).find('.img img').removeClass('bigger');
+            });
+
+            /*--------------------------
+            PhotoSwipe lightbox gallery
+            ----------------------------*/
+            var pswpElement = document.querySelectorAll('.pswp')[0];
+
+            // build items array
+            var pswpItems = [],
+                pswpLength = $banner.find('.slide').length;
+            for (var i = 0; i < pswpLength; i++) {
+                var $item = $banner.find('.slide').eq(i).find('.img img'),
+                    iSrc = $item.attr('src'),
+                    iW = $item.data('width'),
+                    iH = $item.data('height'),
+                    mSrc = iSrc;
+                pswpItems.push({
+                    src: iSrc,
+                    w: iW,
+                    h: iH,
+                    msrc: mSrc
+                });
+            }
+
+            var pswpoptions, // define options
+                gallery; // Initializes and opens PhotoSwipe
+
+            // click to open current lightbox
+            $banner.find('.slide .img img').on('click', function() {
+                var istart = $(this).parents('.slide').index();
+                // define options (if needed)
+                pswpoptions = {
+                    index: istart - 1,
+                    getThumbBoundsFn: function(istart) {
+                        var $thumb = $banner.find('.slide').eq(istart).find('.img img'),
+                            toff = $thumb.offset(),
+                            tw = $thumb.width();
+                        return { x: toff.left, y: toff.top, w: tw };
+                    }
+                };
+                // Initializes and opens PhotoSwip
+                gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, pswpItems, pswpoptions);
+                gallery.init();
+            });
         });
     }
 
