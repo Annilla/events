@@ -810,6 +810,7 @@
         $layout06.each(function(){
             var $layout = $(this).find('.layoutWrap'),
                 title = $layout.data('title'),
+                description = $layout.data('description'),
                 countFrom = 0,
                 countSize = 4,
                 source,
@@ -820,6 +821,7 @@
             var addArticle = function() {
                 $layout.append(article);
                 $layout.find('.detail').html(title);
+                $layout.find('p.subTitle').html(description);
                 layout_06();
                 $(document).trigger('fadeOut');
                 $(document).trigger('img_lazyLoad');

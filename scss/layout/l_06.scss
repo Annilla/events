@@ -22,6 +22,24 @@
             font-size: 30px;
             line-height: 1.5em;
         }
+        .subTitleWrap {
+            @include screen(pcSmall){
+                width: 970px;
+                margin: 0 auto;
+            }
+            .subTitle {
+                margin: 20px $m_gap;
+                color: $black_50;
+                @include screen(tb) {
+                    margin: 20px $tb_gap;
+                }
+                @include screen(pcSmall){
+                    width: 65%;
+                    margin: 20px auto 0 auto;
+                    text-align: center;
+                }
+            }
+        }
         ul.article {
             overflow: hidden;
             max-width: $pc_max_width;
@@ -31,7 +49,7 @@
                 padding: 20px $tb_gap;
             }
             @include screen(pcSmall) {
-                padding: 40px 0;
+                padding: 20px 0 40px 0;
             }
             li {
                 @include list_style_none;
