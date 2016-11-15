@@ -28,12 +28,12 @@
                 margin: 0 auto;
             }
             .subTitle {
-                margin: 20px $m_gap;
+                margin: 20px $m_gap 0 $m_gap;
                 color: $black_50;
                 @include screen(tb) {
-                    margin: 20px $tb_gap;
+                    margin: 20px $tb_gap 0 $tb_gap;
                 }
-                @include screen(pcSmall){
+                @include screen(pcSmall) {
                     width: 65%;
                     margin: 20px auto 0 auto;
                     text-align: center;

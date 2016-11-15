@@ -4861,13 +4861,13 @@ img {
 }
 
 .layout_06 .layoutWrap .subTitleWrap .subTitle {
-  margin: 20px 20px;
+  margin: 20px 20px 0 20px;
   color: rgba(0, 0, 0, 0.5);
 }
 
 @media screen and (min-width: 768px) {
   .layout_06 .layoutWrap .subTitleWrap .subTitle {
-    margin: 20px 40px;
+    margin: 20px 40px 0 40px;
   }
 }
 
