@@ -355,6 +355,9 @@
     // gallery_01
     var gallery_01 = function() {
         var $gallery01 = $('.gallery_01');
+
+        if(!$gallery01.length) return;
+
         $gallery01.each(function(i) {
             /*--------------------------
             Jssor Slider
