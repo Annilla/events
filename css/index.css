@@ -4693,8 +4693,9 @@ img {
   content: '';
   display: block;
   width: 100px;
-  margin: 0px auto 10px auto;
-  border-bottom: 5px solid #000;
+  height: 5px;
+  margin: 5px auto 10px auto;
+  background-color: #000;
 }
 
 .layout_05 .layoutWrap .detail {
@@ -5814,8 +5815,9 @@ img {
   content: '';
   display: block;
   width: 100px;
-  margin: 0px auto 10px auto;
-  border-bottom: 5px solid #000;
+  height: 5px;
+  margin: 5px auto 10px auto;
+  background-color: #000;
 }
 
 .gallery_02 .layoutWrap .detail {
