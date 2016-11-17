@@ -818,6 +818,7 @@
         var $layout06 = $('.layout_06');
         $layout06.each(function(){
             var $layout = $(this).find('.layoutWrap'),
+                engtitle = $layout.data('engtitle'),
                 title = $layout.data('title'),
                 description = $layout.data('description'),
                 countFrom = 0,
@@ -829,6 +830,7 @@
             // add article
             var addArticle = function() {
                 $layout.append(article);
+                $layout.find('.title').html(engtitle);
                 $layout.find('.detail').html(title);
                 $layout.find('p.subTitle').html(description);
                 layout_06();

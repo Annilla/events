@@ -14,8 +14,9 @@
                 content: '';
                 display: block;
                 width: 100px;
-                margin: 10px auto;
-                border-bottom: 5px solid $black;
+                height: 5px;
+                margin: 5px auto 10px auto;
+                background-color: $black;
             }
         }
         .detail {

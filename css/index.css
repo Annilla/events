@@ -4017,8 +4017,9 @@ img {
   content: '';
   display: block;
   width: 100px;
-  margin: 0px auto 10px auto;
-  border-bottom: 5px solid #000;
+  height: 5px;
+  margin: 5px auto 10px auto;
+  background-color: #000;
 }
 
 .layout_03 .layoutWrap .detail {
@@ -4490,8 +4491,9 @@ img {
   content: '';
   display: block;
   width: 100px;
-  margin: 10px auto;
-  border-bottom: 5px solid #000;
+  height: 5px;
+  margin: 5px auto 10px auto;
+  background-color: #000;
 }
 
 .layout_04 .layoutWrap .detail {
@@ -4842,8 +4844,9 @@ img {
   content: '';
   display: block;
   width: 100px;
-  margin: 0px auto 10px auto;
-  border-bottom: 5px solid #000;
+  height: 5px;
+  margin: 5px auto 10px auto;
+  background-color: #000;
 }
 
 .layout_06 .layoutWrap .detail {
@@ -5355,12 +5358,13 @@ img {
 .gallery_01 {
   position: relative;
   background-color: #fff;
+  padding-top: 30px;
   padding-bottom: 20px;
 }
 
 @media screen and (min-width: 1024px) {
   .gallery_01 {
-    padding-bottom: 50px;
+    padding-bottom: 100px;
   }
 }
 
@@ -5373,10 +5377,19 @@ img {
 }
 
 .gallery_01 .layoutWrap .title {
-  padding-top: 50px;
+  padding: 50px 20px 0 20px;
   text-align: center;
   font-size: 30px;
-  line-height: 2em;
+  line-height: 1.5em;
+}
+
+.gallery_01 .layoutWrap .title:after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 5px;
+  margin: 5px auto 10px auto;
+  background-color: #000;
 }
 
 .gallery_01 .layoutWrap .detail {
@@ -5394,8 +5407,8 @@ img {
 @media screen and (min-width: 1024px) {
   .gallery_01 .layoutWrap .detail {
     text-align: center;
-    padding: 0px;
-    width: 65%;
+    padding: 10px 0px;
+    width: 630px;
   }
 }
 
@@ -6454,6 +6467,10 @@ _:-ms-input-placeholder, :root .fixedBtnCover_01 .coverWrap .main .mainWrap .ite
   display: none;
 }
 
+.header_02 .headerWrap .parallax .videoWrapper .videoCover {
+  display: none;
+}
+
 @media screen and (min-width: 1024px) {
   .header_02 .headerWrap .parallaxContent .title {
     background-position: center 60%;
@@ -6586,88 +6603,6 @@ _:-ms-input-placeholder, :root .fixedBtnCover_01 .coverWrap .main .mainWrap .ite
   border-color: transparent transparent #005887 transparent;
 }
 
-@media screen and (min-width: 1280px) {
-  .layout_03 .layoutWrap .articleWrap ul.article li .txtWrap a.txt h3 {
-    background-image: transparent;
-    background-image: -webkit-linear-gradient(left, transparent 50%, #000 50%);
-    background-image: -o-linear-gradient(left, transparent 50%, #000 50%);
-    background-image: -moz-linear-gradient(left, transparent 50%, #000 50%);
-    background-image: linear-gradient(to right, transparent 50%, #000 50%);
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .layout_03 .layoutWrap .articleWrap ul.article li .txtWrap a.more span {
-    background-image: transparent;
-    background-image: -webkit-linear-gradient(left, transparent 50%, #000 50%);
-    background-image: -o-linear-gradient(left, transparent 50%, #000 50%);
-    background-image: -moz-linear-gradient(left, transparent 50%, #000 50%);
-    background-image: linear-gradient(to right, transparent 50%, #000 50%);
-  }
-}
-
-.layout_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img .linkWrap {
-  background-color: rgba(188, 0, 45, 0.9);
-}
-
-.layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) {
-  background-color: #f4f4f4;
-}
-
-.layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even):after {
-  border-color: transparent transparent transparent #f4f4f4;
-}
-
-.layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) a.img .linkWrap {
-  background-color: rgba(188, 0, 45, 0.9);
-}
-
-.layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) .txtWrap a.category {
-  color: black;
-  border-bottom: 1px solid black;
-}
-
-.layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) .txtWrap a.txt h3 {
-  color: black;
-}
-
-.layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) .txtWrap a.more span {
-  color: #666666;
-}
-
-.layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) .txtWrap a.more span:hover {
-  color: white;
-}
-
-.layout_03 .layoutWrap .articleWrap .moreBtn {
-  display: block;
-  color: #000;
-}
-
-@media screen and (min-width: 1280px) {
-  .layout_03 .layoutWrap .articleWrap .moreBtn span {
-    background-image: transparent;
-    background-image: -webkit-linear-gradient(left, transparent 50%, #000 50%);
-    background-image: -o-linear-gradient(left, transparent 50%, #000 50%);
-    background-image: -moz-linear-gradient(left, transparent 50%, #000 50%);
-    background-image: linear-gradient(to right, transparent 50%, #000 50%);
-  }
-}
-
-.layout_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li a.img .linkWrap {
-  background-color: rgba(235, 90, 36, 0.9);
-}
-
-@media screen and (min-width: 1280px) {
-  .layout_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li .txtWrap a.txt h3 {
-    background-image: transparent;
-    background-image: -webkit-linear-gradient(left, transparent 50%, #000 50%);
-    background-image: -o-linear-gradient(left, transparent 50%, #000 50%);
-    background-image: -moz-linear-gradient(left, transparent 50%, #000 50%);
-    background-image: linear-gradient(to right, transparent 50%, #000 50%);
-  }
-}
-
 .layout_05 .layoutWrap ul.article li a.img .linkWrap {
   background-color: rgba(235, 90, 36, 0.9);
 }
@@ -6680,28 +6615,6 @@ _:-ms-input-placeholder, :root .fixedBtnCover_01 .coverWrap .main .mainWrap .ite
     background-image: -moz-linear-gradient(left, transparent 50%, #000 50%);
     background-image: linear-gradient(to right, transparent 50%, #000 50%);
   }
-}
-
-.layout_06 .layoutWrap ul.article li a.img .linkWrap {
-  background-color: rgba(235, 90, 36, 0.9);
-}
-
-@media screen and (min-width: 1280px) {
-  .layout_06 .layoutWrap ul.article li .txtWrap a.txt h3 {
-    background-image: transparent;
-    background-image: -webkit-linear-gradient(left, transparent 50%, #000 50%);
-    background-image: -o-linear-gradient(left, transparent 50%, #000 50%);
-    background-image: -moz-linear-gradient(left, transparent 50%, #000 50%);
-    background-image: linear-gradient(to right, transparent 50%, #000 50%);
-  }
-}
-
-.article_01 {
-  background-color: #394b56;
-}
-
-.article_01 .articleWrap .txtWrap .btnWrap a.btn {
-  background-color: #f29ead;
 }
 
 .article_02 .articleWrap ul.article li:nth-child(odd) {
