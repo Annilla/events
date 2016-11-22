@@ -22,10 +22,12 @@ body{
                 li {
                     @include screen(pcSmall) {
                         ul {
+                            //子選單背景顏色
                             //background-color: rgba(188, 0, 45, 1);
                         }
                         &:hover ul {
                             li {
+                                //子選單背景顏色
                                 //background-color: rgba(188, 0, 45, 1);
                             }
                         }
@@ -55,15 +57,15 @@ body{
         .detail {
             .detailWrap {
                 .txtBg {
+                    //描述背景色
                     //background-color: rgba(0, 0, 0, 1);
                 }
                 .txtInner {
-                    .txtWrap {
-                        //color: rgba(255, 255, 255, 1);
-                    }
                     a.link {
+                        //馬上閱讀背景色
                         //background-color: rgba(188, 0, 45, 1);
                         &:hover {
+                            //馬上閱讀背景色－滑過
                             //background-color: rgba(188, 0, 45, 0.9);
                         }
                     }
@@ -131,28 +133,31 @@ body{
         .visualBg {
             .banner {
                 .bullet {
+                    //輪播導覽條
                     //display: none;
                 }
             }
             .bannerTitle {
+                //蓋住不動的標題
                 display: none;
             }
             .bannerCover {
+                //蓋住不動的圖紋
                 display: none;
             }
         }
         .detail {
             .detailWrap {
                 .txtBg {
+                    //描述背景色
                     background-color: rgba(0, 34, 45, 1);
                 }
                 .txtInner {
-                    .txtWrap {
-                        color: rgba(255, 255, 255, 1);
-                    }
                     a.link {
+                        //馬上閱讀背景色
                         background-color: rgba(7, 208, 0, 1);
                         &:hover {
+                            //馬上閱讀背景色－滑過
                             background-color: rgba(7, 208, 0, 0.9);
                         }
                     }
@@ -167,12 +172,8 @@ body{
         .detail {
             .detailWrap {
                 .txtBg {
+                    //描述背景色
                     background-color: rgba(0, 34, 45, 1);
-                }
-                .txtInner {
-                    .txtWrap {
-                        color: rgba(255, 255, 255, 1);
-                    }
                 }
             }
         }
@@ -180,36 +181,36 @@ body{
 }
 
 .layout_01 {
+    //背景色
+    //background-color: $white;
     .layoutWrap {
         .mainArticle {
             a.img {
                 .linkWrap {
-                    background-color: rgba(188, 0, 45, 0.9);
+                    //圖片滑過色塊
+                    //background-color: rgba(188, 0, 45, 0.9);
                 }
             }
             .detailWrap {
                 a.button {
                     &:hover {
-                        background-color: #bc002d;
-                        color: $white;
+                        //了解更多按鈕－滑過背景色
+                        //background-color: #bc002d;
+                        //了解更多按鈕－滑過文字顏色
+                        //color: $white;
                         .arrow {
-                            border-color: transparent transparent transparent #bc002d;
+                            //了解更多按鈕－滑過背景色
+                            //border-color: transparent transparent transparent #bc002d;
                         }
                     }
                 }
             }
         }
         .subArticle {
-            .popularity {
-                display: none;
-                visibility: hidden;
-                @include screen(pcSmall) {
-                    display: block;
-                }
-            }
             a.img {
                 .linkWrap {
-                    background-color: rgba(188, 0, 45, 0.9);
+                    //圖片滑過色塊
+                    //background-color: rgba(188, 0, 45, 0.9);
                 }
             }
         }
@@ -218,7 +219,8 @@ body{
                 li {
                     a.img {
                         .linkWrap {
-                            background-color: rgba(188, 0, 45, 0.9);
+                            //圖片滑過色塊
+                            //background-color: rgba(188, 0, 45, 0.9);
                         }
                     }
                 }
@@ -228,32 +230,41 @@ body{
 }
 
 .layout_02 {
-    background-color: #fff;
+    //背景色
+    //background-color: $white;
     .layoutWrap {
         .title {
-            color: #333333;
+            //標題顏色
+            //color: #333333;
         }
         .subTitle {
-            color: #666767;
+            //描述顏色
+            //color: #666767;
         }
         ul.articleWrap {
             li {
-                border-top: 1px solid #005887;
+                //區塊上方線條顏色
+                //border-top: 1px solid #005887;
                 .article {
-                    background-color: #005887;
+                    //文章區塊背景色
+                    //background-color: #005887;
                     a.img {
                         .linkWrap {
-                            background-color: rgba(122, 161, 194, 0.8);
+                            //圖片滑過色塊
+                            //background-color: rgba(122, 161, 194, 0.8);
                         }
                         &:after {
-                            border-color: #005887 transparent transparent transparent;
+                            //文章區塊背景色
+                            //border-color: #005887 transparent transparent transparent;
                         }
                     }
                     a.txt {
                         h3 {
-                            color: #fff;
+                            //文字顏色
+                            //color: #fff;
                             @include screen(pcLarge) {
-                                @include linear-gradient(to right, transparent 50%, $black 50%);
+                                //文章標題滑過背景色
+                                //@include linear-gradient(to right, transparent 50%, $black 50%);
                             }
                         }
                     }
@@ -262,12 +273,14 @@ body{
                     .article {
                         a.img {
                             .linkWrap {
-                                background-color: rgba(122, 161, 194, 0.8);
+                                //圖片滑過色塊
+                                //background-color: rgba(122, 161, 194, 0.8);
                             }
                         }
                     }
                     &:after {
-                        border-color: transparent transparent #005887 transparent;
+                        //文章區塊背景色
+                        //border-color: transparent transparent #005887 transparent;
                     }
                 }
             }
@@ -431,14 +444,16 @@ body{
             li {
                 a.img {
                     .linkWrap {
-                        background-color: rgba(235, 90, 36, 0.9);
+                        //圖片滑過顏色
+                        //background-color: rgba(235, 90, 36, 0.9);
                     }
                 }
                 .txtWrap {
                     a.txt {
                         h3 {
                             @include screen(pcLarge) {
-                                @include linear-gradient(to right, transparent 50%, $black 50%);
+                                //文章標題滑過背景色
+                                //@include linear-gradient(to right, transparent 50%, $black 50%);
                             }
                         }
                     }
@@ -537,15 +552,19 @@ body{
         ul.article {
             li {
                 &:nth-child(odd) {
-                    background-color: lighten($grey, 10%);
+                    //奇數區塊背景色
+                    //background-color: lighten($grey, 10%);
                     a.btn {
-                        background-color: $pink;
+                        //奇數區塊按鈕色
+                        //background-color: $pink;
                     }
                 }
                 &:nth-child(even) {
-                    background-color: lighten($grey, 10%);
+                    //偶數區塊背景色
+                    //background-color: lighten($grey, 10%);
                     a.btn {
-                        background-color: $pink;
+                        //偶數區塊按鈕色
+                        //background-color: $pink;
                     }
                 }
             }
