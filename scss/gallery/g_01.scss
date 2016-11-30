@@ -7,16 +7,18 @@
         padding-bottom: 100px;
     }
     .layoutWrap {
+        padding-bottom: 30px;
         @include screen(pcSmall) {
             max-width: $pc_max_width;
             margin: 0 auto;
-            padding-bottom: 30px;
         }
         .title {
             padding: 50px $m_gap 0 $m_gap;
             text-align: center;
-            font-size: 30px;
+            font-size: 28px;
             line-height: 1.5em;
+            font-weight: bold;
+            letter-spacing: 2px;
             &:after {
                 content: '';
                 display: block;
@@ -28,15 +30,33 @@
         }
         .detail {
             margin: 0 auto;
-            padding: 10px $m_gap;
-            color: rgba(0, 0, 0, 0.5);
+            padding: 0px $m_gap;
+            font-size: 30px;
+            line-height: 1.5em;
+            text-align: center;
+            font-weight: bold;
             @include screen(tb) {
-                padding: 10px $tb_gap;
             }
             @include screen(pcSmall) {
-                text-align: center;
-                padding: 10px 0px;
                 width: 630px;
+            }
+        }
+        .subTitleWrap {
+            @include screen(pcSmall){
+                width: 970px;
+                margin: 0 auto;
+            }
+            .subTitle {
+                margin: 20px $m_gap 0 $m_gap;
+                color: $black_50;
+                @include screen(tb) {
+                    margin: 20px $tb_gap 0 $tb_gap;
+                }
+                @include screen(pcSmall){
+                    width: 65%;
+                    margin: 20px auto 0 auto;
+                    text-align: center;
+                }
             }
         }
     }

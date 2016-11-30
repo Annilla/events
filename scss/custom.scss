@@ -400,16 +400,22 @@ body{
     //background-color: $black;
     .layoutWrap {
         .title {
-            //標題文字顏色
+            //上標題文字顏色
             //color: $black;
             &:after {
-                //標題底線顏色
+                //上標題底線顏色
                 //background-color: $black;
             }
         }
         .detail {
-            //描述文字顏色
+            //下標題文字顏色
             //color: $black;
+        }
+        .subTitleWrap {
+            .subTitle {
+                //描述文字顏色
+                //color: $white;
+            }
         }
         .sliderWrap {
             .slidesWrap {
@@ -621,6 +627,25 @@ body{
                     //stroke: rgba(255,255,255,1);
                 }
             }
+        }
+    }
+}
+
+.gallery_02 {
+    //模板背景色
+    //background-color: $black;
+    .layoutWrap {
+        .title {
+            //上標題文字顏色
+            //color: $black;
+            &:after {
+                //上標題底線顏色
+                //background-color: $black;
+            }
+        }
+        .detail {
+            //下標題文字顏色
+            //color: $black;
         }
     }
 }

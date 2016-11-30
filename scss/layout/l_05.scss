@@ -22,6 +22,25 @@
             text-align: center;
             font-size: 30px;
             line-height: 1.5em;
+            font-weight: bold;
+        }
+        .subTitleWrap {
+            @include screen(pcSmall){
+                width: 970px;
+                margin: 0 auto 0 auto;
+            }
+            .subTitle {
+                margin: 20px $m_gap;
+                color: $black_50;
+                @include screen(tb) {
+                    margin: 20px $tb_gap 0 $tb_gap;
+                }
+                @include screen(pcSmall){
+                    width: 65%;
+                    margin: 20px auto 0 auto;
+                    text-align: center;
+                }
+            }
         }
         ul.article {
             overflow: hidden;

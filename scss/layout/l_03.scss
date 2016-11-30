@@ -25,6 +25,7 @@
             text-align: center;
             font-size: 30px;
             line-height: 1.5em;
+            font-weight: bold;
         }
         .subTitleWrap {
             @include screen(pcSmall){
