@@ -173,7 +173,7 @@
         var $windowW = $(window).width(),
             $headerWrap = $('.header_02 .headerWrap'),
             $visualBg = $headerWrap.find('.visualBg'),
-            $parallax = $headerWrap.find('.parallax'),
+            $parallax = $headerWrap.find('.parallaxContent'),
             $txtBg = $headerWrap.find('.detail .detailWrap .txtBg'),
             $txtWrap = $headerWrap.find('.detail .detailWrap');
         $txtBg.height($txtWrap.height());
@@ -699,7 +699,7 @@
 
                 // fixed height which is smaller than window height, ex: video
                 if (h < $(window).height()) {
-                    $(this).next(parallaxContent).height(h);
+                    //$(this).next(parallaxContent).height(h);
                 }
 
                 // z-index set for each parallax
