@@ -6583,6 +6583,10 @@ _:-ms-input-placeholder, :root .fixedBtnCover_01 .coverWrap .main .mainWrap .ite
   display: none;
 }
 
+body {
+  background-color: #000;
+}
+
 .header_02 .headerWrap .parallax .videoWrapper .videoCover {
   display: none;
 }
