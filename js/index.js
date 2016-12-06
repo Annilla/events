@@ -375,7 +375,7 @@
                 slide_aligan = (windowW - 800) / 2;
 
             var mobile_options = {
-                $AutoPlay: true,
+                $AutoPlay: false,
                 $Idle: 3000,
                 $SlideDuration: 1000,
                 $ArrowNavigatorOptions: {
@@ -470,13 +470,6 @@
             $(window).bind("resize", ScaleSlider);
             $(window).bind("orientationchange", ScaleSlider);
             //responsive code end
-
-            // show ThumbnailNavigator
-            $banner.find('.showMore').on('click', function() {
-                $(this).hide();
-                $banner.find('.jssort01').fadeIn(); // change adding class
-            })
-            $banner.find('.jssort01').hide();
 
             //transition when slide park
             juksy_slider.$On($JssorSlider$.$EVT_PARK, function(slideIndex, fromIndex) {

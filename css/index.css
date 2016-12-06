@@ -5509,7 +5509,6 @@ img {
   height: 370px;
   overflow: hidden;
   visibility: hidden;
-  /* show more btn */
   /* jssor slider arrow navigator skin 05 css */
   /* jssor slider thumbnail navigator skin 01 css */
 }
@@ -5637,43 +5636,6 @@ img {
   }
 }
 
-.gallery_01 .gallery_01_slider .showMore {
-  width: 100%;
-  padding: 11px 0;
-  position: absolute;
-  bottom: 20px;
-  z-index: 1;
-  text-align: right;
-  text-decoration: underline;
-  background-color: white;
-  letter-spacing: normal;
-}
-
-@media screen and (min-width: 1024px) {
-  .gallery_01 .gallery_01_slider .showMore {
-    bottom: 0px;
-  }
-}
-
-.gallery_01 .gallery_01_slider .showMore span {
-  display: block;
-  cursor: pointer;
-}
-
-@media screen and (min-width: 1024px) {
-  .gallery_01 .gallery_01_slider .showMore span {
-    width: 800px;
-    margin: 0 auto;
-  }
-}
-
-.gallery_01 .gallery_01_slider .showMore span:after {
-  content: ">>";
-  display: inline-block;
-  text-decoration: none;
-  margin-left: 5px;
-}
-
 .gallery_01 .gallery_01_slider .jssora05l {
   display: none;
   position: absolute;
@@ -5787,26 +5749,28 @@ img {
 }
 
 .gallery_01 .gallery_01_slider .jssort01 .p:hover .c {
-  top: 1px;
-  left: 1px;
-  width: 58px;
-  height: 58px;
-  background-position: 50% 50%;
+  top: 0px;
+  left: 0px;
+  width: 56px;
+  height: 56px;
+  border: black 2px solid;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1024px) {
   .gallery_01 .gallery_01_slider .jssort01 .p:hover .c {
-    width: 58px;
-    height: 58px;
+    width: 56px;
+    height: 56px;
   }
 }
 
 .gallery_01 .gallery_01_slider .jssort01 .p.pdn .c {
   background-position: 50% 50%;
-  top: 2px;
-  left: 2px;
-  width: 58px;
-  height: 58px;
+  top: 0px;
+  left: 0px;
+  width: 56px;
+  height: 56px;
+  border: black 2px solid;
 }
 
 @media screen and (min-width: 1024px) {
@@ -5840,7 +5804,6 @@ img {
   width: 56px;
   height: 56px;
   box-sizing: content-box;
-  background: url("../img/gallery/g_01/t01.png") -800px -800px no-repeat;
   _background: none;
 }
 
@@ -5852,13 +5815,15 @@ img {
 }
 
 .gallery_01 .gallery_01_slider .jssort01 .pav .c {
-  top: 2px;
+  top: 0px;
   _top: 0px;
-  left: 2px;
+  left: 0px;
   _left: 0px;
   width: 56px;
   height: 56px;
-  background-position: 50% 50%;
+  border: black 2px solid;
+  _border: black 2px solid;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 @media screen and (min-width: 1024px) {
