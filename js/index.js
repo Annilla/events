@@ -193,8 +193,8 @@
         -----------------------*/
         var jssor_1_options = {
             $AutoPlay: true,
-            $SlideDuration: 800,
-            $Idle: 2500,
+            $SlideDuration: 1000,
+            $Idle: 3000,
             $PauseOnHover: 0,
             $SlideEasing: $Jease$.$OutQuint,
             $BulletNavigatorOptions: {
@@ -202,7 +202,13 @@
             }
         };
 
-        var jssor_1_slider = new $JssorSlider$("header_03_banner", jssor_1_options);
+        var jssor_1_slider = new $JssorSlider$("header_03_banner", jssor_1_options),
+            $bullets = $(".header_03 .headerWrap .visualBg .banner .bullet");
+
+        //stop slider after click bullets
+        $bullets.on("click",function(){
+            jssor_1_slider.$Pause();
+        });
 
         //responsive code begin
         //you can remove responsive code if you don't want the slider scales while window resizing
@@ -370,7 +376,8 @@
 
             var mobile_options = {
                 $AutoPlay: true,
-                $Idle: 2000,
+                $Idle: 3000,
+                $SlideDuration: 1000,
                 $ArrowNavigatorOptions: {
                     $Class: $JssorArrowNavigator$
                 },
@@ -384,7 +391,8 @@
 
             var desktop_options = {
                 $AutoPlay: false,
-                $Idle: 2000,
+                $Idle: 3000,
+                $SlideDuration: 1000,
                 $PauseOnHover: 0,
                 $SlideWidth: 800,
                 $Cols: 3,

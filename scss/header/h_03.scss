@@ -86,7 +86,7 @@
                     .av {
                         &:before {
                             background-color: rgba(128, 128, 128, 1);
-                            @include animation(hder_bullet 2.5s linear);
+                            @include animation(hder_bullet 3s linear);
                         }
                     }
                     .dn,
