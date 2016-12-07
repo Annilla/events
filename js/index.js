@@ -507,6 +507,7 @@
                 var istart = $(this).parents('.slide').index();
                 // define options (if needed)
                 pswpoptions = {
+                    shareEl: false,
                     index: istart - 1,
                     getThumbBoundsFn: function(istart) {
                         var $thumb = $banner.find('.slide').eq(istart).find('.img img'),
@@ -527,22 +528,16 @@
         var $gallery02 = $('.gallery_02'),
             $windowW = $(window).width();
         $gallery02.each(function() {
-            var $iframe = $gallery02.find('.photo iframe'),
+            var $iframe = $(this).find('.photo iframe'),
                 mUrl = $iframe.data('msrc'),
                 pcUrl = $iframe.data('pcsrc');
             if($windowW<1024) {
-                $iframe.easyframe({
-                    url: mUrl
-                },function(){
-                    iFrameResize();
-                });
+                $iframe.attr('src', mUrl);
+                iFrameResize();
             }
             else {
-                $iframe.easyframe({
-                    url: pcUrl
-                },function(){
-                    iFrameResize();
-                });
+                $iframe.attr('src', pcUrl);
+                iFrameResize();
             }
         });
     }
@@ -910,36 +905,58 @@
         }
     });
 
-})(jQuery);
+    // Youtube api
+    // create deferred object
+    var YTdeferred = $.Deferred();
+    window.onYouTubeIframeAPIReady = function() {
+        // console.log('Youtube API ready');
+        // resolve when youtube callback is called
+        // passing YT as a parameter
+        YTdeferred.resolve(window.YT);
+    };
 
-// youtube api
-function onYouTubeIframeAPIReady() {
-    var player,
-        header_02_player = document.getElementById('header_02_player'),
-        header_02_videoId = header_02_player.dataset.videoid,
-        header_02_start = header_02_player.dataset.start;
-    player = new YT.Player('header_02_player', {
-        videoId: header_02_videoId, // YouTube 影片ID
-        width: 560, // 播放器寬度 (px)
-        height: 315, // 播放器高度 (px)
-        playerVars: {
-            rel: 0, // 播放結束後推薦其他影片
-            controls: 0, // 在播放器顯示暫停／播放按鈕
-            start: header_02_start, //指定起始播放秒數
-            autoplay: 1, // 在讀取時自動播放影片
-            loop: 1, // 讓影片循環播放
-            playlist: header_02_videoId,
-            showinfo: 0, // 隱藏影片標題
-            modestbranding: 1, // 隱藏YouTube Logo
-            fs: 0, // 隱藏全螢幕按鈕
-            cc_load_policty: 0, // 隱藏字幕
-            iv_load_policy: 3, // 隱藏影片註解
-            autohide: 0 // 當播放影片時隱藏影片控制列
-        },
-        events: {
-            onReady: function(e) {
-                e.target.mute(); // 靜音
-            }
-        }
+    // embedding youtube iframe api
+    // https://developers.google.com/youtube/iframe_api_reference#Getting_Started
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    $(function() {
+        var player,
+            header_02_player = $('#header_02_player'),
+            header_02_videoId = header_02_player.data('videoid'),
+            header_02_start = header_02_player.data('start');
+        // whenever youtube callback was called = deferred resolved
+        // your custom function will be executed with YT as an argument
+        YTdeferred.done(function(YT) {
+            // creating a player
+            // https://developers.google.com/youtube/iframe_api_reference#Getting_Started
+            player = new YT.Player('header_02_player', {
+                videoId: header_02_videoId, // YouTube 影片ID
+                width: 560, // 播放器寬度 (px)
+                height: 315, // 播放器高度 (px)
+                playerVars: {
+                    rel: 0, // 播放結束後推薦其他影片
+                    controls: 0, // 在播放器顯示暫停／播放按鈕
+                    start: header_02_start, //指定起始播放秒數
+                    autoplay: 1, // 在讀取時自動播放影片
+                    loop: 1, // 讓影片循環播放
+                    playlist: header_02_videoId,
+                    showinfo: 0, // 隱藏影片標題
+                    modestbranding: 1, // 隱藏YouTube Logo
+                    fs: 0, // 隱藏全螢幕按鈕
+                    cc_load_policty: 0, // 隱藏字幕
+                    iv_load_policy: 3, // 隱藏影片註解
+                    autohide: 0 // 當播放影片時隱藏影片控制列
+                },
+                events: {
+                    onReady: function(e) {
+                        e.target.mute(); // 靜音
+                    }
+                }
+            });
+        });
     });
-}
+
+})(jQuery);

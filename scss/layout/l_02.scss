@@ -115,7 +115,7 @@
                     }
                     .article {
                         @include screen(pcSmall) {
-                            min-height: 415px;
+                            min-height: 414px;
                         }
                         a.img {
                             @include a_img;

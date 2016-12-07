@@ -5,7 +5,11 @@
     "Anny <anny@juksy.com>"
   ],
   "description": "",
-  "main": "",
+  "main": [
+    "css/app.min.css",
+    "js/app.assets.js",
+    "js/app.min.js"
+  ],
   "license": "MIT",
   "ignore": [
     "**/.*",
