@@ -22,9 +22,12 @@
     <link rel="apple-touch-icon-precomposed" href="https://www.juksy.com/img/logoios.ico">
     <!-- Web Clip end-->
     <!-- CSS-->
+    <!-- CSS DEV FILE-->
     <link href="//cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" rel="stylesheet">
     <link href="//cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
+    <!-- CSS MIN FILE-->
+    <!--link(href='css/app.min.css', rel='stylesheet')-->
     <!-- CSS end-->
     <!-- JS global var-->
     <script type="text/javascript">/*JUKSY = {
@@ -193,7 +196,7 @@
         </div>
         <div class="parallax">
           <div class="parallaxWrap videoWrapper">
-            <div id="header_02_player"></div>
+            <div id="header_02_player" data-videoid="2sj2iQyBTQs" data-start="38"></div>
             <div class="videoCover"></div>
           </div>
         </div>
@@ -368,8 +371,11 @@
     <!-- layout04-->
     <section data-menu="true" class="layout_04">
       <div class="layoutWrap">
-        <h2 class="title"> 你，非加一不可的原因</h2>
-        <div class="detail">型，不是別人說的算，專注自己熱愛事的瞬間，才是「有態度」！不管自己正扮演什麼角色，動動手指上傳專屬態度照吧！</div>
+        <h2 class="title"> SELECTED ARTICLES</h2>
+        <div class="detail">三篇文章</div>
+        <div class="subTitleWrap">
+          <p class="subTitle">型，不是別人說的算，專注自己熱愛事的瞬間，才是「有態度」！不管自己正扮演什麼角色，動動手指上傳專屬態度照吧！</p>
+        </div>
         <div class="sliderWrap">
           <div class="slidesWrap fadeOut">
             <ul class="slides">
@@ -436,14 +442,17 @@
     <!-- article01 end-->
     <!-- layout06-->
     <section data-menu="true" class="layout_06">
-      <div data-title="自動讀取標籤四篇" data-tags="[&quot;熱浪來襲&quot;, &quot;hithot&quot;]" data-filter="[56247, 56274, 56375]" class="layoutWrap"></div>
+      <div data-engtitle="FEATURED ARTICLES" data-title="自動讀取標籤四篇" data-description="穿搭，是體現自我風格；單品，則能提升整體質感。球鞋、墨鏡、研讀小編為妳準備的妳準備今必修秘技，成為路人眼中的焦點吧！" data-tags="[&quot;熱浪來襲&quot;, &quot;hithot&quot;]" data-filter="[56247, 56274, 56375]" class="layoutWrap"></div>
     </section>
     <!-- layout06 end-->
     <!-- layout05-->
     <section data-menu="true" class="layout_05">
       <div class="layoutWrap">
-        <div class="title">SELECTED ARTICLES</div>
-        <h2 class="detail">職人眼光，看城市</h2>
+        <h2 class="title">SELECTED ARTICLES</h2>
+        <div class="detail">職人眼光，看城市</div>
+        <div class="subTitleWrap">
+          <p class="subTitle">穿搭，是體現自我風格；單品，則能提升整體質感。球鞋、墨鏡、研讀小編為妳準備的妳準備今必修秘技，成為路人眼中的焦點吧！</p>
+        </div>
         <ul class="article">
           <li class="fadeOut"><a href="https://www.juksy.com/archives/54297" target="_blank" data-imgload="https://static.juksy.com/static/600x600/files/articles/58493/cover/58043bfa2972a.png" class="img imgLoading">
               <div class="linkWrap">
@@ -517,8 +526,11 @@
     <!-- gallery02-->
     <section data-menu="true" class="gallery_02">
       <div class="layoutWrap">
-        <div class="title">PHOTOGRAPHY</div>
-        <h2 class="detail">臉書相簿</h2>
+        <h2 class="title">PHOTOGRAPHY</h2>
+        <div class="detail">臉書相簿</div>
+        <div class="subTitleWrap">
+          <p class="subTitle">穿搭，是體現自我風格；單品，則能提升整體質感。球鞋、墨鏡、研讀小編為妳準備的妳準備今必修秘技，成為路人眼中的焦點吧！</p>
+        </div>
         <div class="photo">
           <iframe style="border: 0; width: 100%; height: 100%;" data-msrc="https://embedsocial.com/facebook_album/pro/a12b38ed62c5eea600559dd37aaea342f279b4cc" data-pcsrc="https://embedsocial.com/facebook_album/pro_develop/10151627900478937?total_images=1000&amp;images_per_page=16&amp;show_title=no&amp;order_by_date=ascending&amp;show_likes=no&amp;show_images_in_lightbox=yes"></iframe>
         </div>
@@ -528,10 +540,13 @@
     <!-- gallery01-->
     <section data-menu="true" class="gallery_01">
       <div class="layoutWrap">
-        <h2 class="title">企劃拍攝</h2>
-        <div class="detail">穿搭，是體現自我風格；單品，則能提升整體質感。球鞋、墨鏡、研讀小編為妳準備的妳準備今必修秘技，成為路人眼中的焦點吧！</div>
+        <h2 class="title">PHOTOGRAPHY</h2>
+        <div class="detail">企劃拍攝</div>
+        <div class="subTitleWrap">
+          <p class="subTitle">穿搭，是體現自我風格；單品，則能提升整體質感。球鞋、墨鏡、研讀小編為妳準備的妳準備今必修秘技，成為路人眼中的焦點吧！</p>
+        </div>
       </div>
-      <div id="gallery_01_slider" class="gallery_01_slider">
+      <div id="gallery_01_slider0" class="gallery_01_slider">
         <!--Loading Screen-->
         <div u="loading" class="loading">
           <div class="loader">Loading...</div>
@@ -619,7 +634,6 @@
             <div class="txt"><span>20. 穿搭，是體現自我風格；單X品，則能提升質感。成為路人眼中的焦點吧！</span></div>
           </div>
         </div>
-        <div class="showMore"><span>SHOW MORE</span></div>
         <!--Thumbnail Navigator-->
         <div data-u="thumbnavigator" data-autocenter="1" class="jssort01">
           <div data-u="slides" class="slides">
@@ -728,10 +742,10 @@
     <!-- layout03-->
     <section data-menu="true" class="layout_03">
       <div class="layoutWrap">
-        <div class="title">RELATED POSTS</div>
-        <h2 class="detail">延伸閱讀–手動</h2>
+        <h2 class="title">RELATED POSTS</h2>
+        <div class="detail">延伸閱讀–手動</div>
         <div class="subTitleWrap">
-          <p class="subTitle">穿搭，是體現自我風格；單品，則能提升整體質感。球鞋、墨鏡、帽子…研讀小編為妳準備的今夏的必修秘技，成為路人眼中的焦點吧！</p>
+          <p class="subTitle">穿搭，是體現自我風格；單品，則能提升整體質感。球鞋、墨鏡、研讀小編為妳準備的妳準備今必修秘技，成為路人眼中的焦點吧！</p>
         </div>
         <div class="articleWrap">
           <ul class="article">
@@ -742,7 +756,7 @@
               <div class="txtWrap"><a data-dotdotdot="true" href="https://www.juksy.com/archives/55540" target="_blank" class="txt">
                   <h3>小賈斯汀也瘋玩寶可夢  被直擊衝入中央公園抓神奇寶貝！</h3></a></div>
             </li>
-            <li class="fadeOut"><a href="https://www.juksy.com/archives/55486" data-imgload="https://static.juksy.com/static/200x200/files/articles/55486/cover/578d99afcc07f.png" target="_blank" class="img imgLoading">
+            <li class="fadeOut"><a href="https://www.juksy.com/archives/55486" data-imgload="https://static.juksy.com/static/600x600/files/articles/55486/cover/578d99afcc07f.png" target="_blank" class="img imgLoading">
                 <div class="linkWrap">
                   <div class="linkBorder"><span class="ch">馬上閱讀</span><span class="ch arrow">→</span></div>
                 </div></a>
@@ -756,7 +770,7 @@
               <div class="txtWrap"><a data-dotdotdot="true" href="https://www.juksy.com/archives/55540" target="_blank" class="txt">
                   <h3>小賈斯汀也瘋玩寶可夢  被直擊衝入中央公園抓神奇寶貝！</h3></a></div>
             </li>
-            <li class="fadeOut"><a href="https://www.juksy.com/archives/55486" data-imgload="https://static.juksy.com/static/200x200/files/articles/55486/cover/578d99afcc07f.png" target="_blank" class="img imgLoading">
+            <li class="fadeOut"><a href="https://www.juksy.com/archives/55486" data-imgload="https://static.juksy.com/static/600x600/files/articles/55486/cover/578d99afcc07f.png" target="_blank" class="img imgLoading">
                 <div class="linkWrap">
                   <div class="linkBorder"><span class="ch">馬上閱讀</span><span class="ch arrow">→</span></div>
                 </div></a>
@@ -770,7 +784,7 @@
               <div class="txtWrap"><a data-dotdotdot="true" href="https://www.juksy.com/archives/55540" target="_blank" class="txt">
                   <h3>小賈斯汀也瘋玩寶可夢  被直擊衝入中央公園抓神奇寶貝！</h3></a></div>
             </li>
-            <li class="fadeOut"><a href="https://www.juksy.com/archives/55486" data-imgload="https://static.juksy.com/static/200x200/files/articles/55486/cover/578d99afcc07f.png" target="_blank" class="img imgLoading">
+            <li class="fadeOut"><a href="https://www.juksy.com/archives/55486" data-imgload="https://static.juksy.com/static/600x600/files/articles/55486/cover/578d99afcc07f.png" target="_blank" class="img imgLoading">
                 <div class="linkWrap">
                   <div class="linkBorder"><span class="ch">馬上閱讀</span><span class="ch arrow">→</span></div>
                 </div></a>
@@ -844,10 +858,10 @@
     <!-- layout03_infinite-->
     <section data-menu="true" class="layout_03_infinit layout_03">
       <div data-tags="[&quot;熱浪來襲&quot;, &quot;hithot&quot;]" data-filter="[56247, 56274, 56375]" class="layoutWrap">
-        <div class="title">RELATED POSTS</div>
-        <h2 class="detail">延伸閱讀–自動讀取特定標籤</h2>
+        <h2 class="title">RELATED POSTS</h2>
+        <div class="detail">延伸閱讀–自動讀取特定標籤</div>
         <div class="subTitleWrap">
-          <p class="subTitle"></p>
+          <p class="subTitle">穿搭，是體現自我風格；單品，則能提升整體質感。球鞋、墨鏡、研讀小編為妳準備的妳準備今必修秘技，成為路人眼中的焦點吧！</p>
         </div>
       </div>
     </section>
@@ -1073,7 +1087,7 @@
       </li>
     </script>
     <script id="entry-template1" type="text/x-handlebars-template">
-      <li class="fadeOut"><a href="https://www.juksy.com/archives/{{id}}" data-imgload="https://static.juksy.com/static/200x200/files/articles/{{id}}/cover/{{body.square}}" target="_blank" class="img imgLoading">
+      <li class="fadeOut"><a href="https://www.juksy.com/archives/{{id}}" data-imgload="https://static.juksy.com/static/600x600/files/articles/{{id}}/cover/{{body.square}}" target="_blank" class="img imgLoading">
           <div class="linkWrap">
             <div class="linkBorder"><span class="ch">馬上閱讀</span><span class="ch arrow">→</span></div>
           </div></a>
@@ -1085,8 +1099,11 @@
     <!--l_03_infinite template end-->
     <!--l_06 template-->
     <script id="template-l06-start" type="text/x-handlebars-template">
-      <div class="title">FEATURED ARTICLES</div>
-      <h2 class="detail"></h2><ul class="article">
+      <h2 class="title">FEATURED ARTICLES</h2>
+      <div class="detail"></div>
+      <div class="subTitleWrap">
+        <p class="subTitle"> </p>
+      </div><ul class="article">
     </script>
     <script id="template-l06" type="text/x-handlebars-template">
       <li class="fadeOut"><a href="https://www.juksy.com/archives/{{id}}" data-imgload="https://static.juksy.com/static/760x400/files/articles/{{id}}/cover/{{body.fbcover}}" target="_blank" class="img imgLoading">
@@ -1099,18 +1116,20 @@
     </script>
     <script id="template-l06-end" type="text/x-handlebars-template"></ul></script>
     <!--l_06 template end-->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="//embedsocial.com/js/iframe.js"></script>
+    <!-- JS DEV FILE-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jQuery.dotdotdot/1.7.4/jquery.dotdotdot.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jssor-slider/21.1.5/jssor.slider.mini.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
-    <script src="//embedsocial.com/js/iframe.js"></script>
-    <script async src="//www.youtube.com/iframe_api"></script>
-    <script src="js/gallery/g_01/photoswipe-ui-default.js"></script>
-    <script src="js/gallery/g_02/jquery-easyframe.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jssor-slider/21.1.5/jssor.slider.mini.js"></script>
     <script src="js/index.js"></script>
+    <!-- JS MIN FILE-->
+    <!--script(src="js/app.assets.js")-->
+    <!--script(src="js/app.min.js")-->
     <!-- third party-->
     <script type="text/javascript">// Google Tag Manager
 /*(function(w, d, s, l, i) {

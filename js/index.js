@@ -173,7 +173,7 @@
         var $windowW = $(window).width(),
             $headerWrap = $('.header_02 .headerWrap'),
             $visualBg = $headerWrap.find('.visualBg'),
-            $parallax = $headerWrap.find('.parallax'),
+            $parallax = $headerWrap.find('.parallaxContent'),
             $txtBg = $headerWrap.find('.detail .detailWrap .txtBg'),
             $txtWrap = $headerWrap.find('.detail .detailWrap');
         $txtBg.height($txtWrap.height());
@@ -193,8 +193,8 @@
         -----------------------*/
         var jssor_1_options = {
             $AutoPlay: true,
-            $SlideDuration: 800,
-            $Idle: 2500,
+            $SlideDuration: 1000,
+            $Idle: 3000,
             $PauseOnHover: 0,
             $SlideEasing: $Jease$.$OutQuint,
             $BulletNavigatorOptions: {
@@ -202,7 +202,13 @@
             }
         };
 
-        var jssor_1_slider = new $JssorSlider$("header_03_banner", jssor_1_options);
+        var jssor_1_slider = new $JssorSlider$("header_03_banner", jssor_1_options),
+            $bullets = $(".header_03 .headerWrap .visualBg .banner .bullet");
+
+        //stop slider after click bullets
+        $bullets.on("click",function(){
+            jssor_1_slider.$Pause();
+        });
 
         //responsive code begin
         //you can remove responsive code if you don't want the slider scales while window resizing
@@ -354,161 +360,166 @@
 
     // gallery_01
     var gallery_01 = function() {
-        /*--------------------------
-        Jssor Slider
-        ----------------------------*/
-        var windowW = $(window).width(),
-            windowH = $(window).height(),
-            $banner = $('.gallery_01_slider'),
-            juksy_slider,
-            slide_aligan = (windowW - 800) / 2;
+        var $gallery01 = $('.gallery_01');
 
-        var mobile_options = {
-            $AutoPlay: true,
-            $Idle: 2000,
-            $ArrowNavigatorOptions: {
-                $Class: $JssorArrowNavigator$
-            },
-            $ThumbnailNavigatorOptions: {
-                $Class: $JssorThumbnailNavigator$,
-                $Cols: 5,
-                $SpacingX: 5,
-                $SpacingY: 5,
-            }
-        };
+        if(!$gallery01.length) return;
 
-        var desktop_options = {
-            $AutoPlay: false,
-            $Idle: 2000,
-            $PauseOnHover: 0,
-            $SlideWidth: 800,
-            $Cols: 3,
-            $Align: slide_aligan,
-            $SlideSpacing: 0,
-            $ArrowNavigatorOptions: {
-                $Class: $JssorArrowNavigator$
-            },
-            $ThumbnailNavigatorOptions: {
-                $Class: $JssorThumbnailNavigator$,
-                $Cols: 10,
-                $SpacingX: 5,
-                $SpacingY: 5,
-            }
-        };
+        $gallery01.each(function(i) {
+            /*--------------------------
+            Jssor Slider
+            ----------------------------*/
+            var windowW = $(window).width(),
+                windowH = $(window).height(),
+                $banner = $(this).find('.gallery_01_slider'),
+                juksy_slider,
+                slide_aligan = (windowW - 800) / 2;
 
-        //set image width and height
-        function setImage(imgW, imgH) {
-            var $imgWrap = $banner.find('.slides .img');
-            $imgWrap.each(function() {
-                var $img = $(this).find('img'),
-                    w = $img.data('width'),
-                    h = $img.data('height'),
-                    r = w / h;
-                if (r >= (4 / 3)) {
-                    $img.attr({
-                        width: imgW,
-                        height: "auto"
-                    });
-                } else {
-                    $img.attr({
-                        width: "auto",
-                        height: imgH
-                    });
-                }
-            });
-        }
-
-        //make slide
-        function makeSlider() {
-            if (windowW < 1024) {
-                setImage(320, 240);
-                juksy_slider = new $JssorSlider$("gallery_01_slider", mobile_options);
-            } else {
-                //set banner width
-                $banner.width(windowW);
-                $banner.find('.slides').width(windowW);
-                //set arrow width
-                var arrowW = (windowW-800-80)/2;//(window.width-slider.width-gap)/2
-                $banner.find('.jssora05l').width(arrowW);
-                $banner.find('.jssora05r').width(arrowW);
-                //set img
-                setImage(800, 600);
-                //set slider
-                juksy_slider = new $JssorSlider$("gallery_01_slider", desktop_options);
-            }
-        }
-        makeSlider();
-
-        //responsive code begin
-        //you can remove responsive code if you don't want the slider scales while window resizing
-        function ScaleSlider() {
-            var refSize = juksy_slider.$Elmt.parentNode.clientWidth;
-            if (refSize) {
-                juksy_slider.$ScaleWidth(refSize);
-            } else {
-                window.setTimeout(ScaleSlider, 30);
-            }
-        }
-        ScaleSlider();
-        $(window).bind("load", ScaleSlider);
-        $(window).bind("resize", ScaleSlider);
-        $(window).bind("orientationchange", ScaleSlider);
-        //responsive code end
-
-        // show ThumbnailNavigator
-        $banner.find('.showMore').on('click', function() {
-            $(this).hide();
-            $banner.find('.jssort01').fadeIn(); // change adding class
-        })
-        $banner.find('.jssort01').hide();
-
-        //transition when slide park
-        juksy_slider.$On($JssorSlider$.$EVT_PARK, function(slideIndex, fromIndex) {
-            $banner.find('.slide').eq(slideIndex).find('.img img').addClass('bigger');
-            $banner.find('.slide').eq(fromIndex).find('.img img').removeClass('bigger');
-        });
-
-        /*--------------------------
-        PhotoSwipe lightbox gallery
-        ----------------------------*/
-        var pswpElement = document.querySelectorAll('.pswp')[0];
-
-        // build items array
-        var pswpItems = [],
-            pswpLength = $banner.find('.slide').length;
-        for (var i = 0; i < pswpLength; i++) {
-            var $item = $banner.find('.slide').eq(i).find('.img img'),
-                iSrc = $item.attr('src'),
-                iW = $item.data('width'),
-                iH = $item.data('height'),
-                mSrc = iSrc;
-            pswpItems.push({
-                src: iSrc,
-                w: iW,
-                h: iH,
-                msrc: mSrc
-            });
-        }
-
-        var pswpoptions, // define options
-            gallery; // Initializes and opens PhotoSwipe
-
-        // click to open current lightbox
-        $banner.find('.slide .img img').on('click', function() {
-            var istart = $(this).parents('.slide').index();
-            // define options (if needed)
-            pswpoptions = {
-                index: istart - 1,
-                getThumbBoundsFn: function(istart) {
-                    var $thumb = $banner.find('.slide').eq(istart).find('.img img'),
-                        toff = $thumb.offset(),
-                        tw = $thumb.width();
-                    return { x: toff.left, y: toff.top, w: tw };
+            var mobile_options = {
+                $AutoPlay: false,
+                $Idle: 3000,
+                $SlideDuration: 1000,
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$
+                },
+                $ThumbnailNavigatorOptions: {
+                    $Class: $JssorThumbnailNavigator$,
+                    $Cols: 5,
+                    $SpacingX: 5,
+                    $SpacingY: 5,
                 }
             };
-            // Initializes and opens PhotoSwip
-            gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, pswpItems, pswpoptions);
-            gallery.init();
+
+            var desktop_options = {
+                $AutoPlay: false,
+                $Idle: 3000,
+                $SlideDuration: 1000,
+                $PauseOnHover: 0,
+                $SlideWidth: 800,
+                $Cols: 3,
+                $Align: slide_aligan,
+                $SlideSpacing: 0,
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$
+                },
+                $ThumbnailNavigatorOptions: {
+                    $Class: $JssorThumbnailNavigator$,
+                    $Cols: 10,
+                    $SpacingX: 5,
+                    $SpacingY: 5,
+                }
+            };
+            
+            //set id gallery_01_slider+i
+            $banner.attr('id','gallery_01_slider'+i);
+
+            //set image width and height
+            function setImage(imgW, imgH) {
+                var $imgWrap = $banner.find('.slides .img');
+                $imgWrap.each(function() {
+                    var $img = $(this).find('img'),
+                        w = $img.data('width'),
+                        h = $img.data('height'),
+                        r = w / h;
+                    if (r >= (4 / 3)) {
+                        $img.attr({
+                            width: imgW,
+                            height: "auto"
+                        });
+                    } else {
+                        $img.attr({
+                            width: "auto",
+                            height: imgH
+                        });
+                    }
+                });
+            }
+
+            //make slide
+            function makeSlider() {
+                if (windowW < 1024) {
+                    setImage(320, 240);
+                    juksy_slider = new $JssorSlider$("gallery_01_slider"+i, mobile_options);
+                } else {
+                    //set banner width
+                    $banner.width(windowW);
+                    $banner.find('.slides').width(windowW);
+                    //set arrow width
+                    var arrowW = (windowW-800-80)/2;//(window.width-slider.width-gap)/2
+                    $banner.find('.jssora05l').width(arrowW);
+                    $banner.find('.jssora05r').width(arrowW);
+                    //set img
+                    setImage(800, 600);
+                    //set slider
+                    juksy_slider = new $JssorSlider$("gallery_01_slider"+i, desktop_options);
+                }
+            }
+            makeSlider();
+
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizing
+            function ScaleSlider() {
+                var refSize = juksy_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    juksy_slider.$ScaleWidth(refSize);
+                } else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //responsive code end
+
+            //transition when slide park
+            juksy_slider.$On($JssorSlider$.$EVT_PARK, function(slideIndex, fromIndex) {
+                $banner.find('.slide').eq(slideIndex).find('.img img').addClass('bigger');
+                $banner.find('.slide').eq(fromIndex).find('.img img').removeClass('bigger');
+            });
+
+            /*--------------------------
+            PhotoSwipe lightbox gallery
+            ----------------------------*/
+            var pswpElement = document.querySelectorAll('.pswp')[0];
+
+            // build items array
+            var pswpItems = [],
+                pswpLength = $banner.find('.slide').length;
+            for (var i = 0; i < pswpLength; i++) {
+                var $item = $banner.find('.slide').eq(i).find('.img img'),
+                    iSrc = $item.attr('src'),
+                    iW = $item.data('width'),
+                    iH = $item.data('height'),
+                    mSrc = iSrc;
+                pswpItems.push({
+                    src: iSrc,
+                    w: iW,
+                    h: iH,
+                    msrc: mSrc
+                });
+            }
+
+            var pswpoptions, // define options
+                gallery; // Initializes and opens PhotoSwipe
+
+            // click to open current lightbox
+            $banner.find('.slide .img img').on('click', function() {
+                var istart = $(this).parents('.slide').index();
+                // define options (if needed)
+                pswpoptions = {
+                    shareEl: false,
+                    index: istart - 1,
+                    getThumbBoundsFn: function(istart) {
+                        var $thumb = $banner.find('.slide').eq(istart).find('.img img'),
+                            toff = $thumb.offset(),
+                            tw = $thumb.width();
+                        return { x: toff.left, y: toff.top, w: tw };
+                    }
+                };
+                // Initializes and opens PhotoSwip
+                gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, pswpItems, pswpoptions);
+                gallery.init();
+            });
         });
     }
 
@@ -517,22 +528,16 @@
         var $gallery02 = $('.gallery_02'),
             $windowW = $(window).width();
         $gallery02.each(function() {
-            var $iframe = $gallery02.find('.photo iframe'),
+            var $iframe = $(this).find('.photo iframe'),
                 mUrl = $iframe.data('msrc'),
                 pcUrl = $iframe.data('pcsrc');
             if($windowW<1024) {
-                $iframe.easyframe({
-                    url: mUrl
-                },function(){
-                    iFrameResize();
-                });
+                $iframe.attr('src', mUrl);
+                iFrameResize();
             }
             else {
-                $iframe.easyframe({
-                    url: pcUrl
-                },function(){
-                    iFrameResize();
-                });
+                $iframe.attr('src', pcUrl);
+                iFrameResize();
             }
         });
     }
@@ -690,7 +695,7 @@
 
                 // fixed height which is smaller than window height, ex: video
                 if (h < $(window).height()) {
-                    $(this).next(parallaxContent).height(h);
+                    //$(this).next(parallaxContent).height(h);
                 }
 
                 // z-index set for each parallax
@@ -809,7 +814,9 @@
         var $layout06 = $('.layout_06');
         $layout06.each(function(){
             var $layout = $(this).find('.layoutWrap'),
+                engtitle = $layout.data('engtitle'),
                 title = $layout.data('title'),
+                description = $layout.data('description'),
                 countFrom = 0,
                 countSize = 4,
                 source,
@@ -819,7 +826,9 @@
             // add article
             var addArticle = function() {
                 $layout.append(article);
+                $layout.find('.title').html(engtitle);
                 $layout.find('.detail').html(title);
+                $layout.find('p.subTitle').html(description);
                 layout_06();
                 $(document).trigger('fadeOut');
                 $(document).trigger('img_lazyLoad');
@@ -896,33 +905,58 @@
         }
     });
 
-})(jQuery);
+    // Youtube api
+    // create deferred object
+    var YTdeferred = $.Deferred();
+    window.onYouTubeIframeAPIReady = function() {
+        // console.log('Youtube API ready');
+        // resolve when youtube callback is called
+        // passing YT as a parameter
+        YTdeferred.resolve(window.YT);
+    };
 
-// youtube api
-function onYouTubeIframeAPIReady() {
-    var player;
-    player = new YT.Player('header_02_player', {
-        videoId: '2sj2iQyBTQs', // YouTube 影片ID
-        width: 560, // 播放器寬度 (px)
-        height: 315, // 播放器高度 (px)
-        playerVars: {
-            rel: 0, // 播放結束後推薦其他影片
-            controls: 0, // 在播放器顯示暫停／播放按鈕
-            start: 38, //指定起始播放秒數
-            autoplay: 1, // 在讀取時自動播放影片
-            loop: 1, // 讓影片循環播放
-            playlist: '2sj2iQyBTQs',
-            showinfo: 0, // 隱藏影片標題
-            modestbranding: 1, // 隱藏YouTube Logo
-            fs: 0, // 隱藏全螢幕按鈕
-            cc_load_policty: 0, // 隱藏字幕
-            iv_load_policy: 3, // 隱藏影片註解
-            autohide: 0 // 當播放影片時隱藏影片控制列
-        },
-        events: {
-            onReady: function(e) {
-                e.target.mute(); // 靜音
-            }
-        }
+    // embedding youtube iframe api
+    // https://developers.google.com/youtube/iframe_api_reference#Getting_Started
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    $(function() {
+        var player,
+            header_02_player = $('#header_02_player'),
+            header_02_videoId = header_02_player.data('videoid'),
+            header_02_start = header_02_player.data('start');
+        // whenever youtube callback was called = deferred resolved
+        // your custom function will be executed with YT as an argument
+        YTdeferred.done(function(YT) {
+            // creating a player
+            // https://developers.google.com/youtube/iframe_api_reference#Getting_Started
+            player = new YT.Player('header_02_player', {
+                videoId: header_02_videoId, // YouTube 影片ID
+                width: 560, // 播放器寬度 (px)
+                height: 315, // 播放器高度 (px)
+                playerVars: {
+                    rel: 0, // 播放結束後推薦其他影片
+                    controls: 0, // 在播放器顯示暫停／播放按鈕
+                    start: header_02_start, //指定起始播放秒數
+                    autoplay: 1, // 在讀取時自動播放影片
+                    loop: 1, // 讓影片循環播放
+                    playlist: header_02_videoId,
+                    showinfo: 0, // 隱藏影片標題
+                    modestbranding: 1, // 隱藏YouTube Logo
+                    fs: 0, // 隱藏全螢幕按鈕
+                    cc_load_policty: 0, // 隱藏字幕
+                    iv_load_policy: 3, // 隱藏影片註解
+                    autohide: 0 // 當播放影片時隱藏影片控制列
+                },
+                events: {
+                    onReady: function(e) {
+                        e.target.mute(); // 靜音
+                    }
+                }
+            });
+        });
     });
-}
+
+})(jQuery);

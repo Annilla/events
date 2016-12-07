@@ -8,26 +8,51 @@
         .title {
             padding: 50px $m_gap 0 $m_gap;
             text-align: center;
-            font-size: 30px;
+            font-size: 28px;
             line-height: 1.5em;
+            font-weight: bold;
+            letter-spacing: 2px;
             &:after {
                 content: '';
                 display: block;
                 width: 100px;
-                margin: 10px auto;
-                border-bottom: 5px solid $black;
+                height: 5px;
+                margin: 5px auto 10px auto;
+                background-color: $black;
             }
         }
         .detail {
             margin: 0 auto;
-            padding: 20px $m_gap 10px $m_gap;
-            color: $black_50;
+            padding: 0 $m_gap;
+            color: $black;
+            font-size: 30px;
+            line-height: 1.5em;
+            text-align: center;
+            font-weight: bold;
             @include screen(tb) {
                 width: 500px;
             }
             @include screen(pcSmall) {
                 width: 620px;
                 text-align: center;
+            }
+        }
+        .subTitleWrap {
+            @include screen(pcSmall){
+                width: 970px;
+                margin: 0 auto 30px auto;
+            }
+            .subTitle {
+                margin: 20px $m_gap;
+                color: $black_50;
+                @include screen(tb) {
+                    margin: 20px $tb_gap;
+                }
+                @include screen(pcSmall){
+                    width: 65%;
+                    margin: 20px auto;
+                    text-align: center;
+                }
             }
         }
         .sliderWrap {

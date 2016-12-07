@@ -1,33 +1,62 @@
 .gallery_01 {
     position: relative;
     background-color: $white;
+    padding-top: 30px;
     padding-bottom: 20px;
     @include screen(pcSmall) {
-        padding-bottom: 50px;
+        padding-bottom: 100px;
     }
     .layoutWrap {
+        padding-bottom: 30px;
         @include screen(pcSmall) {
             max-width: $pc_max_width;
             margin: 0 auto;
-            padding-bottom: 30px;
         }
         .title {
-            padding-top: 50px;
+            padding: 50px $m_gap 0 $m_gap;
             text-align: center;
-            font-size: 30px;
-            line-height: 2em;
+            font-size: 28px;
+            line-height: 1.5em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            &:after {
+                content: '';
+                display: block;
+                width: 100px;
+                height: 5px;
+                margin: 5px auto 10px auto;
+                background-color: $black;
+            }
         }
         .detail {
             margin: 0 auto;
-            padding: 10px $m_gap;
-            color: rgba(0, 0, 0, 0.5);
+            padding: 0px $m_gap;
+            font-size: 30px;
+            line-height: 1.5em;
+            text-align: center;
+            font-weight: bold;
             @include screen(tb) {
-                padding: 10px $tb_gap;
             }
             @include screen(pcSmall) {
-                text-align: center;
-                padding: 0px;
-                width: 65%;
+                width: 630px;
+            }
+        }
+        .subTitleWrap {
+            @include screen(pcSmall){
+                width: 970px;
+                margin: 0 auto;
+            }
+            .subTitle {
+                margin: 20px $m_gap 0 $m_gap;
+                color: $black_50;
+                @include screen(tb) {
+                    margin: 20px $tb_gap 0 $tb_gap;
+                }
+                @include screen(pcSmall){
+                    width: 65%;
+                    margin: 20px auto 0 auto;
+                    text-align: center;
+                }
             }
         }
     }
@@ -116,35 +145,6 @@
                         font-size: 14px;
                         text-align: center;
                     }
-                }
-            }
-        }
-        /* show more btn */
-        .showMore {
-            width: 100%;
-            padding: 11px 0;
-            position: absolute;
-            bottom: 20px;
-            z-index: 1;
-            text-align: right;
-            text-decoration: underline;
-            background-color: white;
-            letter-spacing: normal;
-            @include screen(pcSmall) {
-                bottom: 0px;
-            }
-            span {
-                display: block;
-                cursor: pointer;
-                @include screen(pcSmall) {
-                    width: 800px;
-                    margin: 0 auto;
-                }
-                &:after {
-                    content: ">>";
-                    display: inline-block;
-                    text-decoration: none;
-                    margin-left: 5px;
                 }
             }
         }
@@ -246,24 +246,25 @@
                     height: 60px;
                 }
                 &:hover .c {
-                    top: 1px; //0px
-                    left: 1px; //0px
-                    width: 58px;
-                    height: 58px;
-                    //border: #fff 1px solid;
-                    background-position: 50% 50%;
+                    top: 0px; //0px
+                    left: 0px; //0px
+                    width: 56px;
+                    height: 56px;
+                    border: rgba(0,0,0,1) 2px solid;
+                    cursor: pointer;
+                    //background-position: 50% 50%;
                     @include screen(pcSmall) {
-                        width: 58px;
-                        height: 58px;
+                        width: 56px;
+                        height: 56px;
                     }
                 }
                 &.pdn .c {
                     background-position: 50% 50%;
-                    top: 2px; //0px
-                    left: 2px; //0px
-                    width: 58px;
-                    height: 58px;
-                    //border: #fff 2px solid;
+                    top: 0px; //0px
+                    left: 0px; //0px
+                    width: 56px;
+                    height: 56px;
+                    border: rgba(0,0,0,1) 2px solid;
                     @include screen(pcSmall) {
                         width: 56px;
                         height: 56px;
@@ -293,7 +294,7 @@
                 height: 56px;
                 //border: #000 2px solid;
                 box-sizing: content-box;
-                background: url('../img/gallery/g_01/t01.png') -800px -800px no-repeat;
+                //background: url('../img/gallery/g_01/t01.png') -800px -800px no-repeat;
                 _background: none;
                 @include screen(pcSmall) {
                     width: 56px;
@@ -301,15 +302,16 @@
                 }
             }
             .pav .c {
-                top: 2px;
+                top: 0px;
                 _top: 0px;
-                left: 2px;
+                left: 0px;
                 _left: 0px;
                 width: 56px;
                 height: 56px;
-                //border: #000 0px solid;
-                //_border: #fff 2px solid;
-                background-position: 50% 50%;
+                border: rgba(0,0,0,1) 2px solid;
+                _border: rgba(0,0,0,1) 2px solid;
+                //background-position: 50% 50%;
+                background-color: rgba(0,0,0,0.3);
                 @include screen(pcSmall) {
                     width: 56px;
                     height: 56px;
