@@ -59,7 +59,7 @@
             position: relative;
             margin-top: $m_gap;
             @include screen(pcSmall) {
-                padding-bottom: 50px;
+                padding-bottom: 0px;
             }
             .slidesWrap {
                 width: 100%;

@@ -4589,7 +4589,7 @@ img {
 
 @media screen and (min-width: 1024px) {
   .layout_04 .layoutWrap .sliderWrap {
-    padding-bottom: 50px;
+    padding-bottom: 0px;
   }
 }
 
@@ -5964,6 +5964,7 @@ img {
 }
 
 .video_01 .videoWrap {
+  padding: 50px 0;
   width: 100%;
 }
 

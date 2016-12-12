@@ -234,12 +234,22 @@ body{
     //background-color: $white;
     .layoutWrap {
         .title {
-            //標題顏色
-            //color: #333333;
+            //上標題文字顏色
+            //color: $black;
+            &:after {
+                //上標題底線顏色
+                //background-color: $black;
+            }
         }
-        .subTitle {
-            //描述顏色
-            //color: #666767;
+        .detail {
+            //下標題文字顏色
+            //color: $black;
+        }
+        .subTitleWrap {
+            p.subTitle {
+                //描述顏色
+                //color: rgba(102, 102, 102, 1);
+            }
         }
         ul.articleWrap {
             li {
