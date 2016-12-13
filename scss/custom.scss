@@ -660,6 +660,24 @@ body{
     }
 }
 
+.video_01 {
+    //模版背景
+    //background-image: url('../img/video_bg.jpg');
+    //background-repeat: no-repeat;
+    //background-size: cover;
+    //background-color: rgba(23,23,118,0.7);
+    @include screen(pcLarge) {
+        //桌機模版背景
+        //background-size: 100% auto;
+    }
+    .videoWrap {
+        @include screen(pcLarge) {
+            //桌機模版上下內距
+            //padding: 15% 0 4% 0;
+        }
+    }
+}
+
 .footer_01 {
     //背景色
     //background-color: rgba(188,202,210,1);
