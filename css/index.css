@@ -2754,27 +2754,51 @@ img {
 
 .layout_02 {
   position: relative;
-  background-color: #bccad2; }
+  background-color: #fff; }
   .layout_02 .layoutWrap {
-    padding: 50px 20px 50px 20px; }
+    padding: 0 20px; }
     @media screen and (min-width: 768px) {
       .layout_02 .layoutWrap {
-        padding: 100px 40px 50px 40px; } }
+        padding: 0 40px; } }
     @media screen and (min-width: 1024px) {
       .layout_02 .layoutWrap {
         max-width: 970px;
         margin: 0 auto; } }
     .layout_02 .layoutWrap .title {
+      padding: 50px 0 0 0;
+      text-align: center;
+      font-size: 28px;
+      line-height: 1.5em;
+      font-weight: bold;
+      letter-spacing: 2px; }
+      .layout_02 .layoutWrap .title:after {
+        content: '';
+        display: block;
+        width: 100px;
+        height: 5px;
+        margin: 5px auto 10px auto;
+        background-color: #000; }
+    .layout_02 .layoutWrap .detail {
+      padding: 0;
+      text-align: center;
       font-size: 30px;
-      color: #fff;
-      margin-bottom: 20px;
-      line-height: 1.5em; }
-    .layout_02 .layoutWrap .subTitle {
-      margin-bottom: 20px;
+      line-height: 1.5em;
+      font-weight: bold; }
+    @media screen and (min-width: 1024px) {
+      .layout_02 .layoutWrap .subTitleWrap {
+        width: 970px;
+        margin: 0 auto 30px auto; } }
+    .layout_02 .layoutWrap .subTitleWrap .subTitle {
+      margin: 20px auto;
       color: rgba(0, 0, 0, 0.5); }
+      @media screen and (min-width: 768px) {
+        .layout_02 .layoutWrap .subTitleWrap .subTitle {
+          margin: 20px auto; } }
       @media screen and (min-width: 1024px) {
-        .layout_02 .layoutWrap .subTitle {
-          width: 49%; } }
+        .layout_02 .layoutWrap .subTitleWrap .subTitle {
+          width: 65%;
+          margin: 20px auto;
+          text-align: center; } }
     .layout_02 .layoutWrap ul.articleWrap {
       overflow: hidden; }
       @media screen and (min-width: 1024px) {
@@ -2788,7 +2812,7 @@ img {
         margin-right: 5%;
         margin-bottom: 20px;
         padding-top: 10px;
-        border-top: 1px solid #fff; }
+        border-top: 1px solid #f2f2f2; }
         .layout_02 .layoutWrap ul.articleWrap li:nth-child(odd) {
           margin-right: 0; }
           @media screen and (min-width: 1024px) {
@@ -2803,7 +2827,7 @@ img {
             .layout_02 .layoutWrap ul.articleWrap li:nth-child(4n+3) {
               margin-right: 0; } }
         .layout_02 .layoutWrap ul.articleWrap li .article {
-          background-color: #fff; }
+          background-color: #f2f2f2; }
           .layout_02 .layoutWrap ul.articleWrap li .article a.img {
             display: block;
             background-size: cover;
@@ -2844,7 +2868,7 @@ img {
               height: 0;
               border-style: solid;
               border-width: 10px 10px 0 10px;
-              border-color: #fff transparent transparent transparent;
+              border-color: #f2f2f2 transparent transparent transparent;
               position: absolute;
               right: 15px;
               top: 0; }
@@ -2895,7 +2919,7 @@ img {
             height: 0;
             border-style: solid;
             border-width: 0 10px 10px 10px;
-            border-color: transparent transparent #fff transparent;
+            border-color: transparent transparent #f2f2f2 transparent;
             position: absolute;
             right: 15px;
             bottom: 110px; }
@@ -3171,7 +3195,7 @@ img {
                     padding: 20px 3% 10px 3%; } }
           .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) {
             overflow: hidden;
-            background-color: rgba(0, 0, 0, 0.05); }
+            background-color: #f2f2f2; }
             @media screen and (min-width: 1024px) {
               .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) {
                 float: right; } }
@@ -3182,7 +3206,7 @@ img {
               height: 0;
               border-style: solid;
               border-width: 10px 0 10px 10px;
-              border-color: transparent transparent transparent rgba(0, 0, 0, 0.05);
+              border-color: transparent transparent transparent #f2f2f2;
               position: absolute;
               top: 45%;
               left: 50%; }
@@ -3343,7 +3367,7 @@ img {
     margin-top: 20px; }
     @media screen and (min-width: 1024px) {
       .layout_04 .layoutWrap .sliderWrap {
-        padding-bottom: 50px; } }
+        padding-bottom: 0px; } }
     .layout_04 .layoutWrap .sliderWrap .slidesWrap {
       width: 100%;
       overflow-x: auto;
@@ -4282,6 +4306,7 @@ img {
   position: relative;
   background-color: #fff; }
   .video_01 .videoWrap {
+    padding: 50px 0;
     width: 100%; }
     @media screen and (min-width: 1024px) {
       .video_01 .videoWrap {

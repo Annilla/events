@@ -234,12 +234,22 @@ body{
     //background-color: $white;
     .layoutWrap {
         .title {
-            //標題顏色
-            //color: #333333;
+            //上標題文字顏色
+            //color: $black;
+            &:after {
+                //上標題底線顏色
+                //background-color: $black;
+            }
         }
-        .subTitle {
-            //描述顏色
-            //color: #666767;
+        .detail {
+            //下標題文字顏色
+            //color: $black;
+        }
+        .subTitleWrap {
+            p.subTitle {
+                //描述顏色
+                //color: rgba(102, 102, 102, 1);
+            }
         }
         ul.articleWrap {
             li {
@@ -646,6 +656,24 @@ body{
         .detail {
             //下標題文字顏色
             //color: $black;
+        }
+    }
+}
+
+.video_01 {
+    //模版背景
+    //background-image: url('../img/video_bg.jpg');
+    //background-repeat: no-repeat;
+    //background-size: cover;
+    //background-color: rgba(23,23,118,0.7);
+    @include screen(pcLarge) {
+        //桌機模版背景
+        //background-size: 100% auto;
+    }
+    .videoWrap {
+        @include screen(pcLarge) {
+            //桌機模版上下內距
+            //padding: 15% 0 4% 0;
         }
     }
 }
