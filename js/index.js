@@ -37,14 +37,17 @@
 
     // nav_01
     var nav_01 = function() {
-        /*
-        -------------------------------------
-        open and close menu // didn't use toggleClass because FB APP can't work for android4.2
-        -------------------------------------
-        */
         var $window = $(window),
             $nav = $('.nav_01'),
             $body = $('body'),
+            sourceLi = $('#template-n01').html(),
+            sourceMstart = $('#template-n01-more-start').html(),
+            sourceMend = $('#template-n01-more-end').html(),
+            $ulmenu = $nav.find('.menuWrap ul.menu'),
+            $menuData = $ulmenu.data('navli'),
+            $menuLen = $menuData.length,
+            template,
+            menuInner = '',
             $openBtn = $nav.find('.mIcon .open'),
             $closeBtn = $nav.find('.mIcon .close'),
             $menuOpen = 'menuOpen',
@@ -52,8 +55,40 @@
             lastScrollTop = 0,
             $scrollout = 'scrollout',
             $menuOut = true,
-            $menuli = $nav.find('ul.menu >li'),
+            $menuli,
             $menuTimer;
+        /*
+        -------------------------------------
+        set menu items
+        -------------------------------------
+        */        
+        for (var i=0; i<$menuLen; i++) {
+            // the 4th item will in the 更多 list
+            if(i==3) {
+                template = Handlebars.compile(sourceMstart);
+                menuInner += template();
+            }
+
+            // insert the list in menu
+            var context = {title: $menuData[i]};
+            template = Handlebars.compile(sourceLi);
+            menuInner += template(context);
+
+            // the last item if more than 4 items will have the 更多 close tag
+            if(i>=3 && i==$menuLen-1){
+                template = Handlebars.compile(sourceMend);
+                menuInner += template();
+            }
+        }
+
+        // add menu
+        $ulmenu.html(menuInner);
+
+        /*
+        -------------------------------------
+        open and close menu // didn't use toggleClass because FB APP can't work for android4.2
+        -------------------------------------
+        */
         $openBtn.click(function() {
             $nav.addClass($menuOpen);
             $body.addClass($noscroll);
@@ -109,6 +144,7 @@
         hover menu li animation
         -------------------------------------
         */
+        $menuli = $nav.find('ul.menu >li');
         $menuli.hover(function() {
             clearTimeout($menuTimer);
             $menuli.not(this).stop(true, true).animate({ opacity: 0.5 }, 500);

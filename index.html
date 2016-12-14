@@ -79,41 +79,7 @@
           </div>
         </div>
         <div class="menuWrap">
-          <ul class="menu">
-            <li><a>
-                <h4>手動3篇</h4></a></li>
-            <li><a>
-                <h4>活動辦法</h4></a></li>
-            <li><a>
-                <h4>自動2~8</h4></a></li>
-            <li class="notli">
-              <div class="more">更多 </div>
-              <ul class="submenu">
-                <li><a>
-                    <h4>手動2篇正方</h4></a></li>
-                <li><a>
-                    <h4>自動2~8篇正方</h4></a></li>
-                <li><a>
-                    <h4>活動連結</h4></a></li>
-                <li><a>
-                    <h4>臉書相簿</h4></a></li>
-                <li><a>
-                    <h4>企劃拍攝</h4></a></li>
-                <li><a>
-                    <h4>焦點影音</h4></a></li>
-                <li><a>
-                    <h4>主推區塊－單篇</h4></a></li>
-                <li><a>
-                    <h4>主推區塊－五篇</h4></a></li>
-                <li><a>
-                    <h4>延伸閱讀－手動</h4></a></li>
-                <li><a>
-                    <h4>手動7篇</h4></a></li>
-                <li><a>
-                    <h4>延伸閱讀－自動</h4></a></li>
-              </ul>
-            </li>
-          </ul>
+          <ul data-navli="[&quot;手動3篇&quot;,&quot;活動辦法&quot;,&quot;自動2~8&quot;,&quot;手動2篇正方&quot;,&quot;自動2~8篇正方&quot;,&quot;活動連結&quot;,&quot;臉書相簿&quot;,&quot;企劃拍攝&quot;,&quot;焦點影音&quot;,&quot;主推區塊－單篇&quot;,&quot;主推區塊－五篇&quot;,&quot;延伸閱讀－手動&quot;,&quot;手動7篇&quot;,&quot;延伸閱讀－自動&quot;]" class="menu"></ul>
           <ul class="share">
             <li class="title">分享給朋友</li>
             <li class="line"><a href="" target="_blank" class="btn">
@@ -1085,6 +1051,21 @@
     </div>
     <!--PhotoSwipe End-->
     <!-- JS start-->
+    <!--n_01 template-->
+    <script id="template-n01" type="text/x-handlebars-template">
+      <li><a>
+          <h4>{{title}}</h4></a></li>
+    </script>
+    <script id="template-n01-more-start" type="text/x-handlebars-template">
+      <li class="notli">
+      <div class="more">更多 </div>
+      <ul class="submenu">
+    </script>
+    <script id="template-n01-more-end" type="text/x-handlebars-template">
+      </ul>
+      </li>
+    </script>
+    <!--n_01 template end-->
     <!--l_03_infinite template-->
     <script id="entry-template-start" type="text/x-handlebars-template"><ul class="article"></script>
     <script id="entry-template0" type="text/x-handlebars-template">
