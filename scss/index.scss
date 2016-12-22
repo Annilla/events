@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
 // common use
-@import "base/variables";
-@import "base/mixin";
-@import "base/base";
-@import "base/keyframes";
+@import "common/variables";
+@import "common/mixin";
+@import "common/base";
+@import "common/keyframes";
 
 // modules
 @import "nav/n_01";
