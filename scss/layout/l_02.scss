@@ -84,6 +84,18 @@
                     a.img {
                         @include a_img;
                         @include square_linkWrap;
+                        .linkWrap {
+                            height: calc(140px*0.8);
+                            @include screen(mLarge) {
+                                height: calc(177px*0.8);
+                            }
+                            @include screen(tb) {
+                                height: calc(326.8px*0.8);
+                            }
+                            @include screen(pcSmall) {
+                                height: calc(223.75px*0.8);
+                            }
+                        }
                         &:after {
                             content: "";
                             display: block;
@@ -148,6 +160,18 @@
                         a.img {
                             @include a_img;
                             @include fbsize_linkWrap;
+                            .linkWrap {
+                                height: calc(280px*0.77/1.9);
+                                @include screen(mLarge) {
+                                    height: calc(374px*0.77/1.9);
+                                }
+                                @include screen(tb) {
+                                    height: calc(688px*0.77/1.9);
+                                }
+                                @include screen(pcSmall) {
+                                    height: calc(472.5px*0.77/1.9);
+                                }
+                            }
                             &:after {
                                 display: none;
                             }

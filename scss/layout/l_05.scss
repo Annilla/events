@@ -70,6 +70,18 @@
                     @include a_img;
                     width: 100%;
                     @include square_linkWrap;
+                    .linkWrap {
+                        height: calc(280px*0.8);
+                        @include screen(mLarge) {
+                            height: calc(374px*0.8);
+                        }
+                        @include screen(tb) {
+                            height: calc(688px*0.8);
+                        }
+                        @include screen(pcSmall) {
+                            height: calc(465px*0.8);
+                        }
+                    }
                 }
                 .txtWrap {
                     padding: 10px 0;

@@ -72,6 +72,16 @@
                     @include a_img;
                     width: 100%;
                     @include fbsize_linkWrap;
+                    height: calc(280px/1.9);
+                    @include screen(mLarge) {
+                        height: calc(374px/1.9);
+                    }
+                    @include screen(tb) {
+                        height: calc(688px/1.9);
+                    }
+                    @include screen(pcSmall) {
+                        height: calc(466px/1.9);
+                    }
                     .linkWrap {
                         position: absolute;
                     }

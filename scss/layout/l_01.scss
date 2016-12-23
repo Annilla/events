@@ -62,10 +62,18 @@
             a.img {
                 @include a_img;
                 width: 100%;
-                height: auto;
-                /*js*/
                 overflow: hidden;
                 @include fbsize_linkWrap;
+                height: calc(300px/1.9);
+                @include screen(mLarge) {
+                    height: calc(394px/1.9);
+                }
+                @include screen(tb) {
+                    height: calc(728px/1.9);
+                }
+                @include screen(pcSmall) {
+                    height: calc(455.89px/1.9);
+                }
             }
             .detailWrap {
                 padding-left: $m_gap;
@@ -373,9 +381,14 @@
                     a.img {
                         @include a_img;
                         width: 100%;
-                        height: auto;
-                        /*js*/
                         @include square_linkWrap;
+                        height: 155.19px;
+                        @include screen(mLarge) {
+                            height: 200.78px;
+                        }
+                        @include screen(tb) {
+                            height: 372.47px;
+                        }
                         @include screen(pcSmall) {
                             width: 163px;
                             height: 163px;

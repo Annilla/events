@@ -1,7 +1,10 @@
 // Media Queries mixin
 @mixin screen($point) {
     // default ipnone5
-    @if $point == mLarge { // iphone 6 up
+    @if $point == mMedium { // iphone 6
+        @media screen and (min-width: $m_portrait_med_w) { @content; }
+    }
+    @else if $point == mLarge { // iphone 6 plus up
         @media screen and (min-width: $m_portrait_max_w) { @content; }
     }
     @else if $point == tb { // tablet: ipad portrait
@@ -229,6 +232,7 @@
         opacity: 0;
         @include transition;
         .linkBorder {
+            height: initial;
             border: 1px solid $white;
             padding-top: 13%;
             padding-bottom: 14%;
