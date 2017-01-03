@@ -177,50 +177,6 @@
         }
     }
 
-    // header_01
-    var header_01 = function() {
-        /*
-        -------------------------------------
-        Count img height
-        -------------------------------------
-        */
-        var $header01 = $('.header_01');
-        $header01.each(function() {
-            var $visualBg = $(this).find('.visualBg'),
-                $windowH = $(window).height()*0.9;
-            $visualBg.height($windowH);
-        });
-        /*---------------------
-        文字三角形凹槽高度
-        -----------------------*/
-        var $headerWrap = $('.header_01 .headerWrap'),
-            $visualBg = $headerWrap.find('.visualBg'),
-            $txtBg = $headerWrap.find('.detail .detailWrap .txtBg'),
-            $txtWrap = $headerWrap.find('.detail .detailWrap');
-        $txtBg.height($txtWrap.height());
-        $headerWrap.height($txtBg.height() + $visualBg.height() - 31);
-    }
-
-    // header_02
-    var header_02 = function() {
-        /*---------------------
-        文字三角形凹槽高度
-        -----------------------*/
-        var $windowW = $(window).width(),
-            $headerWrap = $('.header_02 .headerWrap'),
-            $visualBg = $headerWrap.find('.visualBg'),
-            $parallax = $headerWrap.find('.parallaxContent'),
-            $txtBg = $headerWrap.find('.detail .detailWrap .txtBg'),
-            $txtWrap = $headerWrap.find('.detail .detailWrap');
-        $txtBg.height($txtWrap.height());
-        if ($windowW<1024) {
-            $headerWrap.height($txtBg.height() + $visualBg.height() - 31);
-        }
-        else {
-            $headerWrap.height($txtBg.height() + $parallax.height() - 31);
-        }
-    }
-
     // header_03
     var header_03_slider = function() {
         if(!$('#header_03_banner').length) return;
@@ -274,123 +230,19 @@
         $headerWrap.height($txtBg.height() + $visualBg.height() - 31);
     }
 
-    // header_04
-    var header_04 = function() {
-        /*
-        -------------------------------------
-        Count img height
-        -------------------------------------
-        */
-        var $header04 = $('.header_04');
-        $header04.each(function() {
-            var $visualBg = $(this).find('.visualBg'),
-                $windowH = $(window).height()*0.9;
-            $visualBg.height($windowH);
-        });
-        /*---------------------
-        文字三角形凹槽高度
-        -----------------------*/
-        var $headerWrap = $('.header_04 .headerWrap'),
-            $visualBg = $headerWrap.find('.visualBg'),
-            $txtBg = $headerWrap.find('.detail .detailWrap .txtBg'),
-            $txtWrap = $headerWrap.find('.detail .detailWrap');
-        $txtBg.height($txtWrap.height());
-        $headerWrap.height($txtBg.height() + $visualBg.height() - 31);
-    }
-
-    // layout_01
-    var layout_01 = function() {
-        // Count img height
-        var $layout01 = $('.layout_01');
-        $layout01.each(function() {
-            var $this = $(this),
-                $img = $(this).find('.mainArticle a.img'),
-                $imgH = $img.width() / 1.9,
-                $eximg = $(this).find('.exArticle a.img'),
-                $eximgH = $eximg.width();
-            //mainArticle img
-            $img.height($imgH);
-            //exArticle img
-            $eximg.height($eximgH);
-        });
-    }
-
-    // layout_02
-    var layout_02 = function() {
-        // Count img height
-        var $layout02 = $('.layout_02');
-        $layout02.each(function() {
-            var $img = $(this).find('li:not(.big) .article a.img'),
-                $imgBig = $(this).find('li.big .article a.img');
-            $img.each(function() {
-                $(this).height($(this).width());
-            });
-            $imgBig.each(function() {
-                $(this).height($(this).width() / 1.9);
-            });
-        });
-    }
-
-    // layout_03
-    var layout_03 = function() {
-        // Count img height
-        var $layout03 = $('.layout_03');
-        $layout03.each(function() {
-            var $img = $(this).find('.article li:nth-child(even) a.img'),
-                $imgBig = $(this).find('.article li:nth-child(odd) a.img');
-            $img.each(function() {
-                $(this).height($(this).width());
-            });
-            $imgBig.each(function() {
-                $(this).height($(this).width() / 1.9);
-            });
-        });
-    }
-
     // layout_04
     var layout_04 = function() {
         // Slider
         var $layout04 = $('.layout_04');
         $layout04.each(function() {
             var $this = $(this),
-                $slideW = $this.find('ul.slides li:first').width(),
-                $gap = 20,
-                $number = $this.find('ul.slides li').length,
-                $windowW = $(window).width(),
-                $setWidth = $windowW < 1024 ? (($slideW + $gap) * $number) : (($slideW + $gap) * $number - $gap),
-                $container = $this.find('.slidesWrap'),
-                containW = $container.width();
-            // Set slides width
-            $this.find('ul.slides').width($setWidth);
+                $slideW = $this.find('ul.slides').width(),
+                $windowW = $(window).width();
             // Mobile and tablet move to second slide
             if ($windowW < 1024) {
-                var $center = $slideW - (($windowW - $slideW) / 2 - $gap);
+                var $center = ($slideW - 20 - $windowW) / 2;
                 $this.find('.slidesWrap').scrollLeft($center);
             }
-        });
-    }
-
-    // layout_05
-    var layout_05 = function() {
-        // Count img height
-        var $layout05 = $('.layout_05');
-        $layout05.each(function() {
-            var $img = $(this).find('ul.article li a.img');
-            $img.each(function() {
-                $(this).height($(this).width());
-            });
-        });
-    }
-
-    // layout_06
-    var layout_06 = function() {
-        // Count img height
-        var $layout06 = $('.layout_06');
-        $layout06.each(function() {
-            var $img = $(this).find('.article li a.img');
-            $img.each(function() {
-                $(this).height($(this).width() / 1.9);
-            });
         });
     }
 
@@ -569,12 +421,11 @@
                 pcUrl = $iframe.data('pcsrc');
             if($windowW<1024) {
                 $iframe.attr('src', mUrl);
-                iFrameResize();
             }
             else {
                 $iframe.attr('src', pcUrl);
-                iFrameResize();
             }
+            iFrameResize();
         });
     }
 
@@ -644,21 +495,12 @@
     // render content first
     init();
     nav_01();
-    header_01();
-    header_02();
     header_03_slider();
     header_03();
-    header_04();
-    layout_01();
-    layout_02();
-    layout_03();
     layout_04();
-    layout_05();
-    layout_06();
     gallery_01();
     gallery_02();
     fixedBtn_01();
-
 
     // plugin fadeOut
     $(function() {
@@ -722,18 +564,9 @@
     // plugin parallax
     $(function() {
         $(document).on('parallax', function() {
-            var $parallax = $('.parallax'),
-                parallaxWrap = '.parallaxWrap',
-                parallaxContent = '.parallaxContent';
+            var $parallax = $('.parallax');
             $parallax.each(function(index, element) {
-                var i = index,
-                    h = $(this).find(parallaxWrap).outerHeight();
-
-                // fixed height which is smaller than window height, ex: video
-                if (h < $(window).height()) {
-                    //$(this).next(parallaxContent).height(h);
-                }
-
+                var i = index;
                 // z-index set for each parallax
                 $parallax.eq(i).css('z-index', -1 - i);
 
@@ -788,7 +621,6 @@
             // add article
             var addArticle = function() {
                 $layout.append('<div class="articleWrap">' + article + '</div>');
-                layout_03();
                 $(document).trigger('fadeOut');
                 $(document).trigger('img_lazyLoad');
                 $(document).trigger('dotdotdot');
@@ -865,7 +697,6 @@
                 $layout.find('.title').html(engtitle);
                 $layout.find('.detail').html(title);
                 $layout.find('p.subTitle').html(description);
-                layout_05();
                 $(document).trigger('fadeOut');
                 $(document).trigger('img_lazyLoad');
                 $(document).trigger('dotdotdot');
@@ -937,7 +768,6 @@
                 $layout.find('.title').html(engtitle);
                 $layout.find('.detail').html(title);
                 $layout.find('p.subTitle').html(description);
-                layout_06();
                 $(document).trigger('fadeOut');
                 $(document).trigger('img_lazyLoad');
                 $(document).trigger('dotdotdot');
@@ -987,30 +817,6 @@
             //init loading ajax
             layout_06_ajax(countFrom, countSize);
         });
-    });
-
-    // window resizing
-    $(function() {
-        var resizeId;
-        $(window).resize(function() {
-            clearTimeout(resizeId);
-            resizeId = setTimeout(doneResizing, 500);
-        });
-
-        function doneResizing() {
-            header_01();
-            header_02();
-            header_03();
-            header_04();
-            layout_01();
-            layout_02();
-            layout_03();
-            layout_04();
-            layout_05();
-            layout_06();
-            $(document).trigger('dotdotdot');
-            $(document).trigger('parallax');
-        }
     });
 
     // Youtube api

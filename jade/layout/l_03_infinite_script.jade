@@ -3,7 +3,7 @@ script(id="entry-template-start", type="text/x-handlebars-template")
 	<ul class="article">
 script(id="entry-template0", type="text/x-handlebars-template")
 	li.fadeOut
-		a.img.imgLoading(href="https://www.juksy.com/archives/{{id}}", data-imgload="https://static.juksy.com/static/760x400/files/articles/{{id}}/cover/{{body.fbcover}}", target="_blank")
+		a.img.imgLoading(href="https://www.juksy.com/archives/{{id}}", data-imgload="https://static.juksy.com/files/cover/{{id}}/{{body.fbcover}}?m=resize&i=760x400&e=jpg&q=90", target="_blank")
 			.linkWrap
 				.linkBorder
 					span.ch 馬上閱讀
@@ -14,7 +14,7 @@ script(id="entry-template0", type="text/x-handlebars-template")
 				h3 {{body.title}}
 script(id="entry-template1", type="text/x-handlebars-template")
 	li.fadeOut
-		a.img.imgLoading(href='https://www.juksy.com/archives/{{id}}', data-imgload='https://static.juksy.com/static/600x600/files/articles/{{id}}/cover/{{body.square}}', target='_blank')
+		a.img.imgLoading(href='https://www.juksy.com/archives/{{id}}', data-imgload='https://static.juksy.com/files/cover/{{id}}/{{body.square}}?m=resize&i=600x600&e=jpg&q=75', target='_blank')
 			.linkWrap
 				.linkBorder
 					span.ch 馬上閱讀

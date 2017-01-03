@@ -110,6 +110,16 @@
                         a.img {
                             width: 100%;
                             @include fbsize_linkWrap;
+                            height: calc(280px/1.9);
+                            @include screen(mLarge) {
+                                height: calc(374px/1.9);
+                            }
+                            @include screen(tb) {
+                                height: calc(688px/1.9);
+                            }
+                            @include screen(pcSmall) {
+                                height: calc(466px/1.9);
+                            }
                             .linkWrap {
                         		position: absolute;
                         	}
@@ -168,6 +178,18 @@
                             width: 50%;
                             float: right;
                             @include square_linkWrap;
+                            .linkWrap {
+                                height: calc(140px*0.8);
+                                @include screen(mLarge) {
+                                    height: calc(187px*0.8);
+                                }
+                                @include screen(tb) {
+                                    height: calc(344px*0.8);
+                                }
+                                @include screen(pcSmall) {
+                                    height: calc(249px*0.8);
+                                }
+                            }
                             @include screen(pcSmall) {
 								width: 53%;
 							}
