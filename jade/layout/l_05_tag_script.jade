@@ -7,7 +7,7 @@ script(id="template-l05-start", type="text/x-handlebars-template")
 	<ul class="article">
 script(id="template-l05", type="text/x-handlebars-template")
 	li.fadeOut
-		a.img.imgLoading(href='https://www.juksy.com/archives/{{id}}', target='_blank', data-imgload='https://static.juksy.com/static/600x600/files/articles/{{id}}/cover/{{body.square}}')
+		a.img.imgLoading(href='https://www.juksy.com/archives/{{id}}', target='_blank', data-imgload='https://static.juksy.com/files/cover/{{id}}/{{body.square}}?m=resize&i=600x600&e=jpg&q=75')
 			.linkWrap
 				.linkBorder
 					span.ch 馬上閱讀
