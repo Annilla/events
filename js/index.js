@@ -54,7 +54,6 @@
             $noscroll = 'noscroll',
             lastScrollTop = 0,
             $scrollout = 'scrollout',
-            $menuOut = true,
             $menuli,
             $menuTimer;
         /*
@@ -116,26 +115,21 @@
         -------------------------------------
         */
         function navmove() {
-            var st = $(this).scrollTop(),
-                outTimer;
-            clearTimeout(outTimer);
-            if (st > lastScrollTop && $menuOut == true) {
+            var st = $(this).scrollTop();
+            if (st > lastScrollTop) {
                 // downscroll code
                 $nav.stop(true, true).addClass($scrollout);
-                $menuOut = false;
             } else if (st == 0) {
                 // top
                 scrollOut();
-            } else if (st < lastScrollTop && $menuOut == false) {
+            } else if (st < lastScrollTop) {
                 // upscroll code
-                outTimer = setTimeout(scrollOut, 10000);
+                $window.scroll(_.debounce(scrollOut, 10000));
             }
             lastScrollTop = st;
 
             function scrollOut() {
-                clearTimeout(outTimer);
                 $nav.stop(true, true).removeClass($scrollout);
-                $menuOut = true;
             }
         }
         $window.scroll(_.throttle(navmove, 500));
