@@ -138,7 +138,7 @@
                 $menuOut = true;
             }
         }
-        $window.scroll($.throttle(500, navmove));
+        $window.scroll(_.throttle(navmove, 500));
         /*
         -------------------------------------
         hover menu li animation
@@ -489,7 +489,7 @@
                 $fixedBtn.removeClass('show');
             }
         }
-        $window.scroll($.throttle(500, fixedBtnShow));
+        $window.scroll(_.throttle(fixedBtnShow, 500));
     }
 
     // render content first
@@ -520,7 +520,7 @@
                 }
             }
             addAction();
-            $window.scroll($.throttle(250, addAction));
+            $window.scroll(_.throttle(addAction, 250));
         });
         $(document).trigger('fadeOut');
     });
@@ -546,7 +546,7 @@
                 }
             }
             addComplete();
-            $window.scroll($.throttle(250, addComplete));
+            $window.scroll(_.throttle(addComplete, 250));
         });
         $(document).trigger('img_lazyLoad');
     });
