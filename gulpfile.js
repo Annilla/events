@@ -28,7 +28,7 @@ gulp.task('uglify:plugin-js', ['uglify:css'], function(){
 	return gulp.src([
 			'bower_components/jquery/dist/jquery.js',
 			'bower_components/jQuery.dotdotdot/src/jquery.dotdotdot.min.umd.js',
-			'bower_components/jquery-throttle-debounce/jquery.ba-throttle-debounce.min.js',
+			'bower_components/lodash/dist/lodash.min.js',
 			'bower_components/handlebars/handlebars.js',
 			'bower_components/photoswipe/dist/photoswipe.js',
 			'bower_components/photoswipe/dist/photoswipe-ui-default.js',

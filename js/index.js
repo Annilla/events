@@ -54,7 +54,6 @@
             $noscroll = 'noscroll',
             lastScrollTop = 0,
             $scrollout = 'scrollout',
-            $menuOut = true,
             $menuli,
             $menuTimer;
         /*
@@ -116,29 +115,24 @@
         -------------------------------------
         */
         function navmove() {
-            var st = $(this).scrollTop(),
-                outTimer;
-            clearTimeout(outTimer);
-            if (st > lastScrollTop && $menuOut == true) {
+            var st = $(this).scrollTop();
+            if (st > lastScrollTop) {
                 // downscroll code
                 $nav.stop(true, true).addClass($scrollout);
-                $menuOut = false;
             } else if (st == 0) {
                 // top
                 scrollOut();
-            } else if (st < lastScrollTop && $menuOut == false) {
+            } else if (st < lastScrollTop) {
                 // upscroll code
-                outTimer = setTimeout(scrollOut, 10000);
+                $window.scroll(_.debounce(scrollOut, 10000));
             }
             lastScrollTop = st;
 
             function scrollOut() {
-                clearTimeout(outTimer);
                 $nav.stop(true, true).removeClass($scrollout);
-                $menuOut = true;
             }
         }
-        $window.scroll($.throttle(500, navmove));
+        $window.scroll(_.throttle(navmove, 500));
         /*
         -------------------------------------
         hover menu li animation
@@ -489,7 +483,7 @@
                 $fixedBtn.removeClass('show');
             }
         }
-        $window.scroll($.throttle(500, fixedBtnShow));
+        $window.scroll(_.throttle(fixedBtnShow, 500));
     }
 
     // render content first
@@ -520,7 +514,7 @@
                 }
             }
             addAction();
-            $window.scroll($.throttle(250, addAction));
+            $window.scroll(_.throttle(addAction, 250));
         });
         $(document).trigger('fadeOut');
     });
@@ -546,7 +540,7 @@
                 }
             }
             addComplete();
-            $window.scroll($.throttle(250, addComplete));
+            $window.scroll(_.throttle(addComplete, 250));
         });
         $(document).trigger('img_lazyLoad');
     });
