@@ -26,6 +26,8 @@
     "jQuery.dotdotdot": "https://github.com/FrDH/jQuery.dotdotdot.git#^1.8.3",
     "jssor-slider": "^21.1.5",
     "photoswipe": "^4.1.1",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "animate.css": "^3.5.2",
+    "wow": "wowjs#^1.1.2"
   }
 }

@@ -48,13 +48,8 @@ img {
 	display: none;
 }
 
-//animation fadeOut for all elements
-.fadeOut {
-    @include transition(all, 1s, cubic-bezier(0.165, 0.84, 0.44, 1));
-    @include transform(translate(0,20px));
-    opacity:0;
-    &.action {
-        @include transform(translate(0,0));
-        opacity: 1;
-    }
+// plugin wow = scroll to animation
+// animation fadeinup for all elements
+.custom_fadeinup {
+  	@include animation(custom_fadeinup 1s cubic-bezier(0.165, 0.84, 0.44, 1));
 }
