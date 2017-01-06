@@ -14,6 +14,7 @@ gulp.task('make:scss',function(){
 // combine and uglify css to one
 gulp.task('uglify:css', ['make:scss'], function(){
 	return gulp.src([
+			'css/plugin/animate.css/animate.css',
 			'css/plugin/photoswipe/photoswipe.css',
 			'css/plugin/photoswipe/default-skin.css',
 			'css/index.css'
@@ -27,6 +28,7 @@ gulp.task('uglify:css', ['make:scss'], function(){
 gulp.task('uglify:plugin-js', ['uglify:css'], function(){
 	return gulp.src([
 			'bower_components/jquery/dist/jquery.js',
+			'bower_components/wow/dist/wow.js',
 			'bower_components/jQuery.dotdotdot/src/jquery.dotdotdot.min.umd.js',
 			'bower_components/lodash/dist/lodash.min.js',
 			'bower_components/handlebars/handlebars.js',

@@ -44,7 +44,7 @@
             sourceMstart = $('#template-n01-more-start').html(),
             sourceMend = $('#template-n01-more-end').html(),
             $ulmenu = $nav.find('.menuWrap ul.menu'),
-            $menuData = $ulmenu.data('navli'),
+            $menuData = $ulmenu.data('navli') ? $ulmenu.data('navli') : {},
             $menuLen = $menuData.length,
             template,
             menuInner = '',
@@ -496,28 +496,8 @@
     gallery_02();
     fixedBtn_01();
 
-    // plugin fadeOut
-    $(function() {
-        $(document).on('fadeOut', function() {
-            var $window = $(window),
-                target = $('.fadeOut');
-
-            function addAction() {
-                var length = target.length;
-                for (var i = 0; i < length; i++) {
-                    if (target.eq(i).hasClass('action')) continue;
-                    var in_position = target.eq(i).offset().top + 100;
-                    var window_bottom_position = $window.scrollTop() + $window.height();
-                    if (in_position < window_bottom_position) {
-                        target.eq(i).addClass('action');
-                    }
-                }
-            }
-            addAction();
-            $window.scroll(_.throttle(addAction, 250));
-        });
-        $(document).trigger('fadeOut');
-    });
+    // plugin wow = scroll to animation
+    new WOW().init();
 
     // plugin img_lazyLoad
     $(function() {
@@ -615,7 +595,6 @@
             // add article
             var addArticle = function() {
                 $layout.append('<div class="articleWrap">' + article + '</div>');
-                $(document).trigger('fadeOut');
                 $(document).trigger('img_lazyLoad');
                 $(document).trigger('dotdotdot');
                 btnClick();
@@ -691,7 +670,6 @@
                 $layout.find('.title').html(engtitle);
                 $layout.find('.detail').html(title);
                 $layout.find('p.subTitle').html(description);
-                $(document).trigger('fadeOut');
                 $(document).trigger('img_lazyLoad');
                 $(document).trigger('dotdotdot');
             }
@@ -762,7 +740,6 @@
                 $layout.find('.title').html(engtitle);
                 $layout.find('.detail').html(title);
                 $layout.find('p.subTitle').html(description);
-                $(document).trigger('fadeOut');
                 $(document).trigger('img_lazyLoad');
                 $(document).trigger('dotdotdot');
             }

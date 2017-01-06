@@ -63,6 +63,7 @@
                     float: left;
                     width: 100%;
                     margin-bottom: 20px;
+                    position: relative;
                     @include screen(pcSmall) {
 						width: 470px;
                         min-height: 249px;
