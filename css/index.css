@@ -52,10 +52,6 @@ img {
 
 @-webkit-keyframes custom_fadeinup {
   0% {
-    -webkit-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
-    -moz-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
-    -o-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
-    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
     -webkit-transform: translate(0, 20px);
     -ms-transform: translate(0, 20px);
     -moz-transform: translate(0, 20px);
@@ -72,10 +68,6 @@ img {
 
 @-moz-keyframes custom_fadeinup {
   0% {
-    -webkit-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
-    -moz-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
-    -o-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
-    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
     -webkit-transform: translate(0, 20px);
     -ms-transform: translate(0, 20px);
     -moz-transform: translate(0, 20px);
@@ -92,10 +84,6 @@ img {
 
 @-ms-keyframes custom_fadeinup {
   0% {
-    -webkit-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
-    -moz-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
-    -o-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
-    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
     -webkit-transform: translate(0, 20px);
     -ms-transform: translate(0, 20px);
     -moz-transform: translate(0, 20px);
@@ -112,10 +100,6 @@ img {
 
 @keyframes custom_fadeinup {
   0% {
-    -webkit-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
-    -moz-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
-    -o-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
-    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
     -webkit-transform: translate(0, 20px);
     -ms-transform: translate(0, 20px);
     -moz-transform: translate(0, 20px);
