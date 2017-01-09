@@ -1,7 +1,6 @@
-//animation scrollIcon for headers
+//animation for modules
 @mixin cus_fadeInUp {
     0% {
-        @include transition(all, 1s, cubic-bezier(0.165, 0.84, 0.44, 1));
         @include transform(translate(0,20px));
         opacity:0;
     }
