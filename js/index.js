@@ -172,6 +172,17 @@
   };
 
   // header_03
+  var header_03 = function() {
+    /*---------------------
+    文字三角形凹槽高度
+    -----------------------*/
+    var $headerWrap = $('.header_03 .headerWrap'),
+      $visualBg = $headerWrap.find('.visualBg'),
+      $txtBg = $headerWrap.find('.detail .detailWrap .txtBg'),
+      $txtWrap = $headerWrap.find('.detail .detailWrap');
+    $txtBg.height($txtWrap.height());
+    $headerWrap.height($txtBg.height() + $visualBg.height() - 31);
+  };
   var header_03_slider = function() {
     var $header_03_banner = $("#header_03_banner");
     $header_03_banner.lightSlider({
@@ -184,19 +195,9 @@
       pause: 3000,
       controls: false,
       galleryMargin: 0,
-      pager: $header_03_banner.data('pager')
+      pager: $header_03_banner.data('pager'),
+      onSliderLoad: header_03
     });
-  };
-  var header_03 = function() {
-    /*---------------------
-    文字三角形凹槽高度
-    -----------------------*/
-    var $headerWrap = $('.header_03 .headerWrap'),
-      $visualBg = $headerWrap.find('.visualBg'),
-      $txtBg = $headerWrap.find('.detail .detailWrap .txtBg'),
-      $txtWrap = $headerWrap.find('.detail .detailWrap');
-    $txtBg.height($txtWrap.height());
-    $headerWrap.height($txtBg.height() + $visualBg.height() - 31);
   };
 
   // layout_04
@@ -434,7 +435,6 @@
   init();
   nav_01();
   header_03_slider();
-  header_03();
   layout_04();
   gallery_01();
   gallery_02();
