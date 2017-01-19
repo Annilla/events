@@ -185,7 +185,7 @@
   };
   var header_03_slider = function() {
     var $header_03_banner = $("#header_03_banner");
-    $header_03_banner.lightSlider({
+    var slider = $header_03_banner.lightSlider({
       item: 1,
       slideMargin: 0,
       addClass: 'header_03_banner',
@@ -196,7 +196,12 @@
       controls: false,
       galleryMargin: 0,
       pager: $header_03_banner.data('pager'),
-      onSliderLoad: header_03
+      onSliderLoad: function (e) {
+        header_03();
+        e.parents().find('ul.lSpg >li').click(function(){
+          slider.pause();
+        });
+      }
     });
   };
 
