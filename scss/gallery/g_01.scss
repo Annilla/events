@@ -1,336 +1,228 @@
 .gallery_01 {
-    position: relative;
-    background-color: $white;
-    padding-top: 30px;
-    padding-bottom: 20px;
+  position: relative;
+  background-color: $white;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  @include screen(pcSmall) {
+    padding-bottom: 100px;
+  }
+  .layoutWrap {
+    padding-bottom: 30px;
     @include screen(pcSmall) {
-        padding-bottom: 100px;
+      max-width: $pc_max_width;
+      margin: 0 auto;
     }
-    .layoutWrap {
-        padding-bottom: 30px;
-        @include screen(pcSmall) {
-            max-width: $pc_max_width;
-            margin: 0 auto;
-        }
-        .title {
-            padding: 50px $m_gap 0 $m_gap;
-            text-align: center;
-            font-size: 28px;
-            line-height: 1.5em;
-            font-weight: bold;
-            letter-spacing: 2px;
-            &:after {
-                content: '';
-                display: block;
-                width: 100px;
-                height: 5px;
-                margin: 5px auto 10px auto;
-                background-color: $black;
-            }
-        }
-        .detail {
-            margin: 0 auto;
-            padding: 0px $m_gap;
-            font-size: 30px;
-            line-height: 1.5em;
-            text-align: center;
-            font-weight: bold;
-            @include screen(tb) {
-            }
-            @include screen(pcSmall) {
-                width: 630px;
-            }
-        }
-        .subTitleWrap {
-            @include screen(pcSmall){
-                width: 970px;
-                margin: 0 auto;
-            }
-            .subTitle {
-                margin: 20px $m_gap 0 $m_gap;
-                color: $black_50;
-                @include screen(tb) {
-                    margin: 20px $tb_gap 0 $tb_gap;
-                }
-                @include screen(pcSmall){
-                    width: 65%;
-                    margin: 20px auto 0 auto;
-                    text-align: center;
-                }
-            }
-        }
+    .title {
+      padding: 50px $m_gap 0 $m_gap;
+      text-align: center;
+      font-size: 28px;
+      line-height: 1.5em;
+      font-weight: bold;
+      letter-spacing: 2px;
+      &:after {
+        content: '';
+        display: block;
+        width: 100px;
+        height: 5px;
+        margin: 5px auto 10px auto;
+        background-color: $black;
+      }
     }
-    .gallery_01_slider {
-        position: relative;
+    .detail {
+      margin: 0 auto;
+      padding: 0px $m_gap;
+      font-size: 30px;
+      line-height: 1.5em;
+      text-align: center;
+      font-weight: bold;
+      @include screen(tb) {}
+      @include screen(pcSmall) {
+        width: 630px;
+      }
+    }
+    .subTitleWrap {
+      @include screen(pcSmall) {
+        width: 970px;
         margin: 0 auto;
-        top: 0px;
-        left: 0px;
-        width: 320px;
-        height: 370px; //300(slide)+gap(10)+thumb(60)
+      }
+      .subTitle {
+        margin: 20px $m_gap 0 $m_gap;
+        color: $black_50;
+        @include screen(tb) {
+          margin: 20px $tb_gap 0 $tb_gap;
+        }
+        @include screen(pcSmall) {
+          width: 65%;
+          margin: 20px auto 0 auto;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .gallery_01_slider {
+    // generate by lightSlider js
+    ul.lSSlide {
+      @include screen(pcSmall) {
+        margin-left: 400px; // adjust in js
+      }
+    }
+    .galleryWrap {
+      @include screen(pcSmall) {
+        // js add wrapper to thumb and resize
         overflow: hidden;
-        visibility: hidden;
-        @include screen(pcSmall) {
-            width: 800px; //js window.width
-            height: 670px; //600(slide)+gap(10)+thumb(60)
-        }
-        .loading {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            .loader {
-                color: white;
-                text-align: center;
-            }
-        }
-        .slides {
-            cursor: default;
-            position: relative;
-            top: 0px;
-            left: 0px;
-            width: 320px;
-            height: 300px; //240(img)+60(txt);
-            overflow: hidden;
-            @include screen(pcSmall) {
-                width: 800px; //js window.width
-                height: 600px; //600(img);
-            }
-            .img {
-                min-height: 240px;
-                display: -webkit-flex;
-                display: flex;
-                -webkit-align-items: center;
-                align-items: center;
-                -webkit-justify-content: center;
-                justify-content: center;
-                background-color: black;
-                @include screen(pcSmall) {
-                    height: 100%;
-                    background-color: transparent;
-                }
-                img {
-                    display: block;
-                    -webkit-align-self: center;
-                    align-self: center;
-                    cursor: pointer;
-                    @include screen(pcSmall) {
-                        @include transform(scale(0.9));
-                        @include transform-origin(50% 50%);
-                        opacity: 0.5;
-                        @include transition;
-                        &.bigger {
-                            @include transform(scale(1));
-                            @include transform-origin(50% 50%);
-                            opacity: 1;
-                        }
-                    }
-                }
-            }
-            .txt {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                color: white;
-                background-color: black;
-                @include screen(pcSmall) {
-                    background-color: rgba(255, 255, 255, 0.7);
-                    color: black;
-                }
-                span {
-                    display: block;
-                    font-size: 12px;
-                    line-height: 1.5em;
-                    letter-spacing: 3px;
-                    padding: 12px 12px;
-                    @include screen(pcSmall) {
-                        font-size: 14px;
-                        text-align: center;
-                    }
-                }
-            }
-        }
-        /* jssor slider arrow navigator skin 05 css */
-        .jssora05l {
-            display: none;
-            position: absolute;
-            /* size of arrow element */
-            top: 90px;
-            left: 0px;
-            width: 40px;
-            height: 60px;
-            cursor: pointer;
-            overflow: hidden;
-            @include screen(pcSmall) {
-                width: 320px;//js (window.width-800)/2
-                height: 600px;
-                top: 0px;
-                display: block;
-            }
-            &:hover, &.jssora05ldn {
-                svg.arrowL {
-                    polyline {
-                        stroke: rgba(0,0,0,0.8);
-                    }
-                }
-            }
-            svg.arrowL {
-                float: right;
-                margin-top: 270px;
-                margin-right: 50px;
-                width: 20px;
-                height: 60px;
-                polyline {
-                    fill: none;
-                    stroke: rgba(0,0,0,0.3);
-                    stroke-width: 2px;
-                }
-            }
-        }
-        .jssora05r {
-            display: none;
-            position: absolute;
-            /* size of arrow element */
-            top: 90px;
-            right: 0px;
-            width: 40px;
-            height: 60px;
-            cursor: pointer;
-            overflow: hidden;
-            @include screen(pcSmall) {
-                width: 320px;//js (window.width-800)/2
-                height: 600px;
-                top: 0px;
-                display: block;
-            }
-            &:hover, &.jssora05rdn {
-                svg.arrowR {
-                    polyline {
-                        stroke: rgba(0,0,0,0.8);
-                    }
-                }
-            }
-            svg.arrowR {
-                float: left;
-                margin-top: 270px;
-                margin-left: 50px;
-                width: 20px;
-                height: 60px;
-                polyline {
-                    fill: none;
-                    stroke: rgba(0,0,0,0.3);
-                    stroke-width: 2px;
-                }
-            }
-        }
-        /* jssor slider thumbnail navigator skin 01 css */
-        .jssort01 {
-            position: absolute;
-            left: 0px;
-            bottom: 0px;
-            width: 320px;
-            height: 60px;
-            @include screen(pcSmall) {
-                width: 800px;
-                height: 60px;
-            }
-            .slides {
-                cursor: default;
-            }
-            .p {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 60px;
-                height: 60px;
-                @include screen(pcSmall) {
-                    width: 60px;
-                    height: 60px;
-                }
-                &:hover .c {
-                    top: 0px; //0px
-                    left: 0px; //0px
-                    width: 56px;
-                    height: 56px;
-                    border: rgba(0,0,0,1) 2px solid;
-                    cursor: pointer;
-                    //background-position: 50% 50%;
-                    @include screen(pcSmall) {
-                        width: 56px;
-                        height: 56px;
-                    }
-                }
-                &.pdn .c {
-                    background-position: 50% 50%;
-                    top: 0px; //0px
-                    left: 0px; //0px
-                    width: 56px;
-                    height: 56px;
-                    border: rgba(0,0,0,1) 2px solid;
-                    @include screen(pcSmall) {
-                        width: 56px;
-                        height: 56px;
-                    }
-                }
-            }
-            .t {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                border: none;
-            }
-            .w {
-                position: absolute;
-                top: 0px;
-                left: 0px;
-                width: 100%;
-                height: 100%;
-            }
-            .c {
-                position: absolute;
-                top: 0px;
-                left: 0px;
-                width: 56px;
-                height: 56px;
-                //border: #000 2px solid;
-                box-sizing: content-box;
-                //background: url('../img/gallery/g_01/t01.png') -800px -800px no-repeat;
-                _background: none;
-                @include screen(pcSmall) {
-                    width: 56px;
-                    height: 56px;
-                }
-            }
-            .pav .c {
-                top: 0px;
-                _top: 0px;
-                left: 0px;
-                _left: 0px;
-                width: 56px;
-                height: 56px;
-                border: rgba(0,0,0,1) 2px solid;
-                _border: rgba(0,0,0,1) 2px solid;
-                //background-position: 50% 50%;
-                background-color: rgba(0,0,0,0.3);
-                @include screen(pcSmall) {
-                    width: 56px;
-                    height: 56px;
-                }
-            }
-        }
+        @include transform(scale(0.4));
+        @include transform-origin(50% 10%);
+      }
     }
-}
-
-* html .layout05_slider .jssort01 {
-    .c,
-    .pdn .c,
-    .pav .c {
-        /* ie quirks mode adjust */
-        width: 60px;
-        height: 60px;
-        @include screen(pcSmall) {
-            width: 60px;
-            height: 60px;
+    .lSAction {
+      >a {
+        top: 0;
+        width: 300px; // js
+        height: 600px;
+        margin-top: 0;
+        background-image: none;
+        overflow: hidden;
+        &.lSPrev {
+          left: 0;
         }
+        &.lSNext {
+          right: 0;
+        }
+        svg {
+          width: 20px;
+          margin-top: 270px;
+          &.arrowL {
+            float: right;
+            margin-right: 50px;
+          }
+          &.arrowR {
+            float: left;
+            margin-left: 50px;
+          }
+          polyline {
+            fill: none;
+            stroke: rgba(0, 0, 0, 0.5);
+            stroke-width: 2px;
+          }
+        }
+      }
     }
+    ul.lSGallery {
+      li {
+        a {
+          display: block;
+          position: relative;
+          &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0);
+            border: 3px solid rgba(0, 0, 0, 0);
+            box-sizing: border-box;
+          }
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+      li.active {
+        border-radius: 0;
+        a {
+          &:after {
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 3px solid rgba(0, 0, 0, 1);
+          }
+        }
+      }
+    }
+  }
+  // slider default
+  ul.slider {
+    li {
+      position: relative;
+      width: 100%;
+      height: 306px; //240(img)+66(txt)
+      overflow: hidden;
+      @include screen(mMedium) {
+        height: 347.25px; //281.25(img)+66(txt)
+      }
+      @include screen(mLarge) {
+        height: 376.5px; //310.5(img)+66(txt)
+      }
+      @include screen(tb) {
+        height: 624px; //576(img)+48(txt)
+      }
+      @include screen(pcSmall) {
+        height: 600px; //600(img)
+      }
+      .img {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        background-color: black;
+        height: calc(100% - 66px); //240(img)+66(txt)
+        @include screen(tb) {
+          height: calc(100% - 48px); //576(img)+48(txt)
+        }
+        @include screen(pcSmall) {
+          height: auto;
+          background-color: transparent;
+        }
+        img {
+          display: block;
+          -webkit-align-self: center;
+          align-self: center;
+          cursor: pointer;
+          @include screen(pcSmall) {
+            @include transform(scale(0.9));
+            @include transform-origin(50% 50%);
+            opacity: 0.5;
+            @include transition;
+          }
+        }
+      }
+      .txt {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        color: white;
+        background-color: black;
+        @include screen(pcSmall) {
+          background-color: rgba(255, 255, 255, 0.7);
+          color: black;
+        }
+        span {
+          display: block;
+          font-size: 14px;
+          line-height: 1.5em;
+          letter-spacing: 3px;
+          padding: 12px 12px;
+          @include screen(tb) {
+            font-size: 16px;
+            text-align: center;
+          }
+          @include screen(pcSmall) {
+            font-size: 14px;
+            text-align: center;
+          }
+        }
+      }
+    }
+    li.active {
+      .img {
+        img {
+          @include transform(scale(1));
+          @include transform-origin(50% 50%);
+          opacity: 1;
+        }
+      }
+    }
+  }
 }

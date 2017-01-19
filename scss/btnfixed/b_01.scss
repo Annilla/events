@@ -6,6 +6,7 @@ ul.fixedBtn_01 {
     position: fixed;
     right: $m_gap;
     bottom: $m_gap;
+    z-index: 1;
     @include transition;
     @include screen(tb) {
         right: $tb_gap;
