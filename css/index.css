@@ -973,13 +973,13 @@ img {
       width: 1000px;
       height: 80px;
       margin: 0 auto;
-      background-color: rgba(242, 158, 173, 0.9); } }
+      background-color: rgba(0, 0, 0, 0.5); } }
   @media screen and (width: 1024px) {
     .nav_01 .navWrap {
       top: 0; } }
   .nav_01 .navWrap .logoWrap {
     height: 80px;
-    background-color: rgba(242, 158, 173, 0.9);
+    background-color: rgba(0, 0, 0, 0.5);
     overflow: hidden; }
     @media screen and (min-width: 1024px) {
       .nav_01 .navWrap .logoWrap {
@@ -1067,7 +1067,7 @@ img {
               right: 200px;
               z-index: 1;
               padding: 0 0;
-              background-color: #bccad2;
+              background-color: #333333;
               display: none; }
               .nav_01 .navWrap .menuWrap ul.menu li ul li {
                 float: none;
@@ -1081,7 +1081,7 @@ img {
             .nav_01 .navWrap .menuWrap ul.menu li:hover ul {
               display: block; }
               .nav_01 .navWrap .menuWrap ul.menu li:hover ul li {
-                background-color: #bccad2; }
+                background-color: #333333; }
                 .nav_01 .navWrap .menuWrap ul.menu li:hover ul li:hover {
                   background-color: rgba(0, 0, 0, 0.3); } }
         .nav_01 .navWrap .menuWrap ul.menu li .more {
@@ -1303,7 +1303,7 @@ img {
           bottom: -60px;
           width: 100%;
           padding-bottom: 30px;
-          background-color: #bccad2;
+          background-color: #333333;
           height: 360px; }
           @media screen and (min-width: 375px) {
             .header_01 .headerWrap .detail .detailWrap .txtBg {
@@ -1403,7 +1403,7 @@ img {
                     float: right; } }
           .header_01 .headerWrap .detail .detailWrap .txtInner a.link {
             display: block;
-            background-color: #f29ead;
+            background-color: gray;
             color: #fff;
             text-align: right;
             line-height: 60px;
@@ -1439,7 +1439,7 @@ img {
                 .header_01 .headerWrap .detail .detailWrap .txtInner a.link .linkWrap .ch {
                   display: block; } }
             .header_01 .headerWrap .detail .detailWrap .txtInner a.link:hover {
-              background-color: rgba(242, 158, 173, 0.9); }
+              background-color: rgba(0, 0, 0, 0.5); }
               .header_01 .headerWrap .detail .detailWrap .txtInner a.link:hover .arrow {
                 -webkit-animation: arrow_move 1s linear infinite;
                 -moz-animation: arrow_move 1s linear infinite;
@@ -1541,11 +1541,13 @@ img {
       @media screen and (min-width: 1024px) {
         .header_02 .headerWrap .parallax {
           display: block;
+          -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
           bottom: 0;
           height: auto;
           min-height: 100%;
           min-width: 100%;
+          -webkit-perspective: 1000;
           perspective: 1000;
           position: fixed;
           right: 0;
@@ -1640,7 +1642,7 @@ img {
           bottom: -60px;
           width: 100%;
           padding-bottom: 30px;
-          background-color: #bccad2;
+          background-color: #333333;
           height: 360px; }
           @media screen and (min-width: 375px) {
             .header_02 .headerWrap .detail .detailWrap .txtBg {
@@ -1740,7 +1742,7 @@ img {
                     float: right; } }
           .header_02 .headerWrap .detail .detailWrap .txtInner a.link {
             display: block;
-            background-color: #f29ead;
+            background-color: gray;
             color: #fff;
             text-align: right;
             line-height: 60px;
@@ -1776,7 +1778,7 @@ img {
                 .header_02 .headerWrap .detail .detailWrap .txtInner a.link .linkWrap .ch {
                   display: block; } }
             .header_02 .headerWrap .detail .detailWrap .txtInner a.link:hover {
-              background-color: rgba(242, 158, 173, 0.9); }
+              background-color: rgba(0, 0, 0, 0.5); }
               .header_02 .headerWrap .detail .detailWrap .txtInner a.link:hover .arrow {
                 -webkit-animation: arrow_move 1s linear infinite;
                 -moz-animation: arrow_move 1s linear infinite;
@@ -1945,7 +1947,7 @@ img {
         width: 100%;
         height: 100%;
         padding-bottom: 30px;
-        background-color: #bccad2; }
+        background-color: #333333; }
         .header_03 .headerWrap .detail .detailWrap .txtBg:before, .header_03 .headerWrap .detail .detailWrap .txtBg:after {
           content: '';
           position: absolute;
@@ -2032,7 +2034,7 @@ img {
                   float: right; } }
         .header_03 .headerWrap .detail .detailWrap .txtInner a.link {
           display: block;
-          background-color: #f29ead;
+          background-color: gray;
           color: #fff;
           text-align: right;
           line-height: 60px;
@@ -2068,7 +2070,7 @@ img {
               .header_03 .headerWrap .detail .detailWrap .txtInner a.link .linkWrap .ch {
                 display: block; } }
           .header_03 .headerWrap .detail .detailWrap .txtInner a.link:hover {
-            background-color: rgba(242, 158, 173, 0.9); }
+            background-color: rgba(0, 0, 0, 0.5); }
             .header_03 .headerWrap .detail .detailWrap .txtInner a.link:hover .arrow {
               -webkit-animation: arrow_move 1s linear infinite;
               -moz-animation: arrow_move 1s linear infinite;
@@ -2148,7 +2150,7 @@ img {
           width: 89%;
           height: initial;
           padding: 6%;
-          background-color: rgba(242, 158, 173, 0.9);
+          background-color: rgba(0, 0, 0, 0.5);
           color: #fff;
           font-weight: bold;
           opacity: 0;
@@ -2456,7 +2458,7 @@ img {
           width: 81%;
           height: 80%;
           padding: 10%;
-          background-color: rgba(242, 158, 173, 0.9);
+          background-color: rgba(0, 0, 0, 0.5);
           color: #fff;
           font-weight: bold;
           opacity: 0;
@@ -2578,7 +2580,7 @@ img {
               width: 81%;
               height: 80%;
               padding: 10%;
-              background-color: rgba(242, 158, 173, 0.9);
+              background-color: rgba(0, 0, 0, 0.5);
               color: #fff;
               font-weight: bold;
               opacity: 0;
@@ -2773,7 +2775,7 @@ img {
               width: 81%;
               height: 80%;
               padding: 10%;
-              background-color: rgba(242, 158, 173, 0.9);
+              background-color: rgba(0, 0, 0, 0.5);
               color: #fff;
               font-weight: bold;
               opacity: 0;
@@ -2888,7 +2890,7 @@ img {
               width: 89%;
               height: initial;
               padding: 6%;
-              background-color: rgba(242, 158, 173, 0.9);
+              background-color: rgba(0, 0, 0, 0.5);
               color: #fff;
               font-weight: bold;
               opacity: 0;
@@ -3089,7 +3091,7 @@ img {
                 width: 89%;
                 height: initial;
                 padding: 6%;
-                background-color: rgba(242, 158, 173, 0.9);
+                background-color: rgba(0, 0, 0, 0.5);
                 color: #fff;
                 font-weight: bold;
                 opacity: 0;
@@ -3191,7 +3193,7 @@ img {
                 width: 81%;
                 height: 80%;
                 padding: 10%;
-                background-color: rgba(242, 158, 173, 0.9);
+                background-color: rgba(0, 0, 0, 0.5);
                 color: #fff;
                 font-weight: bold;
                 opacity: 0;
@@ -3405,7 +3407,7 @@ img {
               width: 81%;
               height: 80%;
               padding: 10%;
-              background-color: rgba(242, 158, 173, 0.9);
+              background-color: rgba(0, 0, 0, 0.5);
               color: #fff;
               font-weight: bold;
               opacity: 0;
@@ -3539,7 +3541,7 @@ img {
           width: 81%;
           height: 80%;
           padding: 10%;
-          background-color: rgba(242, 158, 173, 0.9);
+          background-color: rgba(0, 0, 0, 0.5);
           color: #fff;
           font-weight: bold;
           opacity: 0;
@@ -3675,7 +3677,7 @@ img {
           width: 89%;
           height: initial;
           padding: 6%;
-          background-color: rgba(242, 158, 173, 0.9);
+          background-color: rgba(0, 0, 0, 0.5);
           color: #fff;
           font-weight: bold;
           opacity: 0;
@@ -3770,7 +3772,7 @@ img {
                   color: #fff; } }
 
 .article_01 {
-  background-color: #394b56;
+  background-color: black;
   padding: 50px 0; }
   .article_01 .articleWrap {
     position: relative;
@@ -3838,7 +3840,7 @@ img {
         width: 238px;
         margin: 0 auto;
         line-height: 60px;
-        background-color: #f29ead;
+        background-color: gray;
         padding: 0 20px;
         overflow: hidden;
         position: relative; }
@@ -3901,7 +3903,7 @@ img {
       width: 90%;
       margin-bottom: 20px;
       padding: 30px 5%;
-      background-color: #dbe2e6; }
+      background-color: #4d4d4d; }
       @media screen and (min-width: 1024px) {
         .article_02 .articleWrap ul.article li {
           width: 38%;
@@ -3911,7 +3913,7 @@ img {
         width: 208px;
         margin: 10px auto 0 auto;
         line-height: 60px;
-        background-color: #f29ead;
+        background-color: gray;
         padding: 0 20px;
         overflow: hidden;
         position: relative;
@@ -4095,10 +4097,13 @@ img {
         height: 600px; } }
     .gallery_01 ul.slider li .img {
       display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
       -webkit-align-items: center;
+      -ms-flex-align: center;
       align-items: center;
       -webkit-justify-content: center;
+      -ms-flex-pack: center;
       justify-content: center;
       background-color: black;
       height: calc(100% - 66px); }
@@ -4112,6 +4117,8 @@ img {
       .gallery_01 ul.slider li .img img {
         display: block;
         -webkit-align-self: center;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
         align-self: center;
         cursor: pointer; }
         @media screen and (min-width: 1024px) {
@@ -4242,7 +4249,7 @@ img {
 
 .footer_01 {
   display: block;
-  background-color: #bccad2;
+  background-color: #333333;
   color: #fff;
   text-align: center;
   position: relative;
@@ -4376,7 +4383,7 @@ ul.fixedBtn_01 {
       height: 60px;
       overflow: hidden;
       border-radius: 30px;
-      background-color: #f29ead;
+      background-color: gray;
       cursor: pointer;
       -webkit-transition: all 0.5s ease 0s;
       -moz-transition: all 0.5s ease 0s;
@@ -4482,10 +4489,13 @@ ul.fixedBtn_01 {
       width: 100%;
       height: 100vh;
       display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
       -webkit-align-items: center;
+      -ms-flex-align: center;
       align-items: center;
       -webkit-justify-content: center;
+      -ms-flex-pack: center;
       justify-content: center;
       opacity: 0;
       -webkit-transition: all 0.5s ease 0s;
@@ -4568,7 +4578,7 @@ ul.fixedBtn_01 {
                 height: 60px;
                 overflow: hidden;
                 border-radius: 30px;
-                background-color: #f29ead;
+                background-color: gray;
                 cursor: pointer;
                 -webkit-transition: all 0.5s ease 0s;
                 -moz-transition: all 0.5s ease 0s;
