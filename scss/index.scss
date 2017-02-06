@@ -3,8 +3,9 @@
 // common use
 @import "common/variables";
 @import "common/mixin";
-@import "common/base";
 @import "common/keyframes";
+@import "common/reset";
+@import "common/global";
 
 // modules
 @import "nav/n_01";

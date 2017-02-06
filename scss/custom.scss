@@ -161,19 +161,6 @@ body {
   }
 }
 
-.header_04 {
-  .headerWrap {
-    .detail {
-      .detailWrap {
-        .txtBg {
-          //描述背景色
-          background-color: rgba(0, 34, 45, 1);
-        }
-      }
-    }
-  }
-}
-
 .layout_01 {
   //背景色
   //background-color: $white;
@@ -608,6 +595,36 @@ body {
             // stroke: rgba(255, 255, 255, 0.5);
           }
         }
+      }
+    }
+  }
+  ul.slider {
+    li {
+      // 隱藏照片描述(調整高度)
+      // height: 240px; //240(img)+66(txt)
+      @include screen(mMedium) {
+        // 隱藏照片描述(調整高度)
+        // height: 281.25px; //281.25(img)+66(txt)
+      }
+      @include screen(mLarge) {
+        // 隱藏照片描述(調整高度)
+        // height: 310.5px; //310.5(img)+66(txt)
+      }
+      @include screen(tb) {
+        // 隱藏照片描述(調整高度)
+        // height: 576px; //576(img)+48(txt)
+      }
+      .img {
+        // 隱藏照片描述(調整高度)
+        // height: 100%; //240(img)+66(txt)
+        @include screen(tb) {
+          // 隱藏照片描述(調整高度)
+          // height: 100%; //576(img)+48(txt)
+        }
+      }
+      .txt {
+        // 隱藏文字描述
+        // display: none;
       }
     }
   }

@@ -1,0 +1,10 @@
+// custom global class
+.hide {
+	display: none;
+}
+
+// plugin wow = scroll to animation
+// animation fadeinup for all elements
+.custom_fadeinup {
+  	@include animation(custom_fadeinup 1s cubic-bezier(0.165, 0.84, 0.44, 1));
+}
