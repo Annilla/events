@@ -4,7 +4,7 @@ html(lang='zh-TW')
     include ./base/head.jade
   body
     #fb-root
-    h1.hide 夏日穿搭特輯 - JUKSY 流行生活網
+    h1.hide 夏日穿搭特輯 - JUKSY 街星
     include ./nav/n_01.jade
     include ./header/h_01.jade
     include ./header/h_02.jade
@@ -36,20 +36,10 @@ html(lang='zh-TW')
     script(src="//embedsocial.com/js/iframe.js")
 
     // JS DEV FILE
-    script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js")
-    script(src="//cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js")
-    script(src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js")
-    script(src="//cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js")
-    script(src="//cdnjs.cloudflare.com/ajax/libs/jQuery.dotdotdot/1.7.4/jquery.dotdotdot.min.js")
-    script(src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js")
-    script(src="//cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js")
-    script(src="//cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js")
-    script(src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js")
-    script(src="js/index.js")
+    include ./base/devjs.jade
 
     // JS MIN FILE
-    //- script(src="js/app.assets.js")
-    //- script(src="js/app.min.js")
+    //- include ./base/minjs.jade
 
     // JS third party
     script(type='text/javascript')
