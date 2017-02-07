@@ -169,7 +169,7 @@ body {
   }
 }
 
-.layout_01 {
+.list_01 {
   //背景色
   //background-color: $white;
   .layoutWrap {
@@ -218,7 +218,7 @@ body {
   }
 }
 
-.layout_02 {
+.list_02 {
   //背景色
   //background-color: $white;
   .layoutWrap {
@@ -287,7 +287,7 @@ body {
   }
 }
 
-.layout_03 {
+.list_03 {
   //背景色
   //background-color: $white;
   .layoutWrap {
@@ -394,7 +394,7 @@ body {
   }
 }
 
-.layout_04 {
+.list_04 {
   //模板背景色
   //background-color: $black;
   .layoutWrap {
@@ -443,7 +443,7 @@ body {
   }
 }
 
-.layout_05 {
+.list_05 {
   .layoutWrap {
     ul.article {
       li {
@@ -468,7 +468,7 @@ body {
   }
 }
 
-.layout_06 {
+.list_06 {
   //模板背景色
   //background-color: $black;
   .layoutWrap {
@@ -506,45 +506,6 @@ body {
                 //@include linear-gradient(to right, transparent 50%, $black 50%);
               }
             }
-          }
-        }
-      }
-    }
-  }
-}
-
-.article_01 {
-  //模板背景色
-  //background-color: darken($grey, 50%);
-  @include screen(pcSmall) {
-    //模板背景色－桌機
-    //background-color: rgba(0,0,0,0.5);
-  }
-  .articleWrap {
-    .txtWrap {
-      @include screen(pcSmall) {
-        //框線顏色
-        //border: 1px solid rgba(250,141,41,1);
-      }
-      .btnWrap {
-        a.btn {
-          //按鈕顏色
-          //background-color: $pink;
-          &:before {
-            //按鈕框線顏色
-            //border: 1px solid rgba(123,156,188,1);
-          }
-          .icon {
-            svg {
-              .st0 {
-                //按鈕facebook svg 顏色
-                //fill: rgba(123,156,188,1);
-              }
-            }
-          }
-          .icontext {
-            //按鈕文字顏色
-            //color: rgba(123,156,188,1);
           }
         }
       }
@@ -638,7 +599,46 @@ body {
   }
 }
 
-.gallery_02 {
+.social_01 {
+  //模板背景色
+  //background-color: darken($grey, 50%);
+  @include screen(pcSmall) {
+    //模板背景色－桌機
+    //background-color: rgba(0,0,0,0.5);
+  }
+  .articleWrap {
+    .txtWrap {
+      @include screen(pcSmall) {
+        //框線顏色
+        //border: 1px solid rgba(250,141,41,1);
+      }
+      .btnWrap {
+        a.btn {
+          //按鈕顏色
+          //background-color: $pink;
+          &:before {
+            //按鈕框線顏色
+            //border: 1px solid rgba(123,156,188,1);
+          }
+          .icon {
+            svg {
+              .st0 {
+                //按鈕facebook svg 顏色
+                //fill: rgba(123,156,188,1);
+              }
+            }
+          }
+          .icontext {
+            //按鈕文字顏色
+            //color: rgba(123,156,188,1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.social_02 {
   //模板背景色
   //background-color: $black;
   .layoutWrap {

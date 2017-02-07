@@ -1541,13 +1541,11 @@ img {
       @media screen and (min-width: 1024px) {
         .header_02 .headerWrap .parallax {
           display: block;
-          -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
           bottom: 0;
           height: auto;
           min-height: 100%;
           min-width: 100%;
-          -webkit-perspective: 1000;
           perspective: 1000;
           position: fixed;
           right: 0;
@@ -2077,19 +2075,19 @@ img {
               -o-animation: arrow_move 1s linear infinite;
               animation: arrow_move 1s linear infinite; }
 
-.layout_01 {
+.list_01 {
   position: relative;
   padding-bottom: 50px;
   background-color: #fff; }
-  .layout_01 .layoutWrap {
+  .list_01 .layoutWrap {
     overflow: hidden;
     position: relative; }
     @media screen and (min-width: 1024px) {
-      .layout_01 .layoutWrap {
+      .list_01 .layoutWrap {
         max-width: 970px;
         margin: 0 auto;
         padding-top: 50px; } }
-    .layout_01 .layoutWrap .title {
+    .list_01 .layoutWrap .title {
       position: absolute;
       left: 20px;
       font-size: 30px;
@@ -2097,10 +2095,10 @@ img {
       line-height: 1em;
       margin-top: 30px; }
       @media screen and (min-width: 768px) {
-        .layout_01 .layoutWrap .title {
+        .list_01 .layoutWrap .title {
           left: 40px; } }
       @media screen and (min-width: 1024px) {
-        .layout_01 .layoutWrap .title {
+        .list_01 .layoutWrap .title {
           width: auto;
           display: inline-block;
           right: initial;
@@ -2109,7 +2107,7 @@ img {
           padding-left: 20px;
           margin-top: 50px;
           width: 474px; } }
-      .layout_01 .layoutWrap .title:after {
+      .list_01 .layoutWrap .title:after {
         content: "";
         display: inline-block;
         width: 40%;
@@ -2117,26 +2115,26 @@ img {
         border-top: 1px solid #000;
         margin: 0 0 0.4em 10px; }
         @media screen and (min-width: 1024px) {
-          .layout_01 .layoutWrap .title:after {
+          .list_01 .layoutWrap .title:after {
             width: 300px;
             height: 0;
             display: inline-block;
             border-left: 0px solid #000;
             border-top: 1px solid #000;
             margin: 0 0 0.4em 38px; } }
-    .layout_01 .layoutWrap .mainArticle {
+    .list_01 .layoutWrap .mainArticle {
       padding-right: 20px;
       padding-top: 80px; }
       @media screen and (min-width: 768px) {
-        .layout_01 .layoutWrap .mainArticle {
+        .list_01 .layoutWrap .mainArticle {
           padding-right: 40px; } }
       @media screen and (min-width: 1024px) {
-        .layout_01 .layoutWrap .mainArticle {
+        .list_01 .layoutWrap .mainArticle {
           padding-top: 0;
           padding-right: 0;
           width: 47%;
           float: right; } }
-      .layout_01 .layoutWrap .mainArticle a.img {
+      .list_01 .layoutWrap .mainArticle a.img {
         display: block;
         background-size: cover;
         background-repeat: no-repeat;
@@ -2146,7 +2144,7 @@ img {
         position: relative;
         overflow: hidden;
         height: calc(300px/1.9); }
-        .layout_01 .layoutWrap .mainArticle a.img .linkWrap {
+        .list_01 .layoutWrap .mainArticle a.img .linkWrap {
           width: 89%;
           height: initial;
           padding: 6%;
@@ -2158,66 +2156,66 @@ img {
           -moz-transition: all 0.5s ease 0s;
           -o-transition: all 0.5s ease 0s;
           transition: all 0.5s ease 0s; }
-          .layout_01 .layoutWrap .mainArticle a.img .linkWrap .linkBorder {
+          .list_01 .layoutWrap .mainArticle a.img .linkWrap .linkBorder {
             height: initial;
             border: 1px solid #fff;
             padding-top: 13%;
             padding-bottom: 14%;
             text-align: center; }
             @media screen and (min-width: 414px) {
-              .layout_01 .layoutWrap .mainArticle a.img .linkWrap .linkBorder {
+              .list_01 .layoutWrap .mainArticle a.img .linkWrap .linkBorder {
                 padding-top: 13%;
                 padding-bottom: 15.5%; } }
             @media screen and (min-width: 768px) {
-              .layout_01 .layoutWrap .mainArticle a.img .linkWrap .linkBorder {
+              .list_01 .layoutWrap .mainArticle a.img .linkWrap .linkBorder {
                 padding-top: 17%;
                 padding-bottom: 16%; } }
             @media screen and (min-width: 1024px) {
-              .layout_01 .layoutWrap .mainArticle a.img .linkWrap .linkBorder {
+              .list_01 .layoutWrap .mainArticle a.img .linkWrap .linkBorder {
                 padding-top: 15%;
                 padding-bottom: 15.5%; } }
-            .layout_01 .layoutWrap .mainArticle a.img .linkWrap .linkBorder .ch {
+            .list_01 .layoutWrap .mainArticle a.img .linkWrap .linkBorder .ch {
               display: block; }
-        .layout_01 .layoutWrap .mainArticle a.img:hover .linkWrap {
+        .list_01 .layoutWrap .mainArticle a.img:hover .linkWrap {
           opacity: 1; }
-        .layout_01 .layoutWrap .mainArticle a.img:hover .arrow {
+        .list_01 .layoutWrap .mainArticle a.img:hover .arrow {
           -webkit-animation: arrow_move 1s linear infinite;
           -moz-animation: arrow_move 1s linear infinite;
           -o-animation: arrow_move 1s linear infinite;
           animation: arrow_move 1s linear infinite; }
         @media screen and (min-width: 414px) {
-          .layout_01 .layoutWrap .mainArticle a.img {
+          .list_01 .layoutWrap .mainArticle a.img {
             height: calc(394px/1.9); } }
         @media screen and (min-width: 768px) {
-          .layout_01 .layoutWrap .mainArticle a.img {
+          .list_01 .layoutWrap .mainArticle a.img {
             height: calc(728px/1.9); } }
         @media screen and (min-width: 1024px) {
-          .layout_01 .layoutWrap .mainArticle a.img {
+          .list_01 .layoutWrap .mainArticle a.img {
             height: calc(455.89px/1.9); } }
-      .layout_01 .layoutWrap .mainArticle .detailWrap {
+      .list_01 .layoutWrap .mainArticle .detailWrap {
         padding-left: 20px; }
         @media screen and (min-width: 768px) {
-          .layout_01 .layoutWrap .mainArticle .detailWrap {
+          .list_01 .layoutWrap .mainArticle .detailWrap {
             padding-left: 40px; } }
         @media screen and (min-width: 1024px) {
-          .layout_01 .layoutWrap .mainArticle .detailWrap {
+          .list_01 .layoutWrap .mainArticle .detailWrap {
             padding-left: 15%; } }
-        .layout_01 .layoutWrap .mainArticle .detailWrap a.txt {
+        .list_01 .layoutWrap .mainArticle .detailWrap a.txt {
           display: block;
           height: 3.6em;
           padding-top: 1em;
           font-size: 18px; }
           @media screen and (min-width: 768px) {
-            .layout_01 .layoutWrap .mainArticle .detailWrap a.txt {
+            .list_01 .layoutWrap .mainArticle .detailWrap a.txt {
               font-size: 30px;
               height: 3.6em; } }
           @media screen and (min-width: 1024px) {
-            .layout_01 .layoutWrap .mainArticle .detailWrap a.txt {
+            .list_01 .layoutWrap .mainArticle .detailWrap a.txt {
               height: 5.4em;
               font-size: 21px;
               width: 70%; } }
           @media screen and (min-width: 1280px) {
-            .layout_01 .layoutWrap .mainArticle .detailWrap a.txt h3 {
+            .list_01 .layoutWrap .mainArticle .detailWrap a.txt h3 {
               display: inline;
               background-image: transparent;
               background-image: -webkit-linear-gradient(left, transparent 50%, #000 50%);
@@ -2230,24 +2228,24 @@ img {
               -moz-transition: all 0.4s ease 0s;
               -o-transition: all 0.4s ease 0s;
               transition: all 0.4s ease 0s; }
-              .layout_01 .layoutWrap .mainArticle .detailWrap a.txt h3:hover {
+              .list_01 .layoutWrap .mainArticle .detailWrap a.txt h3:hover {
                 background-size: 200%;
                 background-position: -100%;
                 color: #fff; } }
-        .layout_01 .layoutWrap .mainArticle .detailWrap a.category {
+        .list_01 .layoutWrap .mainArticle .detailWrap a.category {
           border-bottom: 1px solid #000;
           padding: 3px 5px;
           display: none;
           cursor: inherit; }
           @media screen and (min-width: 1024px) {
-            .layout_01 .layoutWrap .mainArticle .detailWrap a.category {
+            .list_01 .layoutWrap .mainArticle .detailWrap a.category {
               display: inline-block;
               margin-bottom: 1em; } }
-        .layout_01 .layoutWrap .mainArticle .detailWrap .detail {
+        .list_01 .layoutWrap .mainArticle .detailWrap .detail {
           max-height: 9em;
           overflow: hidden;
           color: rgba(0, 0, 0, 0.5); }
-        .layout_01 .layoutWrap .mainArticle .detailWrap a.button {
+        .list_01 .layoutWrap .mainArticle .detailWrap a.button {
           margin-top: 15px;
           display: inline-block;
           border-left: 1px solid rgba(0, 0, 0, 0.5);
@@ -2256,12 +2254,12 @@ img {
           padding: 8px 15px;
           position: relative; }
           @media screen and (min-width: 768px) {
-            .layout_01 .layoutWrap .mainArticle .detailWrap a.button {
+            .list_01 .layoutWrap .mainArticle .detailWrap a.button {
               margin-top: 30px; } }
           @media screen and (min-width: 1024px) {
-            .layout_01 .layoutWrap .mainArticle .detailWrap a.button {
+            .list_01 .layoutWrap .mainArticle .detailWrap a.button {
               margin-top: 30px; } }
-          .layout_01 .layoutWrap .mainArticle .detailWrap a.button:after, .layout_01 .layoutWrap .mainArticle .detailWrap a.button:before {
+          .list_01 .layoutWrap .mainArticle .detailWrap a.button:after, .list_01 .layoutWrap .mainArticle .detailWrap a.button:before {
             content: "";
             display: block;
             width: 0;
@@ -2281,12 +2279,12 @@ img {
             -o-transform-origin: 100% 0;
             transform-origin: 100% 0; }
             @media screen and (min-width: 768px) {
-              .layout_01 .layoutWrap .mainArticle .detailWrap a.button:after, .layout_01 .layoutWrap .mainArticle .detailWrap a.button:before {
+              .list_01 .layoutWrap .mainArticle .detailWrap a.button:after, .list_01 .layoutWrap .mainArticle .detailWrap a.button:before {
                 height: 42px; } }
             @media screen and (min-width: 1024px) {
-              .layout_01 .layoutWrap .mainArticle .detailWrap a.button:after, .layout_01 .layoutWrap .mainArticle .detailWrap a.button:before {
+              .list_01 .layoutWrap .mainArticle .detailWrap a.button:after, .list_01 .layoutWrap .mainArticle .detailWrap a.button:before {
                 height: 35px; } }
-          .layout_01 .layoutWrap .mainArticle .detailWrap a.button:before {
+          .list_01 .layoutWrap .mainArticle .detailWrap a.button:before {
             top: initial;
             bottom: 0;
             -webkit-transform: rotate(45deg);
@@ -2299,7 +2297,7 @@ img {
             -moz-transform-origin: 100% 100%;
             -o-transform-origin: 100% 100%;
             transform-origin: 100% 100%; }
-          .layout_01 .layoutWrap .mainArticle .detailWrap a.button .arrow {
+          .list_01 .layoutWrap .mainArticle .detailWrap a.button .arrow {
             width: 0;
             height: 0;
             border-style: solid;
@@ -2313,43 +2311,43 @@ img {
             -o-transition: all 0.5s ease 0s;
             transition: all 0.5s ease 0s; }
             @media screen and (min-width: 768px) {
-              .layout_01 .layoutWrap .mainArticle .detailWrap a.button .arrow {
+              .list_01 .layoutWrap .mainArticle .detailWrap a.button .arrow {
                 right: -29px;
                 border-width: 30.5px 0 30.5px 30.5px; } }
             @media screen and (min-width: 1024px) {
-              .layout_01 .layoutWrap .mainArticle .detailWrap a.button .arrow {
+              .list_01 .layoutWrap .mainArticle .detailWrap a.button .arrow {
                 right: -24px;
                 border-width: 24px 0 24px 24px; } }
-          .layout_01 .layoutWrap .mainArticle .detailWrap a.button:hover {
+          .list_01 .layoutWrap .mainArticle .detailWrap a.button:hover {
             background-color: rgba(0, 0, 0, 0.5);
             color: #fff; }
-            .layout_01 .layoutWrap .mainArticle .detailWrap a.button:hover .arrow {
+            .list_01 .layoutWrap .mainArticle .detailWrap a.button:hover .arrow {
               border-color: transparent transparent transparent rgba(0, 0, 0, 0.5); }
-    .layout_01 .layoutWrap .mainImgWrap {
+    .list_01 .layoutWrap .mainImgWrap {
       display: none; }
       @media screen and (min-width: 1024px) {
-        .layout_01 .layoutWrap .mainImgWrap {
+        .list_01 .layoutWrap .mainImgWrap {
           display: block;
           width: 58%;
           background-color: rgba(0, 0, 0, 0.05);
           margin-top: 150px; }
-          .layout_01 .layoutWrap .mainImgWrap ul.mainImg {
+          .list_01 .layoutWrap .mainImgWrap ul.mainImg {
             overflow: auto;
             padding: 20px 0 20px 20px; }
-            .layout_01 .layoutWrap .mainImgWrap ul.mainImg li {
+            .list_01 .layoutWrap .mainImgWrap ul.mainImg li {
               list-style: none;
               display: block;
               float: left;
               width: 160px;
               height: 160px;
               margin: 5px 10px 5px 0; }
-              .layout_01 .layoutWrap .mainImgWrap ul.mainImg li .wrap {
+              .list_01 .layoutWrap .mainImgWrap ul.mainImg li .wrap {
                 width: 100%;
                 height: 100%;
                 overflow: hidden;
                 position: relative; }
-                .layout_01 .layoutWrap .mainImgWrap ul.mainImg li .wrap .front,
-                .layout_01 .layoutWrap .mainImgWrap ul.mainImg li .wrap .back {
+                .list_01 .layoutWrap .mainImgWrap ul.mainImg li .wrap .front,
+                .list_01 .layoutWrap .mainImgWrap ul.mainImg li .wrap .back {
                   width: 100%;
                   height: 100%;
                   background-repeat: no-repeat;
@@ -2359,56 +2357,56 @@ img {
                   top: 0;
                   left: 0;
                   z-index: 1; }
-                .layout_01 .layoutWrap .mainImgWrap ul.mainImg li .wrap .back {
+                .list_01 .layoutWrap .mainImgWrap ul.mainImg li .wrap .back {
                   z-index: 2;
                   -webkit-transform: translateY(-160px);
                   -ms-transform: translateY(-160px);
                   -moz-transform: translateY(-160px);
                   -o-transform: translateY(-160px);
                   transform: translateY(-160px); }
-              .layout_01 .layoutWrap .mainImgWrap ul.mainImg li.rectangle {
+              .list_01 .layoutWrap .mainImgWrap ul.mainImg li.rectangle {
                 width: 304px; }
-              .layout_01 .layoutWrap .mainImgWrap ul.mainImg li:nth-child(4n+1) .wrap .front {
+              .list_01 .layoutWrap .mainImgWrap ul.mainImg li:nth-child(4n+1) .wrap .front {
                 -webkit-animation: downImg1 19s infinite;
                 -moz-animation: downImg1 19s infinite;
                 -o-animation: downImg1 19s infinite;
                 animation: downImg1 19s infinite; }
-              .layout_01 .layoutWrap .mainImgWrap ul.mainImg li:nth-child(4n+1) .wrap .back {
+              .list_01 .layoutWrap .mainImgWrap ul.mainImg li:nth-child(4n+1) .wrap .back {
                 -webkit-animation: downImg2 19s infinite;
                 -moz-animation: downImg2 19s infinite;
                 -o-animation: downImg2 19s infinite;
                 animation: downImg2 19s infinite; }
-              .layout_01 .layoutWrap .mainImgWrap ul.mainImg li:nth-child(4n+2) .wrap .front {
+              .list_01 .layoutWrap .mainImgWrap ul.mainImg li:nth-child(4n+2) .wrap .front {
                 -webkit-animation: downImg1 17s infinite;
                 -moz-animation: downImg1 17s infinite;
                 -o-animation: downImg1 17s infinite;
                 animation: downImg1 17s infinite; }
-              .layout_01 .layoutWrap .mainImgWrap ul.mainImg li:nth-child(4n+2) .wrap .back {
+              .list_01 .layoutWrap .mainImgWrap ul.mainImg li:nth-child(4n+2) .wrap .back {
                 -webkit-animation: downImg2 17s infinite;
                 -moz-animation: downImg2 17s infinite;
                 -o-animation: downImg2 17s infinite;
                 animation: downImg2 17s infinite; }
-              .layout_01 .layoutWrap .mainImgWrap ul.mainImg li:nth-child(4n+3) .wrap .front {
+              .list_01 .layoutWrap .mainImgWrap ul.mainImg li:nth-child(4n+3) .wrap .front {
                 -webkit-animation: downImg1 23s infinite;
                 -moz-animation: downImg1 23s infinite;
                 -o-animation: downImg1 23s infinite;
                 animation: downImg1 23s infinite; }
-              .layout_01 .layoutWrap .mainImgWrap ul.mainImg li:nth-child(4n+3) .wrap .back {
+              .list_01 .layoutWrap .mainImgWrap ul.mainImg li:nth-child(4n+3) .wrap .back {
                 -webkit-animation: downImg2 23s infinite;
                 -moz-animation: downImg2 23s infinite;
                 -o-animation: downImg2 23s infinite;
                 animation: downImg2 23s infinite; }
-              .layout_01 .layoutWrap .mainImgWrap ul.mainImg li:nth-child(4n+4) .wrap .front {
+              .list_01 .layoutWrap .mainImgWrap ul.mainImg li:nth-child(4n+4) .wrap .front {
                 -webkit-animation: downImg1 13s infinite;
                 -moz-animation: downImg1 13s infinite;
                 -o-animation: downImg1 13s infinite;
                 animation: downImg1 13s infinite; }
-              .layout_01 .layoutWrap .mainImgWrap ul.mainImg li:nth-child(4n+4) .wrap .back {
+              .list_01 .layoutWrap .mainImgWrap ul.mainImg li:nth-child(4n+4) .wrap .back {
                 -webkit-animation: downImg2 13s infinite;
                 -moz-animation: downImg2 13s infinite;
                 -o-animation: downImg2 13s infinite;
                 animation: downImg2 13s infinite; } }
-    .layout_01 .layoutWrap .title2 {
+    .list_01 .layoutWrap .title2 {
       width: 73%;
       font-size: 30px;
       padding: 20px 10% 20px 0;
@@ -2416,7 +2414,7 @@ img {
       background-color: rgba(0, 0, 0, 0.05);
       margin-top: 50px; }
       @media screen and (min-width: 1024px) {
-        .layout_01 .layoutWrap .title2 {
+        .list_01 .layoutWrap .title2 {
           display: block;
           width: 160px;
           height: 100px;
@@ -2425,17 +2423,17 @@ img {
           font-size: 24px;
           float: right;
           margin: 100px 70px 0 0; } }
-    .layout_01 .layoutWrap .subArticle {
+    .list_01 .layoutWrap .subArticle {
       width: 83%;
       position: relative;
       float: right;
       margin-top: 50px; }
       @media screen and (min-width: 1024px) {
-        .layout_01 .layoutWrap .subArticle {
+        .list_01 .layoutWrap .subArticle {
           width: 28%;
           float: left;
           margin-top: 100px; } }
-      .layout_01 .layoutWrap .subArticle a.img {
+      .list_01 .layoutWrap .subArticle a.img {
         display: block;
         background-size: cover;
         background-repeat: no-repeat;
@@ -2446,15 +2444,15 @@ img {
         position: relative;
         overflow: hidden; }
         @media screen and (min-width: 768px) {
-          .layout_01 .layoutWrap .subArticle a.img {
+          .list_01 .layoutWrap .subArticle a.img {
             width: 460.8px;
             height: 460.8px;
             margin-left: 40px; } }
         @media screen and (min-width: 1024px) {
-          .layout_01 .layoutWrap .subArticle a.img {
+          .list_01 .layoutWrap .subArticle a.img {
             width: 216px;
             height: 216px; } }
-        .layout_01 .layoutWrap .subArticle a.img .linkWrap {
+        .list_01 .layoutWrap .subArticle a.img .linkWrap {
           width: 81%;
           height: 80%;
           padding: 10%;
@@ -2466,21 +2464,21 @@ img {
           -moz-transition: all 0.5s ease 0s;
           -o-transition: all 0.5s ease 0s;
           transition: all 0.5s ease 0s; }
-          .layout_01 .layoutWrap .subArticle a.img .linkWrap .linkBorder {
+          .list_01 .layoutWrap .subArticle a.img .linkWrap .linkBorder {
             height: 65%;
             border: 1px solid #fff;
             padding-top: 35%;
             text-align: center; }
-            .layout_01 .layoutWrap .subArticle a.img .linkWrap .linkBorder .ch {
+            .list_01 .layoutWrap .subArticle a.img .linkWrap .linkBorder .ch {
               display: block; }
-        .layout_01 .layoutWrap .subArticle a.img:hover .linkWrap {
+        .list_01 .layoutWrap .subArticle a.img:hover .linkWrap {
           opacity: 1; }
-        .layout_01 .layoutWrap .subArticle a.img:hover .arrow {
+        .list_01 .layoutWrap .subArticle a.img:hover .arrow {
           -webkit-animation: arrow_move 1s linear infinite;
           -moz-animation: arrow_move 1s linear infinite;
           -o-animation: arrow_move 1s linear infinite;
           animation: arrow_move 1s linear infinite; }
-      .layout_01 .layoutWrap .subArticle a.txt {
+      .list_01 .layoutWrap .subArticle a.txt {
         width: 240px;
         margin-left: 20px;
         display: block;
@@ -2489,16 +2487,16 @@ img {
         padding: 20px 0;
         font-size: 18px; }
         @media screen and (min-width: 768px) {
-          .layout_01 .layoutWrap .subArticle a.txt {
+          .list_01 .layoutWrap .subArticle a.txt {
             max-height: 3.6em;
             margin-left: 40px;
             width: 460.8px;
             font-size: 24px; } }
         @media screen and (min-width: 1024px) {
-          .layout_01 .layoutWrap .subArticle a.txt {
+          .list_01 .layoutWrap .subArticle a.txt {
             width: 216px; } }
         @media screen and (min-width: 1280px) {
-          .layout_01 .layoutWrap .subArticle a.txt h3 {
+          .list_01 .layoutWrap .subArticle a.txt h3 {
             display: inline;
             background-image: transparent;
             background-image: -webkit-linear-gradient(left, transparent 50%, #000 50%);
@@ -2511,11 +2509,11 @@ img {
             -moz-transition: all 0.4s ease 0s;
             -o-transition: all 0.4s ease 0s;
             transition: all 0.4s ease 0s; }
-            .layout_01 .layoutWrap .subArticle a.txt h3:hover {
+            .list_01 .layoutWrap .subArticle a.txt h3:hover {
               background-size: 200%;
               background-position: -100%;
               color: #fff; } }
-      .layout_01 .layoutWrap .subArticle a.category {
+      .list_01 .layoutWrap .subArticle a.category {
         border-bottom: 1px solid #000;
         padding: 3px 5px;
         display: none;
@@ -2523,18 +2521,18 @@ img {
         margin-left: 20px;
         cursor: inherit; }
         @media screen and (min-width: 1024px) {
-          .layout_01 .layoutWrap .subArticle a.category {
+          .list_01 .layoutWrap .subArticle a.category {
             display: inline-block;
             margin-bottom: 1em; } }
         @media screen and (min-width: 768px) {
-          .layout_01 .layoutWrap .subArticle a.category {
+          .list_01 .layoutWrap .subArticle a.category {
             display: inline-block;
             margin-left: 40px; } }
         @media screen and (min-width: 1024px) {
-          .layout_01 .layoutWrap .subArticle a.category {
+          .list_01 .layoutWrap .subArticle a.category {
             display: inline-block;
             margin-bottom: 0; } }
-      .layout_01 .layoutWrap .subArticle:before {
+      .list_01 .layoutWrap .subArticle:before {
         content: "";
         display: block;
         width: 100%;
@@ -2543,20 +2541,20 @@ img {
         position: absolute;
         bottom: 0;
         z-index: -1; }
-    .layout_01 .layoutWrap .exArticle {
+    .list_01 .layoutWrap .exArticle {
       clear: both;
       padding-top: 80px;
       overflow: hidden; }
       @media screen and (min-width: 1024px) {
-        .layout_01 .layoutWrap .exArticle {
+        .list_01 .layoutWrap .exArticle {
           width: 72%;
           clear: none;
           float: right;
           padding-top: 5px; } }
-      .layout_01 .layoutWrap .exArticle ul.exArticleWrap {
+      .list_01 .layoutWrap .exArticle ul.exArticleWrap {
         overflow: auto;
         float: right; }
-        .layout_01 .layoutWrap .exArticle ul.exArticleWrap li {
+        .list_01 .layoutWrap .exArticle ul.exArticleWrap li {
           list-style: none;
           display: block;
           width: 48.5%;
@@ -2564,10 +2562,10 @@ img {
           position: relative;
           float: left; }
           @media screen and (min-width: 1024px) {
-            .layout_01 .layoutWrap .exArticle ul.exArticleWrap li {
+            .list_01 .layoutWrap .exArticle ul.exArticleWrap li {
               width: 163px;
               margin: 5px; } }
-          .layout_01 .layoutWrap .exArticle ul.exArticleWrap li a.img {
+          .list_01 .layoutWrap .exArticle ul.exArticleWrap li a.img {
             display: block;
             background-size: cover;
             background-repeat: no-repeat;
@@ -2576,7 +2574,7 @@ img {
             position: relative;
             overflow: hidden;
             height: 155.19px; }
-            .layout_01 .layoutWrap .exArticle ul.exArticleWrap li a.img .linkWrap {
+            .list_01 .layoutWrap .exArticle ul.exArticleWrap li a.img .linkWrap {
               width: 81%;
               height: 80%;
               padding: 10%;
@@ -2588,43 +2586,43 @@ img {
               -moz-transition: all 0.5s ease 0s;
               -o-transition: all 0.5s ease 0s;
               transition: all 0.5s ease 0s; }
-              .layout_01 .layoutWrap .exArticle ul.exArticleWrap li a.img .linkWrap .linkBorder {
+              .list_01 .layoutWrap .exArticle ul.exArticleWrap li a.img .linkWrap .linkBorder {
                 height: 65%;
                 border: 1px solid #fff;
                 padding-top: 35%;
                 text-align: center; }
-                .layout_01 .layoutWrap .exArticle ul.exArticleWrap li a.img .linkWrap .linkBorder .ch {
+                .list_01 .layoutWrap .exArticle ul.exArticleWrap li a.img .linkWrap .linkBorder .ch {
                   display: block; }
-            .layout_01 .layoutWrap .exArticle ul.exArticleWrap li a.img:hover .linkWrap {
+            .list_01 .layoutWrap .exArticle ul.exArticleWrap li a.img:hover .linkWrap {
               opacity: 1; }
-            .layout_01 .layoutWrap .exArticle ul.exArticleWrap li a.img:hover .arrow {
+            .list_01 .layoutWrap .exArticle ul.exArticleWrap li a.img:hover .arrow {
               -webkit-animation: arrow_move 1s linear infinite;
               -moz-animation: arrow_move 1s linear infinite;
               -o-animation: arrow_move 1s linear infinite;
               animation: arrow_move 1s linear infinite; }
             @media screen and (min-width: 414px) {
-              .layout_01 .layoutWrap .exArticle ul.exArticleWrap li a.img {
+              .list_01 .layoutWrap .exArticle ul.exArticleWrap li a.img {
                 height: 200.78px; } }
             @media screen and (min-width: 768px) {
-              .layout_01 .layoutWrap .exArticle ul.exArticleWrap li a.img {
+              .list_01 .layoutWrap .exArticle ul.exArticleWrap li a.img {
                 height: 372.47px; } }
             @media screen and (min-width: 1024px) {
-              .layout_01 .layoutWrap .exArticle ul.exArticleWrap li a.img {
+              .list_01 .layoutWrap .exArticle ul.exArticleWrap li a.img {
                 width: 163px;
                 height: 163px; } }
-          .layout_01 .layoutWrap .exArticle ul.exArticleWrap li a.txt {
+          .list_01 .layoutWrap .exArticle ul.exArticleWrap li a.txt {
             display: block;
             height: 3.6em;
             overflow: hidden;
             padding-top: 1em;
             letter-spacing: normal; }
             @media screen and (min-width: 1024px) {
-              .layout_01 .layoutWrap .exArticle ul.exArticleWrap li a.txt {
+              .list_01 .layoutWrap .exArticle ul.exArticleWrap li a.txt {
                 height: 5.4em; } }
-            .layout_01 .layoutWrap .exArticle ul.exArticleWrap li a.txt h3 {
+            .list_01 .layoutWrap .exArticle ul.exArticleWrap li a.txt h3 {
               font-weight: inherit; }
               @media screen and (min-width: 1280px) {
-                .layout_01 .layoutWrap .exArticle ul.exArticleWrap li a.txt h3 {
+                .list_01 .layoutWrap .exArticle ul.exArticleWrap li a.txt h3 {
                   display: inline;
                   background-image: transparent;
                   background-image: -webkit-linear-gradient(left, transparent 50%, #000 50%);
@@ -2637,110 +2635,110 @@ img {
                   -moz-transition: all 0.4s ease 0s;
                   -o-transition: all 0.4s ease 0s;
                   transition: all 0.4s ease 0s; }
-                  .layout_01 .layoutWrap .exArticle ul.exArticleWrap li a.txt h3:hover {
+                  .list_01 .layoutWrap .exArticle ul.exArticleWrap li a.txt h3:hover {
                     background-size: 200%;
                     background-position: -100%;
                     color: #fff; } }
-          .layout_01 .layoutWrap .exArticle ul.exArticleWrap li.top {
+          .list_01 .layoutWrap .exArticle ul.exArticleWrap li.top {
             padding-top: 4em; }
             @media screen and (min-width: 1024px) {
-              .layout_01 .layoutWrap .exArticle ul.exArticleWrap li.top {
+              .list_01 .layoutWrap .exArticle ul.exArticleWrap li.top {
                 padding-top: 0; } }
-            .layout_01 .layoutWrap .exArticle ul.exArticleWrap li.top a.txt {
+            .list_01 .layoutWrap .exArticle ul.exArticleWrap li.top a.txt {
               position: absolute;
               top: 0;
               padding-top: 0; }
               @media screen and (min-width: 1024px) {
-                .layout_01 .layoutWrap .exArticle ul.exArticleWrap li.top a.txt {
+                .list_01 .layoutWrap .exArticle ul.exArticleWrap li.top a.txt {
                   position: relative;
                   top: initial;
                   padding-top: 1em; } }
-          .layout_01 .layoutWrap .exArticle ul.exArticleWrap li:nth-child(odd) {
+          .list_01 .layoutWrap .exArticle ul.exArticleWrap li:nth-child(odd) {
             margin-left: 0; }
             @media screen and (min-width: 1024px) {
-              .layout_01 .layoutWrap .exArticle ul.exArticleWrap li:nth-child(odd) {
+              .list_01 .layoutWrap .exArticle ul.exArticleWrap li:nth-child(odd) {
                 margin-left: 5px; } }
-            .layout_01 .layoutWrap .exArticle ul.exArticleWrap li:nth-child(odd) a.txt {
+            .list_01 .layoutWrap .exArticle ul.exArticleWrap li:nth-child(odd) a.txt {
               padding-left: 20px;
               padding-right: 10px; }
               @media screen and (min-width: 768px) {
-                .layout_01 .layoutWrap .exArticle ul.exArticleWrap li:nth-child(odd) a.txt {
+                .list_01 .layoutWrap .exArticle ul.exArticleWrap li:nth-child(odd) a.txt {
                   padding-left: 40px;
                   padding-right: 20px; } }
               @media screen and (min-width: 1024px) {
-                .layout_01 .layoutWrap .exArticle ul.exArticleWrap li:nth-child(odd) a.txt {
+                .list_01 .layoutWrap .exArticle ul.exArticleWrap li:nth-child(odd) a.txt {
                   padding-left: 15px;
                   padding-right: 15px; } }
-          .layout_01 .layoutWrap .exArticle ul.exArticleWrap li:nth-child(even) {
+          .list_01 .layoutWrap .exArticle ul.exArticleWrap li:nth-child(even) {
             margin-right: 0; }
             @media screen and (min-width: 1024px) {
-              .layout_01 .layoutWrap .exArticle ul.exArticleWrap li:nth-child(even) {
+              .list_01 .layoutWrap .exArticle ul.exArticleWrap li:nth-child(even) {
                 margin-right: 5px; } }
-            .layout_01 .layoutWrap .exArticle ul.exArticleWrap li:nth-child(even) a.txt {
+            .list_01 .layoutWrap .exArticle ul.exArticleWrap li:nth-child(even) a.txt {
               padding-left: 10px;
               padding-right: 20px; }
               @media screen and (min-width: 768px) {
-                .layout_01 .layoutWrap .exArticle ul.exArticleWrap li:nth-child(even) a.txt {
+                .list_01 .layoutWrap .exArticle ul.exArticleWrap li:nth-child(even) a.txt {
                   padding-left: 20px;
                   padding-right: 40px; } }
               @media screen and (min-width: 1024px) {
-                .layout_01 .layoutWrap .exArticle ul.exArticleWrap li:nth-child(even) a.txt {
+                .list_01 .layoutWrap .exArticle ul.exArticleWrap li:nth-child(even) a.txt {
                   padding-left: 15px;
                   padding-right: 15px; } }
 
-.layout_02 {
+.list_02 {
   position: relative;
   background-color: #fff; }
-  .layout_02 .layoutWrap {
+  .list_02 .layoutWrap {
     padding: 0 20px; }
     @media screen and (min-width: 768px) {
-      .layout_02 .layoutWrap {
+      .list_02 .layoutWrap {
         padding: 0 40px; } }
     @media screen and (min-width: 1024px) {
-      .layout_02 .layoutWrap {
+      .list_02 .layoutWrap {
         max-width: 970px;
         margin: 0 auto; } }
-    .layout_02 .layoutWrap .title {
+    .list_02 .layoutWrap .title {
       padding: 50px 0 0 0;
       text-align: center;
       font-size: 28px;
       line-height: 1.5em;
       font-weight: bold;
       letter-spacing: 2px; }
-      .layout_02 .layoutWrap .title:after {
+      .list_02 .layoutWrap .title:after {
         content: '';
         display: block;
         width: 100px;
         height: 5px;
         margin: 5px auto 10px auto;
         background-color: #000; }
-    .layout_02 .layoutWrap .detail {
+    .list_02 .layoutWrap .detail {
       padding: 0;
       text-align: center;
       font-size: 30px;
       line-height: 1.5em;
       font-weight: bold; }
     @media screen and (min-width: 1024px) {
-      .layout_02 .layoutWrap .subTitleWrap {
+      .list_02 .layoutWrap .subTitleWrap {
         width: 970px;
         margin: 0 auto 30px auto; } }
-    .layout_02 .layoutWrap .subTitleWrap .subTitle {
+    .list_02 .layoutWrap .subTitleWrap .subTitle {
       margin: 20px auto;
       color: rgba(0, 0, 0, 0.5); }
       @media screen and (min-width: 768px) {
-        .layout_02 .layoutWrap .subTitleWrap .subTitle {
+        .list_02 .layoutWrap .subTitleWrap .subTitle {
           margin: 20px auto; } }
       @media screen and (min-width: 1024px) {
-        .layout_02 .layoutWrap .subTitleWrap .subTitle {
+        .list_02 .layoutWrap .subTitleWrap .subTitle {
           width: 65%;
           margin: 20px auto;
           text-align: center; } }
-    .layout_02 .layoutWrap ul.articleWrap {
+    .list_02 .layoutWrap ul.articleWrap {
       overflow: hidden; }
       @media screen and (min-width: 1024px) {
-        .layout_02 .layoutWrap ul.articleWrap {
+        .list_02 .layoutWrap ul.articleWrap {
           width: 970px; } }
-      .layout_02 .layoutWrap ul.articleWrap li {
+      .list_02 .layoutWrap ul.articleWrap li {
         list-style: none;
         display: block;
         width: 47.5%;
@@ -2749,29 +2747,29 @@ img {
         margin-bottom: 20px;
         padding-top: 10px;
         border-top: 1px solid #f2f2f2; }
-        .layout_02 .layoutWrap ul.articleWrap li:nth-child(odd) {
+        .list_02 .layoutWrap ul.articleWrap li:nth-child(odd) {
           margin-right: 0; }
           @media screen and (min-width: 1024px) {
-            .layout_02 .layoutWrap ul.articleWrap li:nth-child(odd) {
+            .list_02 .layoutWrap ul.articleWrap li:nth-child(odd) {
               margin-right: 25px; } }
         @media screen and (min-width: 1024px) {
-          .layout_02 .layoutWrap ul.articleWrap li {
+          .list_02 .layoutWrap ul.articleWrap li {
             width: 223.75px;
             margin-top: 58px;
             margin-right: 25px;
             margin-bottom: 25px; }
-            .layout_02 .layoutWrap ul.articleWrap li:nth-child(4n+3) {
+            .list_02 .layoutWrap ul.articleWrap li:nth-child(4n+3) {
               margin-right: 0; } }
-        .layout_02 .layoutWrap ul.articleWrap li .article {
+        .list_02 .layoutWrap ul.articleWrap li .article {
           background-color: #f2f2f2; }
-          .layout_02 .layoutWrap ul.articleWrap li .article a.img {
+          .list_02 .layoutWrap ul.articleWrap li .article a.img {
             display: block;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center top;
             position: relative;
             overflow: hidden; }
-            .layout_02 .layoutWrap ul.articleWrap li .article a.img .linkWrap {
+            .list_02 .layoutWrap ul.articleWrap li .article a.img .linkWrap {
               width: 81%;
               height: 80%;
               padding: 10%;
@@ -2783,32 +2781,32 @@ img {
               -moz-transition: all 0.5s ease 0s;
               -o-transition: all 0.5s ease 0s;
               transition: all 0.5s ease 0s; }
-              .layout_02 .layoutWrap ul.articleWrap li .article a.img .linkWrap .linkBorder {
+              .list_02 .layoutWrap ul.articleWrap li .article a.img .linkWrap .linkBorder {
                 height: 65%;
                 border: 1px solid #fff;
                 padding-top: 35%;
                 text-align: center; }
-                .layout_02 .layoutWrap ul.articleWrap li .article a.img .linkWrap .linkBorder .ch {
+                .list_02 .layoutWrap ul.articleWrap li .article a.img .linkWrap .linkBorder .ch {
                   display: block; }
-            .layout_02 .layoutWrap ul.articleWrap li .article a.img:hover .linkWrap {
+            .list_02 .layoutWrap ul.articleWrap li .article a.img:hover .linkWrap {
               opacity: 1; }
-            .layout_02 .layoutWrap ul.articleWrap li .article a.img:hover .arrow {
+            .list_02 .layoutWrap ul.articleWrap li .article a.img:hover .arrow {
               -webkit-animation: arrow_move 1s linear infinite;
               -moz-animation: arrow_move 1s linear infinite;
               -o-animation: arrow_move 1s linear infinite;
               animation: arrow_move 1s linear infinite; }
-            .layout_02 .layoutWrap ul.articleWrap li .article a.img .linkWrap {
+            .list_02 .layoutWrap ul.articleWrap li .article a.img .linkWrap {
               height: calc(140px*0.8); }
               @media screen and (min-width: 414px) {
-                .layout_02 .layoutWrap ul.articleWrap li .article a.img .linkWrap {
+                .list_02 .layoutWrap ul.articleWrap li .article a.img .linkWrap {
                   height: calc(177px*0.8); } }
               @media screen and (min-width: 768px) {
-                .layout_02 .layoutWrap ul.articleWrap li .article a.img .linkWrap {
+                .list_02 .layoutWrap ul.articleWrap li .article a.img .linkWrap {
                   height: calc(326.8px*0.8); } }
               @media screen and (min-width: 1024px) {
-                .layout_02 .layoutWrap ul.articleWrap li .article a.img .linkWrap {
+                .list_02 .layoutWrap ul.articleWrap li .article a.img .linkWrap {
                   height: calc(223.75px*0.8); } }
-            .layout_02 .layoutWrap ul.articleWrap li .article a.img:after {
+            .list_02 .layoutWrap ul.articleWrap li .article a.img:after {
               content: "";
               display: block;
               width: 0;
@@ -2819,22 +2817,22 @@ img {
               position: absolute;
               right: 15px;
               top: 0; }
-          .layout_02 .layoutWrap ul.articleWrap li .article a.txt {
+          .list_02 .layoutWrap ul.articleWrap li .article a.txt {
             display: block;
             height: 5.4em;
             overflow: hidden;
             padding: 15px;
             letter-spacing: normal; }
             @media screen and (min-width: 768px) {
-              .layout_02 .layoutWrap ul.articleWrap li .article a.txt {
+              .list_02 .layoutWrap ul.articleWrap li .article a.txt {
                 padding: 40px; } }
             @media screen and (min-width: 1024px) {
-              .layout_02 .layoutWrap ul.articleWrap li .article a.txt {
+              .list_02 .layoutWrap ul.articleWrap li .article a.txt {
                 padding: 18px; } }
-            .layout_02 .layoutWrap ul.articleWrap li .article a.txt h3 {
+            .list_02 .layoutWrap ul.articleWrap li .article a.txt h3 {
               font-weight: normal; }
               @media screen and (min-width: 1280px) {
-                .layout_02 .layoutWrap ul.articleWrap li .article a.txt h3 {
+                .list_02 .layoutWrap ul.articleWrap li .article a.txt h3 {
                   display: inline;
                   background-image: transparent;
                   background-image: -webkit-linear-gradient(left, transparent 50%, #000 50%);
@@ -2847,19 +2845,19 @@ img {
                   -moz-transition: all 0.4s ease 0s;
                   -o-transition: all 0.4s ease 0s;
                   transition: all 0.4s ease 0s; }
-                  .layout_02 .layoutWrap ul.articleWrap li .article a.txt h3:hover {
+                  .list_02 .layoutWrap ul.articleWrap li .article a.txt h3:hover {
                     background-size: 200%;
                     background-position: -100%;
                     color: #fff; } }
-        .layout_02 .layoutWrap ul.articleWrap li.big {
+        .list_02 .layoutWrap ul.articleWrap li.big {
           width: 100%;
           margin-right: 0; }
           @media screen and (min-width: 1024px) {
-            .layout_02 .layoutWrap ul.articleWrap li.big {
+            .list_02 .layoutWrap ul.articleWrap li.big {
               width: 472.5px;
               margin-top: 0;
               margin-right: 25px; } }
-          .layout_02 .layoutWrap ul.articleWrap li.big:after {
+          .list_02 .layoutWrap ul.articleWrap li.big:after {
             content: "";
             display: block;
             width: 0;
@@ -2871,22 +2869,22 @@ img {
             right: 15px;
             bottom: 110px; }
             @media screen and (min-width: 768px) {
-              .layout_02 .layoutWrap ul.articleWrap li.big:after {
+              .list_02 .layoutWrap ul.articleWrap li.big:after {
                 bottom: 159px; } }
             @media screen and (min-width: 1024px) {
-              .layout_02 .layoutWrap ul.articleWrap li.big:after {
+              .list_02 .layoutWrap ul.articleWrap li.big:after {
                 bottom: 165px; } }
           @media screen and (min-width: 1024px) {
-            .layout_02 .layoutWrap ul.articleWrap li.big .article {
+            .list_02 .layoutWrap ul.articleWrap li.big .article {
               min-height: 414px; } }
-          .layout_02 .layoutWrap ul.articleWrap li.big .article a.img {
+          .list_02 .layoutWrap ul.articleWrap li.big .article a.img {
             display: block;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center top;
             position: relative;
             overflow: hidden; }
-            .layout_02 .layoutWrap ul.articleWrap li.big .article a.img .linkWrap {
+            .list_02 .layoutWrap ul.articleWrap li.big .article a.img .linkWrap {
               width: 89%;
               height: initial;
               padding: 6%;
@@ -2898,109 +2896,109 @@ img {
               -moz-transition: all 0.5s ease 0s;
               -o-transition: all 0.5s ease 0s;
               transition: all 0.5s ease 0s; }
-              .layout_02 .layoutWrap ul.articleWrap li.big .article a.img .linkWrap .linkBorder {
+              .list_02 .layoutWrap ul.articleWrap li.big .article a.img .linkWrap .linkBorder {
                 height: initial;
                 border: 1px solid #fff;
                 padding-top: 13%;
                 padding-bottom: 14%;
                 text-align: center; }
                 @media screen and (min-width: 414px) {
-                  .layout_02 .layoutWrap ul.articleWrap li.big .article a.img .linkWrap .linkBorder {
+                  .list_02 .layoutWrap ul.articleWrap li.big .article a.img .linkWrap .linkBorder {
                     padding-top: 13%;
                     padding-bottom: 15.5%; } }
                 @media screen and (min-width: 768px) {
-                  .layout_02 .layoutWrap ul.articleWrap li.big .article a.img .linkWrap .linkBorder {
+                  .list_02 .layoutWrap ul.articleWrap li.big .article a.img .linkWrap .linkBorder {
                     padding-top: 17%;
                     padding-bottom: 16%; } }
                 @media screen and (min-width: 1024px) {
-                  .layout_02 .layoutWrap ul.articleWrap li.big .article a.img .linkWrap .linkBorder {
+                  .list_02 .layoutWrap ul.articleWrap li.big .article a.img .linkWrap .linkBorder {
                     padding-top: 15%;
                     padding-bottom: 15.5%; } }
-                .layout_02 .layoutWrap ul.articleWrap li.big .article a.img .linkWrap .linkBorder .ch {
+                .list_02 .layoutWrap ul.articleWrap li.big .article a.img .linkWrap .linkBorder .ch {
                   display: block; }
-            .layout_02 .layoutWrap ul.articleWrap li.big .article a.img:hover .linkWrap {
+            .list_02 .layoutWrap ul.articleWrap li.big .article a.img:hover .linkWrap {
               opacity: 1; }
-            .layout_02 .layoutWrap ul.articleWrap li.big .article a.img:hover .arrow {
+            .list_02 .layoutWrap ul.articleWrap li.big .article a.img:hover .arrow {
               -webkit-animation: arrow_move 1s linear infinite;
               -moz-animation: arrow_move 1s linear infinite;
               -o-animation: arrow_move 1s linear infinite;
               animation: arrow_move 1s linear infinite; }
-            .layout_02 .layoutWrap ul.articleWrap li.big .article a.img .linkWrap {
+            .list_02 .layoutWrap ul.articleWrap li.big .article a.img .linkWrap {
               height: calc(280px*0.77/1.9); }
               @media screen and (min-width: 414px) {
-                .layout_02 .layoutWrap ul.articleWrap li.big .article a.img .linkWrap {
+                .list_02 .layoutWrap ul.articleWrap li.big .article a.img .linkWrap {
                   height: calc(374px*0.77/1.9); } }
               @media screen and (min-width: 768px) {
-                .layout_02 .layoutWrap ul.articleWrap li.big .article a.img .linkWrap {
+                .list_02 .layoutWrap ul.articleWrap li.big .article a.img .linkWrap {
                   height: calc(688px*0.77/1.9); } }
               @media screen and (min-width: 1024px) {
-                .layout_02 .layoutWrap ul.articleWrap li.big .article a.img .linkWrap {
+                .list_02 .layoutWrap ul.articleWrap li.big .article a.img .linkWrap {
                   height: calc(472.5px*0.77/1.9); } }
-            .layout_02 .layoutWrap ul.articleWrap li.big .article a.img:after {
+            .list_02 .layoutWrap ul.articleWrap li.big .article a.img:after {
               display: none; }
-          .layout_02 .layoutWrap ul.articleWrap li.big .article a.txt {
+          .list_02 .layoutWrap ul.articleWrap li.big .article a.txt {
             font-size: 20px;
             line-height: 40px;
             height: 80px; }
             @media screen and (min-width: 768px) {
-              .layout_02 .layoutWrap ul.articleWrap li.big .article a.txt {
+              .list_02 .layoutWrap ul.articleWrap li.big .article a.txt {
                 font-size: 24px; } }
 
-.layout_03 {
+.list_03 {
   position: relative;
   background-color: #fff; }
-  .layout_03 .layoutWrap {
+  .list_03 .layoutWrap {
     padding: 50px 0 50px 0;
     overflow: hidden; }
-    .layout_03 .layoutWrap .title {
+    .list_03 .layoutWrap .title {
       padding: 50px 20px 0 20px;
       text-align: center;
       font-size: 28px;
       line-height: 1.5em;
       font-weight: bold;
       letter-spacing: 2px; }
-      .layout_03 .layoutWrap .title:after {
+      .list_03 .layoutWrap .title:after {
         content: '';
         display: block;
         width: 100px;
         height: 5px;
         margin: 5px auto 10px auto;
         background-color: #000; }
-    .layout_03 .layoutWrap .detail {
+    .list_03 .layoutWrap .detail {
       padding: 0 20px;
       text-align: center;
       font-size: 30px;
       line-height: 1.5em;
       font-weight: bold; }
     @media screen and (min-width: 1024px) {
-      .layout_03 .layoutWrap .subTitleWrap {
+      .list_03 .layoutWrap .subTitleWrap {
         width: 970px;
         margin: 0 auto 30px auto; } }
-    .layout_03 .layoutWrap .subTitleWrap .subTitle {
+    .list_03 .layoutWrap .subTitleWrap .subTitle {
       margin: 20px 20px;
       color: rgba(0, 0, 0, 0.5); }
       @media screen and (min-width: 768px) {
-        .layout_03 .layoutWrap .subTitleWrap .subTitle {
+        .list_03 .layoutWrap .subTitleWrap .subTitle {
           margin: 20px 40px; } }
       @media screen and (min-width: 1024px) {
-        .layout_03 .layoutWrap .subTitleWrap .subTitle {
+        .list_03 .layoutWrap .subTitleWrap .subTitle {
           width: 65%;
           margin: 20px auto;
           text-align: center; } }
-    .layout_03 .layoutWrap .articleWrap {
+    .list_03 .layoutWrap .articleWrap {
       padding-left: 20px;
       padding-right: 20px; }
       @media screen and (min-width: 768px) {
-        .layout_03 .layoutWrap .articleWrap {
+        .list_03 .layoutWrap .articleWrap {
           padding-left: 40px;
           padding-right: 40px; } }
       @media screen and (min-width: 1024px) {
-        .layout_03 .layoutWrap .articleWrap {
+        .list_03 .layoutWrap .articleWrap {
           width: 970px;
           margin: 0 auto; } }
-      .layout_03 .layoutWrap .articleWrap ul.article {
+      .list_03 .layoutWrap .articleWrap ul.article {
         overflow: hidden; }
-        .layout_03 .layoutWrap .articleWrap ul.article li {
+        .list_03 .layoutWrap .articleWrap ul.article li {
           list-style: none;
           display: block;
           float: left;
@@ -3008,28 +3006,28 @@ img {
           margin-bottom: 20px;
           position: relative; }
           @media screen and (min-width: 1024px) {
-            .layout_03 .layoutWrap .articleWrap ul.article li {
+            .list_03 .layoutWrap .articleWrap ul.article li {
               width: 470px;
               min-height: 249px;
               margin-bottom: 20px; } }
-          .layout_03 .layoutWrap .articleWrap ul.article li a.category {
+          .list_03 .layoutWrap .articleWrap ul.article li a.category {
             border-bottom: 1px solid #000;
             padding: 3px 5px;
             display: none;
             cursor: inherit; }
             @media screen and (min-width: 1024px) {
-              .layout_03 .layoutWrap .articleWrap ul.article li a.category {
+              .list_03 .layoutWrap .articleWrap ul.article li a.category {
                 display: inline-block;
                 margin-bottom: 1em; } }
-          .layout_03 .layoutWrap .articleWrap ul.article li a.img {
+          .list_03 .layoutWrap .articleWrap ul.article li a.img {
             display: block;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center top; }
-          .layout_03 .layoutWrap .articleWrap ul.article li .txtWrap a.txt {
+          .list_03 .layoutWrap .articleWrap ul.article li .txtWrap a.txt {
             display: block; }
             @media screen and (min-width: 1280px) {
-              .layout_03 .layoutWrap .articleWrap ul.article li .txtWrap a.txt h3 {
+              .list_03 .layoutWrap .articleWrap ul.article li .txtWrap a.txt h3 {
                 display: inline;
                 background-image: transparent;
                 background-image: -webkit-linear-gradient(left, transparent 50%, #000 50%);
@@ -3042,20 +3040,20 @@ img {
                 -moz-transition: all 0.4s ease 0s;
                 -o-transition: all 0.4s ease 0s;
                 transition: all 0.4s ease 0s; }
-                .layout_03 .layoutWrap .articleWrap ul.article li .txtWrap a.txt h3:hover {
+                .list_03 .layoutWrap .articleWrap ul.article li .txtWrap a.txt h3:hover {
                   background-size: 200%;
                   background-position: -100%;
                   color: #fff; } }
-          .layout_03 .layoutWrap .articleWrap ul.article li .txtWrap a.more {
+          .list_03 .layoutWrap .articleWrap ul.article li .txtWrap a.more {
             display: none;
             margin-left: 20px;
             margin-top: 35px;
             color: rgba(0, 0, 0, 0.5); }
             @media screen and (min-width: 1024px) {
-              .layout_03 .layoutWrap .articleWrap ul.article li .txtWrap a.more {
+              .list_03 .layoutWrap .articleWrap ul.article li .txtWrap a.more {
                 display: block; } }
   @media screen and (min-width: 1024px) and (min-width: 1280px) {
-    .layout_03 .layoutWrap .articleWrap ul.article li .txtWrap a.more span {
+    .list_03 .layoutWrap .articleWrap ul.article li .txtWrap a.more span {
       display: inline;
       background-image: transparent;
       background-image: -webkit-linear-gradient(left, transparent 50%, #000 50%);
@@ -3068,26 +3066,26 @@ img {
       -moz-transition: all 0.4s ease 0s;
       -o-transition: all 0.4s ease 0s;
       transition: all 0.4s ease 0s; }
-      .layout_03 .layoutWrap .articleWrap ul.article li .txtWrap a.more span:hover {
+      .list_03 .layoutWrap .articleWrap ul.article li .txtWrap a.more span:hover {
         background-size: 200%;
         background-position: -100%;
         color: #fff; } }
-          .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) {
+          .list_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) {
             position: relative; }
             @media screen and (min-width: 1024px) {
-              .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.category {
+              .list_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.category {
                 position: absolute;
                 top: 10px;
                 left: 20px;
                 color: #fff;
                 border-color: #fff;
                 font-weight: bold; } }
-            .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img {
+            .list_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img {
               width: 100%;
               position: relative;
               overflow: hidden;
               height: calc(280px/1.9); }
-              .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img .linkWrap {
+              .list_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img .linkWrap {
                 width: 89%;
                 height: initial;
                 padding: 6%;
@@ -3099,51 +3097,51 @@ img {
                 -moz-transition: all 0.5s ease 0s;
                 -o-transition: all 0.5s ease 0s;
                 transition: all 0.5s ease 0s; }
-                .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img .linkWrap .linkBorder {
+                .list_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img .linkWrap .linkBorder {
                   height: initial;
                   border: 1px solid #fff;
                   padding-top: 13%;
                   padding-bottom: 14%;
                   text-align: center; }
                   @media screen and (min-width: 414px) {
-                    .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img .linkWrap .linkBorder {
+                    .list_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img .linkWrap .linkBorder {
                       padding-top: 13%;
                       padding-bottom: 15.5%; } }
                   @media screen and (min-width: 768px) {
-                    .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img .linkWrap .linkBorder {
+                    .list_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img .linkWrap .linkBorder {
                       padding-top: 17%;
                       padding-bottom: 16%; } }
                   @media screen and (min-width: 1024px) {
-                    .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img .linkWrap .linkBorder {
+                    .list_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img .linkWrap .linkBorder {
                       padding-top: 15%;
                       padding-bottom: 15.5%; } }
-                  .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img .linkWrap .linkBorder .ch {
+                  .list_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img .linkWrap .linkBorder .ch {
                     display: block; }
-              .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img:hover .linkWrap {
+              .list_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img:hover .linkWrap {
                 opacity: 1; }
-              .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img:hover .arrow {
+              .list_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img:hover .arrow {
                 -webkit-animation: arrow_move 1s linear infinite;
                 -moz-animation: arrow_move 1s linear infinite;
                 -o-animation: arrow_move 1s linear infinite;
                 animation: arrow_move 1s linear infinite; }
               @media screen and (min-width: 414px) {
-                .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img {
+                .list_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img {
                   height: calc(374px/1.9); } }
               @media screen and (min-width: 768px) {
-                .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img {
+                .list_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img {
                   height: calc(688px/1.9); } }
               @media screen and (min-width: 1024px) {
-                .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img {
+                .list_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img {
                   height: calc(466px/1.9); } }
-              .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img .linkWrap {
+              .list_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img .linkWrap {
                 position: absolute; }
-              .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img:hover + .category {
+              .list_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img:hover + .category {
                 opacity: 0; }
-              .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img:hover .linkWrap {
+              .list_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) a.img:hover .linkWrap {
                 z-index: 1; }
-            .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) .txtWrap {
+            .list_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) .txtWrap {
               position: relative; }
-              .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) .txtWrap a.txt {
+              .list_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) .txtWrap a.txt {
                 min-width: 94%;
                 height: 3.6em;
                 overflow: hidden;
@@ -3159,18 +3157,18 @@ img {
                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 );
                 /* IE6-9 */ }
                 @media screen and (min-width: 768px) {
-                  .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) .txtWrap a.txt {
+                  .list_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) .txtWrap a.txt {
                     padding: 20px 3% 10px 3%; } }
                 @media screen and (min-width: 1024px) {
-                  .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) .txtWrap a.txt {
+                  .list_03 .layoutWrap .articleWrap ul.article li:nth-child(odd) .txtWrap a.txt {
                     padding: 20px 3% 10px 3%; } }
-          .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) {
+          .list_03 .layoutWrap .articleWrap ul.article li:nth-child(even) {
             overflow: hidden;
             background-color: #f2f2f2; }
             @media screen and (min-width: 1024px) {
-              .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) {
+              .list_03 .layoutWrap .articleWrap ul.article li:nth-child(even) {
                 float: right; } }
-            .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even):after {
+            .list_03 .layoutWrap .articleWrap ul.article li:nth-child(even):after {
               content: "";
               display: block;
               width: 0;
@@ -3182,14 +3180,14 @@ img {
               top: 45%;
               left: 50%; }
               @media screen and (min-width: 1024px) {
-                .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even):after {
+                .list_03 .layoutWrap .articleWrap ul.article li:nth-child(even):after {
                   left: 47%; } }
-            .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) a.img {
+            .list_03 .layoutWrap .articleWrap ul.article li:nth-child(even) a.img {
               width: 50%;
               float: right;
               position: relative;
               overflow: hidden; }
-              .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) a.img .linkWrap {
+              .list_03 .layoutWrap .articleWrap ul.article li:nth-child(even) a.img .linkWrap {
                 width: 81%;
                 height: 80%;
                 padding: 10%;
@@ -3201,56 +3199,56 @@ img {
                 -moz-transition: all 0.5s ease 0s;
                 -o-transition: all 0.5s ease 0s;
                 transition: all 0.5s ease 0s; }
-                .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) a.img .linkWrap .linkBorder {
+                .list_03 .layoutWrap .articleWrap ul.article li:nth-child(even) a.img .linkWrap .linkBorder {
                   height: 65%;
                   border: 1px solid #fff;
                   padding-top: 35%;
                   text-align: center; }
-                  .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) a.img .linkWrap .linkBorder .ch {
+                  .list_03 .layoutWrap .articleWrap ul.article li:nth-child(even) a.img .linkWrap .linkBorder .ch {
                     display: block; }
-              .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) a.img:hover .linkWrap {
+              .list_03 .layoutWrap .articleWrap ul.article li:nth-child(even) a.img:hover .linkWrap {
                 opacity: 1; }
-              .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) a.img:hover .arrow {
+              .list_03 .layoutWrap .articleWrap ul.article li:nth-child(even) a.img:hover .arrow {
                 -webkit-animation: arrow_move 1s linear infinite;
                 -moz-animation: arrow_move 1s linear infinite;
                 -o-animation: arrow_move 1s linear infinite;
                 animation: arrow_move 1s linear infinite; }
-              .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) a.img .linkWrap {
+              .list_03 .layoutWrap .articleWrap ul.article li:nth-child(even) a.img .linkWrap {
                 height: calc(140px*0.8); }
                 @media screen and (min-width: 414px) {
-                  .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) a.img .linkWrap {
+                  .list_03 .layoutWrap .articleWrap ul.article li:nth-child(even) a.img .linkWrap {
                     height: calc(187px*0.8); } }
                 @media screen and (min-width: 768px) {
-                  .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) a.img .linkWrap {
+                  .list_03 .layoutWrap .articleWrap ul.article li:nth-child(even) a.img .linkWrap {
                     height: calc(344px*0.8); } }
                 @media screen and (min-width: 1024px) {
-                  .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) a.img .linkWrap {
+                  .list_03 .layoutWrap .articleWrap ul.article li:nth-child(even) a.img .linkWrap {
                     height: calc(249px*0.8); } }
               @media screen and (min-width: 1024px) {
-                .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) a.img {
+                .list_03 .layoutWrap .articleWrap ul.article li:nth-child(even) a.img {
                   width: 53%; } }
-            .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) .txtWrap {
+            .list_03 .layoutWrap .articleWrap ul.article li:nth-child(even) .txtWrap {
               width: 50%; }
-              .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) .txtWrap a.category {
+              .list_03 .layoutWrap .articleWrap ul.article li:nth-child(even) .txtWrap a.category {
                 cursor: inherit; }
                 @media screen and (min-width: 1024px) {
-                  .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) .txtWrap a.category {
+                  .list_03 .layoutWrap .articleWrap ul.article li:nth-child(even) .txtWrap a.category {
                     margin-left: 20px;
                     margin-top: 10px; } }
-              .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) .txtWrap a.txt {
+              .list_03 .layoutWrap .articleWrap ul.article li:nth-child(even) .txtWrap a.txt {
                 height: 5.4em;
                 overflow: hidden;
                 padding: 20% 10px 0 10px; }
                 @media screen and (min-width: 768px) {
-                  .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) .txtWrap a.txt {
+                  .list_03 .layoutWrap .articleWrap ul.article li:nth-child(even) .txtWrap a.txt {
                     padding: 30% 20px 0 20px; } }
                 @media screen and (min-width: 1024px) {
-                  .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) .txtWrap a.txt {
+                  .list_03 .layoutWrap .articleWrap ul.article li:nth-child(even) .txtWrap a.txt {
                     padding: 0 20px; } }
-                .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) .txtWrap a.txt h3 {
+                .list_03 .layoutWrap .articleWrap ul.article li:nth-child(even) .txtWrap a.txt h3 {
                   font-weight: normal; }
                   @media screen and (min-width: 1280px) {
-                    .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) .txtWrap a.txt h3 {
+                    .list_03 .layoutWrap .articleWrap ul.article li:nth-child(even) .txtWrap a.txt h3 {
                       display: inline;
                       background-image: transparent;
                       background-image: -webkit-linear-gradient(left, transparent 50%, #000 50%);
@@ -3263,11 +3261,11 @@ img {
                       -moz-transition: all 0.4s ease 0s;
                       -o-transition: all 0.4s ease 0s;
                       transition: all 0.4s ease 0s; }
-                      .layout_03 .layoutWrap .articleWrap ul.article li:nth-child(even) .txtWrap a.txt h3:hover {
+                      .list_03 .layoutWrap .articleWrap ul.article li:nth-child(even) .txtWrap a.txt h3:hover {
                         background-size: 200%;
                         background-position: -100%;
                         color: #fff; } }
-      .layout_03 .layoutWrap .articleWrap .moreBtn {
+      .list_03 .layoutWrap .articleWrap .moreBtn {
         font-size: 24px;
         font-weight: bold;
         display: block;
@@ -3276,7 +3274,7 @@ img {
         cursor: pointer;
         color: rgba(0, 0, 0, 0.5); }
         @media screen and (min-width: 1280px) {
-          .layout_03 .layoutWrap .articleWrap .moreBtn span {
+          .list_03 .layoutWrap .articleWrap .moreBtn span {
             display: inline;
             background-image: transparent;
             background-image: -webkit-linear-gradient(left, transparent 50%, #000 50%);
@@ -3289,32 +3287,32 @@ img {
             -moz-transition: all 0.4s ease 0s;
             -o-transition: all 0.4s ease 0s;
             transition: all 0.4s ease 0s; }
-            .layout_03 .layoutWrap .articleWrap .moreBtn span:hover {
+            .list_03 .layoutWrap .articleWrap .moreBtn span:hover {
               background-size: 200%;
               background-position: -100%;
               color: #fff; } }
 
-.layout_04 {
+.list_04 {
   position: relative;
   background-color: #fff; }
   @media screen and (min-width: 1024px) {
-    .layout_04 .layoutWrap {
+    .list_04 .layoutWrap {
       margin: 0 auto; } }
-  .layout_04 .layoutWrap .title {
+  .list_04 .layoutWrap .title {
     padding: 50px 20px 0 20px;
     text-align: center;
     font-size: 28px;
     line-height: 1.5em;
     font-weight: bold;
     letter-spacing: 2px; }
-    .layout_04 .layoutWrap .title:after {
+    .list_04 .layoutWrap .title:after {
       content: '';
       display: block;
       width: 100px;
       height: 5px;
       margin: 5px auto 10px auto;
       background-color: #000; }
-  .layout_04 .layoutWrap .detail {
+  .list_04 .layoutWrap .detail {
     margin: 0 auto;
     padding: 0 20px;
     color: #000;
@@ -3323,78 +3321,78 @@ img {
     text-align: center;
     font-weight: bold; }
     @media screen and (min-width: 768px) {
-      .layout_04 .layoutWrap .detail {
+      .list_04 .layoutWrap .detail {
         width: 500px; } }
     @media screen and (min-width: 1024px) {
-      .layout_04 .layoutWrap .detail {
+      .list_04 .layoutWrap .detail {
         width: 620px;
         text-align: center; } }
   @media screen and (min-width: 1024px) {
-    .layout_04 .layoutWrap .subTitleWrap {
+    .list_04 .layoutWrap .subTitleWrap {
       width: 970px;
       margin: 0 auto 30px auto; } }
-  .layout_04 .layoutWrap .subTitleWrap .subTitle {
+  .list_04 .layoutWrap .subTitleWrap .subTitle {
     margin: 20px 20px;
     color: rgba(0, 0, 0, 0.5); }
     @media screen and (min-width: 768px) {
-      .layout_04 .layoutWrap .subTitleWrap .subTitle {
+      .list_04 .layoutWrap .subTitleWrap .subTitle {
         margin: 20px 40px; } }
     @media screen and (min-width: 1024px) {
-      .layout_04 .layoutWrap .subTitleWrap .subTitle {
+      .list_04 .layoutWrap .subTitleWrap .subTitle {
         width: 65%;
         margin: 20px auto;
         text-align: center; } }
-  .layout_04 .layoutWrap .sliderWrap {
+  .list_04 .layoutWrap .sliderWrap {
     position: relative;
     margin-top: 20px; }
     @media screen and (min-width: 1024px) {
-      .layout_04 .layoutWrap .sliderWrap {
+      .list_04 .layoutWrap .sliderWrap {
         padding-bottom: 0px; } }
-    .layout_04 .layoutWrap .sliderWrap .slidesWrap {
+    .list_04 .layoutWrap .sliderWrap .slidesWrap {
       width: 100%;
       overflow-x: auto;
       overflow-y: hidden;
       -webkit-overflow-scrolling: touch; }
       @media screen and (min-width: 1024px) {
-        .layout_04 .layoutWrap .sliderWrap .slidesWrap {
+        .list_04 .layoutWrap .sliderWrap .slidesWrap {
           width: calc(276px*3 - 20px);
           overflow-x: hidden;
           margin: 0 auto; } }
       @media screen and (min-width: 1280px) {
-        .layout_04 .layoutWrap .sliderWrap .slidesWrap {
+        .list_04 .layoutWrap .sliderWrap .slidesWrap {
           width: calc(420px*3 - 20px); } }
-      .layout_04 .layoutWrap .sliderWrap .slidesWrap ul.slides {
+      .list_04 .layoutWrap .sliderWrap .slidesWrap ul.slides {
         overflow: hidden;
         margin: 0;
         padding: 0;
         width: calc(212px*3); }
         @media screen and (min-width: 768px) {
-          .layout_04 .layoutWrap .sliderWrap .slidesWrap ul.slides {
+          .list_04 .layoutWrap .sliderWrap .slidesWrap ul.slides {
             width: calc(520px*3); } }
         @media screen and (min-width: 1024px) {
-          .layout_04 .layoutWrap .sliderWrap .slidesWrap ul.slides {
+          .list_04 .layoutWrap .sliderWrap .slidesWrap ul.slides {
             width: calc(276px*3 - 20px); } }
         @media screen and (min-width: 1280px) {
-          .layout_04 .layoutWrap .sliderWrap .slidesWrap ul.slides {
+          .list_04 .layoutWrap .sliderWrap .slidesWrap ul.slides {
             width: calc(420px*3 - 20px); } }
-        .layout_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li {
+        .list_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li {
           list-style: none;
           display: block;
           width: 192px;
           float: left;
           margin-right: 20px; }
           @media screen and (min-width: 768px) {
-            .layout_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li {
+            .list_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li {
               width: 500px; } }
           @media screen and (min-width: 1024px) {
-            .layout_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li {
+            .list_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li {
               width: 256px; } }
           @media screen and (min-width: 1280px) {
-            .layout_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li {
+            .list_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li {
               width: 400px; } }
-          .layout_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li:last-child {
+          .list_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li:last-child {
             margin-right: 0; }
-          .layout_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li a.img {
+          .list_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li a.img {
             display: block;
             background-size: cover;
             background-repeat: no-repeat;
@@ -3403,7 +3401,7 @@ img {
             height: 192px;
             position: relative;
             overflow: hidden; }
-            .layout_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li a.img .linkWrap {
+            .list_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li a.img .linkWrap {
               width: 81%;
               height: 80%;
               padding: 10%;
@@ -3415,43 +3413,43 @@ img {
               -moz-transition: all 0.5s ease 0s;
               -o-transition: all 0.5s ease 0s;
               transition: all 0.5s ease 0s; }
-              .layout_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li a.img .linkWrap .linkBorder {
+              .list_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li a.img .linkWrap .linkBorder {
                 height: 65%;
                 border: 1px solid #fff;
                 padding-top: 35%;
                 text-align: center; }
-                .layout_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li a.img .linkWrap .linkBorder .ch {
+                .list_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li a.img .linkWrap .linkBorder .ch {
                   display: block; }
-            .layout_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li a.img:hover .linkWrap {
+            .list_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li a.img:hover .linkWrap {
               opacity: 1; }
-            .layout_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li a.img:hover .arrow {
+            .list_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li a.img:hover .arrow {
               -webkit-animation: arrow_move 1s linear infinite;
               -moz-animation: arrow_move 1s linear infinite;
               -o-animation: arrow_move 1s linear infinite;
               animation: arrow_move 1s linear infinite; }
             @media screen and (min-width: 768px) {
-              .layout_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li a.img {
+              .list_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li a.img {
                 width: 500px;
                 height: 500px; } }
             @media screen and (min-width: 1024px) {
-              .layout_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li a.img {
+              .list_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li a.img {
                 width: 256px;
                 height: 256px; } }
             @media screen and (min-width: 1280px) {
-              .layout_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li a.img {
+              .list_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li a.img {
                 width: 400px;
                 height: 400px; } }
-          .layout_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li .txtWrap {
+          .list_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li .txtWrap {
             padding: 20px 10px; }
-            .layout_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li .txtWrap a.txt {
+            .list_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li .txtWrap a.txt {
               display: block;
               height: 5.4em;
               overflow: hidden;
               text-align: center; }
-              .layout_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li .txtWrap a.txt h3 {
+              .list_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li .txtWrap a.txt h3 {
                 font-weight: normal; }
                 @media screen and (min-width: 1280px) {
-                  .layout_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li .txtWrap a.txt h3 {
+                  .list_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li .txtWrap a.txt h3 {
                     display: inline;
                     background-image: transparent;
                     background-image: -webkit-linear-gradient(left, transparent 50%, #000 50%);
@@ -3464,72 +3462,72 @@ img {
                     -moz-transition: all 0.4s ease 0s;
                     -o-transition: all 0.4s ease 0s;
                     transition: all 0.4s ease 0s; }
-                    .layout_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li .txtWrap a.txt h3:hover {
+                    .list_04 .layoutWrap .sliderWrap .slidesWrap ul.slides li .txtWrap a.txt h3:hover {
                       background-size: 200%;
                       background-position: -100%;
                       color: #fff; } }
 
-.layout_05 {
+.list_05 {
   background-color: #fff; }
-  .layout_05 .layoutWrap .title {
+  .list_05 .layoutWrap .title {
     padding: 50px 20px 0 20px;
     text-align: center;
     font-size: 28px;
     line-height: 1.5em;
     font-weight: bold;
     letter-spacing: 2px; }
-    .layout_05 .layoutWrap .title:after {
+    .list_05 .layoutWrap .title:after {
       content: '';
       display: block;
       width: 100px;
       height: 5px;
       margin: 5px auto 10px auto;
       background-color: #000; }
-  .layout_05 .layoutWrap .detail {
+  .list_05 .layoutWrap .detail {
     padding: 0 20px;
     text-align: center;
     font-size: 30px;
     line-height: 1.5em;
     font-weight: bold; }
   @media screen and (min-width: 1024px) {
-    .layout_05 .layoutWrap .subTitleWrap {
+    .list_05 .layoutWrap .subTitleWrap {
       width: 970px;
       margin: 0 auto 0 auto; } }
-  .layout_05 .layoutWrap .subTitleWrap .subTitle {
+  .list_05 .layoutWrap .subTitleWrap .subTitle {
     margin: 20px 20px;
     color: rgba(0, 0, 0, 0.5); }
     @media screen and (min-width: 768px) {
-      .layout_05 .layoutWrap .subTitleWrap .subTitle {
+      .list_05 .layoutWrap .subTitleWrap .subTitle {
         margin: 20px 40px 0 40px; } }
     @media screen and (min-width: 1024px) {
-      .layout_05 .layoutWrap .subTitleWrap .subTitle {
+      .list_05 .layoutWrap .subTitleWrap .subTitle {
         width: 65%;
         margin: 20px auto 0 auto;
         text-align: center; } }
-  .layout_05 .layoutWrap ul.article {
+  .list_05 .layoutWrap ul.article {
     overflow: hidden;
     max-width: 970px;
     margin: 0 auto;
     padding: 20px 20px; }
     @media screen and (min-width: 768px) {
-      .layout_05 .layoutWrap ul.article {
+      .list_05 .layoutWrap ul.article {
         padding: 20px 40px; } }
     @media screen and (min-width: 1024px) {
-      .layout_05 .layoutWrap ul.article {
+      .list_05 .layoutWrap ul.article {
         padding: 40px 0; } }
-    .layout_05 .layoutWrap ul.article li {
+    .list_05 .layoutWrap ul.article li {
       list-style: none;
       display: block;
       width: 100%;
       margin-bottom: 20px; }
       @media screen and (min-width: 1024px) {
-        .layout_05 .layoutWrap ul.article li {
+        .list_05 .layoutWrap ul.article li {
           width: 48%; } }
-      .layout_05 .layoutWrap ul.article li:nth-child(odd) {
+      .list_05 .layoutWrap ul.article li:nth-child(odd) {
         float: left; }
-      .layout_05 .layoutWrap ul.article li:nth-child(even) {
+      .list_05 .layoutWrap ul.article li:nth-child(even) {
         float: right; }
-      .layout_05 .layoutWrap ul.article li a.img {
+      .list_05 .layoutWrap ul.article li a.img {
         display: block;
         background-size: cover;
         background-repeat: no-repeat;
@@ -3537,7 +3535,7 @@ img {
         width: 100%;
         position: relative;
         overflow: hidden; }
-        .layout_05 .layoutWrap ul.article li a.img .linkWrap {
+        .list_05 .layoutWrap ul.article li a.img .linkWrap {
           width: 81%;
           height: 80%;
           padding: 10%;
@@ -3549,42 +3547,42 @@ img {
           -moz-transition: all 0.5s ease 0s;
           -o-transition: all 0.5s ease 0s;
           transition: all 0.5s ease 0s; }
-          .layout_05 .layoutWrap ul.article li a.img .linkWrap .linkBorder {
+          .list_05 .layoutWrap ul.article li a.img .linkWrap .linkBorder {
             height: 65%;
             border: 1px solid #fff;
             padding-top: 35%;
             text-align: center; }
-            .layout_05 .layoutWrap ul.article li a.img .linkWrap .linkBorder .ch {
+            .list_05 .layoutWrap ul.article li a.img .linkWrap .linkBorder .ch {
               display: block; }
-        .layout_05 .layoutWrap ul.article li a.img:hover .linkWrap {
+        .list_05 .layoutWrap ul.article li a.img:hover .linkWrap {
           opacity: 1; }
-        .layout_05 .layoutWrap ul.article li a.img:hover .arrow {
+        .list_05 .layoutWrap ul.article li a.img:hover .arrow {
           -webkit-animation: arrow_move 1s linear infinite;
           -moz-animation: arrow_move 1s linear infinite;
           -o-animation: arrow_move 1s linear infinite;
           animation: arrow_move 1s linear infinite; }
-        .layout_05 .layoutWrap ul.article li a.img .linkWrap {
+        .list_05 .layoutWrap ul.article li a.img .linkWrap {
           height: calc(280px*0.8); }
           @media screen and (min-width: 414px) {
-            .layout_05 .layoutWrap ul.article li a.img .linkWrap {
+            .list_05 .layoutWrap ul.article li a.img .linkWrap {
               height: calc(374px*0.8); } }
           @media screen and (min-width: 768px) {
-            .layout_05 .layoutWrap ul.article li a.img .linkWrap {
+            .list_05 .layoutWrap ul.article li a.img .linkWrap {
               height: calc(688px*0.8); } }
           @media screen and (min-width: 1024px) {
-            .layout_05 .layoutWrap ul.article li a.img .linkWrap {
+            .list_05 .layoutWrap ul.article li a.img .linkWrap {
               height: calc(465px*0.8); } }
-      .layout_05 .layoutWrap ul.article li .txtWrap {
+      .list_05 .layoutWrap ul.article li .txtWrap {
         padding: 10px 0; }
-        .layout_05 .layoutWrap ul.article li .txtWrap a.txt {
+        .list_05 .layoutWrap ul.article li .txtWrap a.txt {
           display: block;
           max-height: 5.4em;
           overflow: hidden;
           text-align: center; }
-          .layout_05 .layoutWrap ul.article li .txtWrap a.txt h3 {
+          .list_05 .layoutWrap ul.article li .txtWrap a.txt h3 {
             font-weight: normal; }
             @media screen and (min-width: 1280px) {
-              .layout_05 .layoutWrap ul.article li .txtWrap a.txt h3 {
+              .list_05 .layoutWrap ul.article li .txtWrap a.txt h3 {
                 display: inline;
                 background-image: transparent;
                 background-image: -webkit-linear-gradient(left, transparent 50%, #000 50%);
@@ -3597,74 +3595,74 @@ img {
                 -moz-transition: all 0.4s ease 0s;
                 -o-transition: all 0.4s ease 0s;
                 transition: all 0.4s ease 0s; }
-                .layout_05 .layoutWrap ul.article li .txtWrap a.txt h3:hover {
+                .list_05 .layoutWrap ul.article li .txtWrap a.txt h3:hover {
                   background-size: 200%;
                   background-position: -100%;
                   color: #fff; } }
 
-.layout_06 {
+.list_06 {
   background-color: #fff; }
-  .layout_06 .layoutWrap .title {
+  .list_06 .layoutWrap .title {
     padding: 50px 20px 0 20px;
     text-align: center;
     font-size: 28px;
     line-height: 1.5em;
     font-weight: bold;
     letter-spacing: 2px; }
-    .layout_06 .layoutWrap .title:after {
+    .list_06 .layoutWrap .title:after {
       content: '';
       display: block;
       width: 100px;
       height: 5px;
       margin: 5px auto 10px auto;
       background-color: #000; }
-  .layout_06 .layoutWrap .detail {
+  .list_06 .layoutWrap .detail {
     padding: 0 20px;
     text-align: center;
     font-size: 30px;
     line-height: 1.5em;
     font-weight: bold; }
   @media screen and (min-width: 1024px) {
-    .layout_06 .layoutWrap .subTitleWrap {
+    .list_06 .layoutWrap .subTitleWrap {
       width: 970px;
       margin: 0 auto; } }
-  .layout_06 .layoutWrap .subTitleWrap .subTitle {
+  .list_06 .layoutWrap .subTitleWrap .subTitle {
     margin: 20px 20px 0 20px;
     color: rgba(0, 0, 0, 0.5); }
     @media screen and (min-width: 768px) {
-      .layout_06 .layoutWrap .subTitleWrap .subTitle {
+      .list_06 .layoutWrap .subTitleWrap .subTitle {
         margin: 20px 40px 0 40px; } }
     @media screen and (min-width: 1024px) {
-      .layout_06 .layoutWrap .subTitleWrap .subTitle {
+      .list_06 .layoutWrap .subTitleWrap .subTitle {
         width: 65%;
         margin: 20px auto 0 auto;
         text-align: center; } }
-  .layout_06 .layoutWrap ul.article {
+  .list_06 .layoutWrap ul.article {
     overflow: hidden;
     max-width: 970px;
     margin: 0 auto;
     padding: 20px 20px; }
     @media screen and (min-width: 768px) {
-      .layout_06 .layoutWrap ul.article {
+      .list_06 .layoutWrap ul.article {
         padding: 20px 40px; } }
     @media screen and (min-width: 1024px) {
-      .layout_06 .layoutWrap ul.article {
+      .list_06 .layoutWrap ul.article {
         padding: 20px 0 40px 0; } }
-    .layout_06 .layoutWrap ul.article li {
+    .list_06 .layoutWrap ul.article li {
       list-style: none;
       display: block;
       width: 100%;
       margin-bottom: 20px;
       position: relative; }
       @media screen and (min-width: 1024px) {
-        .layout_06 .layoutWrap ul.article li {
+        .list_06 .layoutWrap ul.article li {
           width: 48%;
           margin-bottom: 40px; } }
-      .layout_06 .layoutWrap ul.article li:nth-child(odd) {
+      .list_06 .layoutWrap ul.article li:nth-child(odd) {
         float: left; }
-      .layout_06 .layoutWrap ul.article li:nth-child(even) {
+      .list_06 .layoutWrap ul.article li:nth-child(even) {
         float: right; }
-      .layout_06 .layoutWrap ul.article li a.img {
+      .list_06 .layoutWrap ul.article li a.img {
         display: block;
         background-size: cover;
         background-repeat: no-repeat;
@@ -3673,7 +3671,7 @@ img {
         position: relative;
         overflow: hidden;
         height: calc(280px/1.9); }
-        .layout_06 .layoutWrap ul.article li a.img .linkWrap {
+        .list_06 .layoutWrap ul.article li a.img .linkWrap {
           width: 89%;
           height: initial;
           padding: 6%;
@@ -3685,51 +3683,51 @@ img {
           -moz-transition: all 0.5s ease 0s;
           -o-transition: all 0.5s ease 0s;
           transition: all 0.5s ease 0s; }
-          .layout_06 .layoutWrap ul.article li a.img .linkWrap .linkBorder {
+          .list_06 .layoutWrap ul.article li a.img .linkWrap .linkBorder {
             height: initial;
             border: 1px solid #fff;
             padding-top: 13%;
             padding-bottom: 14%;
             text-align: center; }
             @media screen and (min-width: 414px) {
-              .layout_06 .layoutWrap ul.article li a.img .linkWrap .linkBorder {
+              .list_06 .layoutWrap ul.article li a.img .linkWrap .linkBorder {
                 padding-top: 13%;
                 padding-bottom: 15.5%; } }
             @media screen and (min-width: 768px) {
-              .layout_06 .layoutWrap ul.article li a.img .linkWrap .linkBorder {
+              .list_06 .layoutWrap ul.article li a.img .linkWrap .linkBorder {
                 padding-top: 17%;
                 padding-bottom: 16%; } }
             @media screen and (min-width: 1024px) {
-              .layout_06 .layoutWrap ul.article li a.img .linkWrap .linkBorder {
+              .list_06 .layoutWrap ul.article li a.img .linkWrap .linkBorder {
                 padding-top: 15%;
                 padding-bottom: 15.5%; } }
-            .layout_06 .layoutWrap ul.article li a.img .linkWrap .linkBorder .ch {
+            .list_06 .layoutWrap ul.article li a.img .linkWrap .linkBorder .ch {
               display: block; }
-        .layout_06 .layoutWrap ul.article li a.img:hover .linkWrap {
+        .list_06 .layoutWrap ul.article li a.img:hover .linkWrap {
           opacity: 1; }
-        .layout_06 .layoutWrap ul.article li a.img:hover .arrow {
+        .list_06 .layoutWrap ul.article li a.img:hover .arrow {
           -webkit-animation: arrow_move 1s linear infinite;
           -moz-animation: arrow_move 1s linear infinite;
           -o-animation: arrow_move 1s linear infinite;
           animation: arrow_move 1s linear infinite; }
         @media screen and (min-width: 414px) {
-          .layout_06 .layoutWrap ul.article li a.img {
+          .list_06 .layoutWrap ul.article li a.img {
             height: calc(374px/1.9); } }
         @media screen and (min-width: 768px) {
-          .layout_06 .layoutWrap ul.article li a.img {
+          .list_06 .layoutWrap ul.article li a.img {
             height: calc(688px/1.9); } }
         @media screen and (min-width: 1024px) {
-          .layout_06 .layoutWrap ul.article li a.img {
+          .list_06 .layoutWrap ul.article li a.img {
             height: calc(466px/1.9); } }
-        .layout_06 .layoutWrap ul.article li a.img .linkWrap {
+        .list_06 .layoutWrap ul.article li a.img .linkWrap {
           position: absolute; }
-        .layout_06 .layoutWrap ul.article li a.img:hover + .category {
+        .list_06 .layoutWrap ul.article li a.img:hover + .category {
           opacity: 0; }
-        .layout_06 .layoutWrap ul.article li a.img:hover .linkWrap {
+        .list_06 .layoutWrap ul.article li a.img:hover .linkWrap {
           z-index: 1; }
-      .layout_06 .layoutWrap ul.article li .txtWrap {
+      .list_06 .layoutWrap ul.article li .txtWrap {
         position: relative; }
-        .layout_06 .layoutWrap ul.article li .txtWrap a.txt {
+        .list_06 .layoutWrap ul.article li .txtWrap a.txt {
           min-width: 94%;
           height: 3.6em;
           overflow: hidden;
@@ -3745,15 +3743,15 @@ img {
           filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 );
           /* IE6-9 */ }
           @media screen and (min-width: 768px) {
-            .layout_06 .layoutWrap ul.article li .txtWrap a.txt {
+            .list_06 .layoutWrap ul.article li .txtWrap a.txt {
               padding: 20px 3% 10px 3%; } }
           @media screen and (min-width: 1024px) {
-            .layout_06 .layoutWrap ul.article li .txtWrap a.txt {
+            .list_06 .layoutWrap ul.article li .txtWrap a.txt {
               padding: 20px 3% 10px 3%; } }
-          .layout_06 .layoutWrap ul.article li .txtWrap a.txt h3 {
+          .list_06 .layoutWrap ul.article li .txtWrap a.txt h3 {
             font-weight: normal; }
             @media screen and (min-width: 1280px) {
-              .layout_06 .layoutWrap ul.article li .txtWrap a.txt h3 {
+              .list_06 .layoutWrap ul.article li .txtWrap a.txt h3 {
                 display: inline;
                 background-image: transparent;
                 background-image: -webkit-linear-gradient(left, transparent 50%, #000 50%);
@@ -3766,122 +3764,10 @@ img {
                 -moz-transition: all 0.4s ease 0s;
                 -o-transition: all 0.4s ease 0s;
                 transition: all 0.4s ease 0s; }
-                .layout_06 .layoutWrap ul.article li .txtWrap a.txt h3:hover {
+                .list_06 .layoutWrap ul.article li .txtWrap a.txt h3:hover {
                   background-size: 200%;
                   background-position: -100%;
                   color: #fff; } }
-
-.article_01 {
-  background-color: black;
-  padding: 50px 0; }
-  .article_01 .articleWrap {
-    position: relative;
-    overflow: hidden; }
-    @media screen and (min-width: 1024px) {
-      .article_01 .articleWrap {
-        width: 800px;
-        margin: 0 auto; } }
-    .article_01 .articleWrap img.logo {
-      display: block;
-      margin: 0 auto 50px auto; }
-    .article_01 .articleWrap .txtWrap {
-      color: #fff;
-      padding: 0 20px;
-      position: relative;
-      float: left; }
-      @media screen and (min-width: 768px) {
-        .article_01 .articleWrap .txtWrap {
-          padding: 0 40px; } }
-      @media screen and (min-width: 1024px) {
-        .article_01 .articleWrap .txtWrap {
-          border: 1px solid #fff;
-          margin-bottom: 30px;
-          padding: 40px 60px; } }
-      .article_01 .articleWrap .txtWrap .title {
-        font-size: 30px;
-        text-align: center;
-        margin-bottom: 20px; }
-        @media screen and (min-width: 1024px) {
-          .article_01 .articleWrap .txtWrap .title {
-            text-align: left; } }
-      .article_01 .articleWrap .txtWrap .txt ul.list {
-        padding: 20px 0; }
-        .article_01 .articleWrap .txtWrap .txt ul.list li {
-          list-style: none;
-          display: block;
-          margin-bottom: 10px;
-          overflow: hidden; }
-          .article_01 .articleWrap .txtWrap .txt ul.list li span {
-            display: block;
-            float: left; }
-            .article_01 .articleWrap .txtWrap .txt ul.list li span.item {
-              width: 100px; }
-              @media screen and (min-width: 768px) {
-                .article_01 .articleWrap .txtWrap .txt ul.list li span.item {
-                  width: 140px; } }
-              @media screen and (min-width: 1024px) {
-                .article_01 .articleWrap .txtWrap .txt ul.list li span.item {
-                  width: 120px; } }
-            .article_01 .articleWrap .txtWrap .txt ul.list li span.itemTxt {
-              width: calc(100% - 100px); }
-              @media screen and (min-width: 768px) {
-                .article_01 .articleWrap .txtWrap .txt ul.list li span.itemTxt {
-                  width: calc(100% - 140px); } }
-              @media screen and (min-width: 1024px) {
-                .article_01 .articleWrap .txtWrap .txt ul.list li span.itemTxt {
-                  width: calc(100% - 120px); } }
-      @media screen and (min-width: 1024px) {
-        .article_01 .articleWrap .txtWrap .btnWrap {
-          position: absolute;
-          z-index: 1;
-          margin: 10px 0 0 201px; } }
-      .article_01 .articleWrap .txtWrap .btnWrap a.btn {
-        display: block;
-        width: 238px;
-        margin: 0 auto;
-        line-height: 60px;
-        background-color: gray;
-        padding: 0 20px;
-        overflow: hidden;
-        position: relative; }
-        @media screen and (min-width: 768px) {
-          .article_01 .articleWrap .txtWrap .btnWrap a.btn {
-            width: 278px; } }
-        @media screen and (min-width: 1024px) {
-          .article_01 .articleWrap .txtWrap .btnWrap a.btn {
-            width: 238px;
-            box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.24), 0 3px 10px 0 rgba(0, 0, 0, 0.48);
-            -webkit-transition: all 0.5s ease 0s;
-            -moz-transition: all 0.5s ease 0s;
-            -o-transition: all 0.5s ease 0s;
-            transition: all 0.5s ease 0s; }
-            .article_01 .articleWrap .txtWrap .btnWrap a.btn:hover {
-              box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 3px 15px 0 rgba(0, 0, 0, 0.24);
-              -webkit-transform: translate(-10px, -10px);
-              -ms-transform: translate(-10px, -10px);
-              -moz-transform: translate(-10px, -10px);
-              -o-transform: translate(-10px, -10px);
-              transform: translate(-10px, -10px); } }
-        .article_01 .articleWrap .txtWrap .btnWrap a.btn:before {
-          content: '';
-          display: block;
-          position: absolute;
-          left: 5px;
-          right: 5px;
-          top: 5px;
-          bottom: 5px;
-          border: 1px solid #fff; }
-        .article_01 .articleWrap .txtWrap .btnWrap a.btn .icon {
-          position: absolute;
-          bottom: 0;
-          width: 120px;
-          height: 48px; }
-          .article_01 .articleWrap .txtWrap .btnWrap a.btn .icon svg .st0 {
-            fill: #fff; }
-        .article_01 .articleWrap .txtWrap .btnWrap a.btn .icontext {
-          float: right;
-          font-style: italic;
-          font-weight: bold; }
 
 .article_02 {
   background-color: #fff;
@@ -4097,13 +3983,10 @@ img {
         height: 600px; } }
     .gallery_01 ul.slider li .img {
       display: -webkit-flex;
-      display: -ms-flexbox;
       display: flex;
       -webkit-align-items: center;
-      -ms-flex-align: center;
       align-items: center;
       -webkit-justify-content: center;
-      -ms-flex-pack: center;
       justify-content: center;
       background-color: black;
       height: calc(100% - 66px); }
@@ -4117,8 +4000,6 @@ img {
       .gallery_01 ul.slider li .img img {
         display: block;
         -webkit-align-self: center;
-        -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
         align-self: center;
         cursor: pointer; }
         @media screen and (min-width: 1024px) {
@@ -4175,52 +4056,164 @@ img {
     transform-origin: 50% 50%;
     opacity: 1; }
 
-.gallery_02 {
+.social_01 {
+  background-color: black;
+  padding: 50px 0; }
+  .social_01 .articleWrap {
+    position: relative;
+    overflow: hidden; }
+    @media screen and (min-width: 1024px) {
+      .social_01 .articleWrap {
+        width: 800px;
+        margin: 0 auto; } }
+    .social_01 .articleWrap img.logo {
+      display: block;
+      margin: 0 auto 50px auto; }
+    .social_01 .articleWrap .txtWrap {
+      color: #fff;
+      padding: 0 20px;
+      position: relative;
+      float: left; }
+      @media screen and (min-width: 768px) {
+        .social_01 .articleWrap .txtWrap {
+          padding: 0 40px; } }
+      @media screen and (min-width: 1024px) {
+        .social_01 .articleWrap .txtWrap {
+          border: 1px solid #fff;
+          margin-bottom: 30px;
+          padding: 40px 60px; } }
+      .social_01 .articleWrap .txtWrap .title {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 20px; }
+        @media screen and (min-width: 1024px) {
+          .social_01 .articleWrap .txtWrap .title {
+            text-align: left; } }
+      .social_01 .articleWrap .txtWrap .txt ul.list {
+        padding: 20px 0; }
+        .social_01 .articleWrap .txtWrap .txt ul.list li {
+          list-style: none;
+          display: block;
+          margin-bottom: 10px;
+          overflow: hidden; }
+          .social_01 .articleWrap .txtWrap .txt ul.list li span {
+            display: block;
+            float: left; }
+            .social_01 .articleWrap .txtWrap .txt ul.list li span.item {
+              width: 100px; }
+              @media screen and (min-width: 768px) {
+                .social_01 .articleWrap .txtWrap .txt ul.list li span.item {
+                  width: 140px; } }
+              @media screen and (min-width: 1024px) {
+                .social_01 .articleWrap .txtWrap .txt ul.list li span.item {
+                  width: 120px; } }
+            .social_01 .articleWrap .txtWrap .txt ul.list li span.itemTxt {
+              width: calc(100% - 100px); }
+              @media screen and (min-width: 768px) {
+                .social_01 .articleWrap .txtWrap .txt ul.list li span.itemTxt {
+                  width: calc(100% - 140px); } }
+              @media screen and (min-width: 1024px) {
+                .social_01 .articleWrap .txtWrap .txt ul.list li span.itemTxt {
+                  width: calc(100% - 120px); } }
+      @media screen and (min-width: 1024px) {
+        .social_01 .articleWrap .txtWrap .btnWrap {
+          position: absolute;
+          z-index: 1;
+          margin: 10px 0 0 201px; } }
+      .social_01 .articleWrap .txtWrap .btnWrap a.btn {
+        display: block;
+        width: 238px;
+        margin: 0 auto;
+        line-height: 60px;
+        background-color: gray;
+        padding: 0 20px;
+        overflow: hidden;
+        position: relative; }
+        @media screen and (min-width: 768px) {
+          .social_01 .articleWrap .txtWrap .btnWrap a.btn {
+            width: 278px; } }
+        @media screen and (min-width: 1024px) {
+          .social_01 .articleWrap .txtWrap .btnWrap a.btn {
+            width: 238px;
+            box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.24), 0 3px 10px 0 rgba(0, 0, 0, 0.48);
+            -webkit-transition: all 0.5s ease 0s;
+            -moz-transition: all 0.5s ease 0s;
+            -o-transition: all 0.5s ease 0s;
+            transition: all 0.5s ease 0s; }
+            .social_01 .articleWrap .txtWrap .btnWrap a.btn:hover {
+              box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 3px 15px 0 rgba(0, 0, 0, 0.24);
+              -webkit-transform: translate(-10px, -10px);
+              -ms-transform: translate(-10px, -10px);
+              -moz-transform: translate(-10px, -10px);
+              -o-transform: translate(-10px, -10px);
+              transform: translate(-10px, -10px); } }
+        .social_01 .articleWrap .txtWrap .btnWrap a.btn:before {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 5px;
+          right: 5px;
+          top: 5px;
+          bottom: 5px;
+          border: 1px solid #fff; }
+        .social_01 .articleWrap .txtWrap .btnWrap a.btn .icon {
+          position: absolute;
+          bottom: 0;
+          width: 120px;
+          height: 48px; }
+          .social_01 .articleWrap .txtWrap .btnWrap a.btn .icon svg .st0 {
+            fill: #fff; }
+        .social_01 .articleWrap .txtWrap .btnWrap a.btn .icontext {
+          float: right;
+          font-style: italic;
+          font-weight: bold; }
+
+.social_02 {
   background-color: #fff; }
-  .gallery_02 .layoutWrap .title {
+  .social_02 .layoutWrap .title {
     padding: 50px 20px 0 20px;
     text-align: center;
     font-size: 28px;
     line-height: 1.5em;
     font-weight: bold;
     letter-spacing: 2px; }
-    .gallery_02 .layoutWrap .title:after {
+    .social_02 .layoutWrap .title:after {
       content: '';
       display: block;
       width: 100px;
       height: 5px;
       margin: 5px auto 10px auto;
       background-color: #000; }
-  .gallery_02 .layoutWrap .detail {
+  .social_02 .layoutWrap .detail {
     padding: 0 20px;
     text-align: center;
     font-size: 30px;
     line-height: 1.5em;
     font-weight: bold; }
   @media screen and (min-width: 1024px) {
-    .gallery_02 .layoutWrap .subTitleWrap {
+    .social_02 .layoutWrap .subTitleWrap {
       width: 970px;
       margin: 0 auto; } }
-  .gallery_02 .layoutWrap .subTitleWrap .subTitle {
+  .social_02 .layoutWrap .subTitleWrap .subTitle {
     margin: 20px 20px 0 20px;
     color: rgba(0, 0, 0, 0.5); }
     @media screen and (min-width: 768px) {
-      .gallery_02 .layoutWrap .subTitleWrap .subTitle {
+      .social_02 .layoutWrap .subTitleWrap .subTitle {
         margin: 20px 40px 0 40px; } }
     @media screen and (min-width: 1024px) {
-      .gallery_02 .layoutWrap .subTitleWrap .subTitle {
+      .social_02 .layoutWrap .subTitleWrap .subTitle {
         width: 65%;
         margin: 20px auto 0 auto;
         text-align: center; } }
-  .gallery_02 .layoutWrap .photo {
+  .social_02 .layoutWrap .photo {
     max-width: 970px;
     margin: 0 auto;
     padding: 20px 0; }
     @media screen and (min-width: 768px) {
-      .gallery_02 .layoutWrap .photo {
+      .social_02 .layoutWrap .photo {
         padding: 20px 20px; } }
     @media screen and (min-width: 1024px) {
-      .gallery_02 .layoutWrap .photo {
+      .social_02 .layoutWrap .photo {
         padding: 20px 0 40px 0; } }
 
 .video_01 {
@@ -4489,13 +4482,10 @@ ul.fixedBtn_01 {
       width: 100%;
       height: 100vh;
       display: -webkit-flex;
-      display: -ms-flexbox;
       display: flex;
       -webkit-align-items: center;
-      -ms-flex-align: center;
       align-items: center;
       -webkit-justify-content: center;
-      -ms-flex-pack: center;
       justify-content: center;
       opacity: 0;
       -webkit-transition: all 0.5s ease 0s;

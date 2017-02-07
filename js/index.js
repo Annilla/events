@@ -205,11 +205,11 @@
     });
   };
 
-  // layout_04
-  var layout_04 = function() {
+  // list_04
+  var list_04 = function() {
     // Slider
-    var $layout04 = $('.layout_04');
-    $layout04.each(function() {
+    var $list04 = $('.list_04');
+    $list04.each(function() {
       var $this = $(this),
         $slideW = $this.find('ul.slides').width(),
         $windowW = $(window).width();
@@ -356,10 +356,10 @@
   };
 
   // gallery_02
-  var gallery_02 = function() {
-    var $gallery02 = $('.gallery_02'),
+  var social_02 = function() {
+    var $social02 = $('.social_02'),
       $windowW = $(window).width();
-    $gallery02.each(function() {
+    $social02.each(function() {
       var $iframe = $(this).find('.photo iframe'),
         mUrl = $iframe.data('msrc'),
         pcUrl = $iframe.data('pcsrc');
@@ -440,9 +440,9 @@
   init();
   nav_01();
   header_03_slider();
-  layout_04();
+  list_04();
   gallery_01();
-  gallery_02();
+  social_02();
   fixedBtn_01();
 
   // plugin wow = scroll to animation
@@ -517,10 +517,10 @@
     $(document).trigger('parallax');
   });
 
-  // plugin layout_03 infinite scroll
+  // plugin list_03 infinite scroll
   $(function() {
-    var $layout03infinit = $('.layout_03_infinit');
-    $layout03infinit.each(function() {
+    var $list03infinit = $('.list_03_infinit');
+    $list03infinit.each(function() {
       var $layout = $(this).find('.layoutWrap'),
         moreBtn = '.moreBtn',
         countFrom = 0,
@@ -535,7 +535,7 @@
           $(this).remove();
           // get new data
           countFrom += countSize;
-          layout_03_ajax(countFrom, countSize);
+          list_03_ajax(countFrom, countSize);
           // append article
           addArticle();
         });
@@ -550,7 +550,7 @@
       }
 
       // ajax
-      var layout_03_ajax = function(ifrom, isize) {
+      var list_03_ajax = function(ifrom, isize) {
         // clear article content
         article = '';
         var items = {
@@ -595,14 +595,14 @@
       }
 
       //init loading ajax
-      layout_03_ajax(countFrom, countSize);
+      list_03_ajax(countFrom, countSize);
     });
   });
 
-  // plugin layout_05_tag auto loading
+  // plugin list_05_tag auto loading
   $(function() {
-    var $layout05_tag = $('.layout_05_tag');
-    $layout05_tag.each(function() {
+    var $list05_tag = $('.list_05_tag');
+    $list05_tag.each(function() {
       var $layout = $(this).find('.layoutWrap'),
         engtitle = $layout.data('engtitle'),
         title = $layout.data('title'),
@@ -624,7 +624,7 @@
       }
 
       // ajax
-      var layout_05_ajax = function(ifrom, isize) {
+      var list_05_ajax = function(ifrom, isize) {
         // clear article content
         article = '';
         var items = {
@@ -665,14 +665,14 @@
       }
 
       //init loading ajax
-      layout_05_ajax(countFrom, countSize);
+      list_05_ajax(countFrom, countSize);
     });
   });
 
-  // plugin layout_06 auto loading
+  // plugin list_06 auto loading
   $(function() {
-    var $layout06 = $('.layout_06');
-    $layout06.each(function() {
+    var $list06 = $('.list_06');
+    $list06.each(function() {
       var $layout = $(this).find('.layoutWrap'),
         engtitle = $layout.data('engtitle'),
         title = $layout.data('title'),
@@ -694,7 +694,7 @@
       }
 
       // ajax
-      var layout_06_ajax = function(ifrom, isize) {
+      var list_06_ajax = function(ifrom, isize) {
         // clear article content
         article = '';
         var items = {
@@ -735,7 +735,7 @@
       }
 
       //init loading ajax
-      layout_06_ajax(countFrom, countSize);
+      list_06_ajax(countFrom, countSize);
     });
   });
 
