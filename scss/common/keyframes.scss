@@ -13,7 +13,7 @@
     @include cus_fadeInUp;
 }
 
-//animation scrollIcon for headers
+//animation scrollIcon for header01~03
 @mixin scr_circle {
     0% {
         @include transform(translateY(0));
@@ -43,6 +43,36 @@
 }
 @include keyframes(scroll_arrow) {
     @include scr_arrow;
+}
+
+//animation scrollIcon for header04~05
+@mixin scr_line {
+    0% {
+        @include transform(translateY(0));
+    }
+    50% {
+        @include transform(translateY(5px));
+    }
+    100% {
+        @include transform(translateY(0));
+    }
+}
+@include keyframes(scroll_line) {
+    @include scr_line;
+}
+@mixin scr_arrow2 {
+    0% {
+        @include transform(translateY(-5px));
+    }
+    50% {
+        @include transform(translateY(0));
+    }
+    100% {
+        @include transform(translateY(-5px));
+    }
+}
+@include keyframes(scroll_arrow2) {
+    @include scr_arrow2;
 }
 
 //animation bullet for header03

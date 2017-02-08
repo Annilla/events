@@ -1,0 +1,26 @@
+doctype html
+html(lang='zh-TW')
+  head
+    include ./base/head.jade
+  body
+    #fb-root
+    h1.hide 夏日穿搭特輯 - JUKSY 街星
+    include ./header/h_04.jade
+
+    // JS start
+
+    // JS cdn
+    include ./base/cdnjs.jade
+
+    // JS DEV FILE
+    include ./base/devjs.jade
+
+    // JS MIN FILE
+    //- include ./base/minjs.jade
+
+    // JS third party
+    script(type='text/javascript')
+      include ./js/foot.js
+    // JS third party end
+
+    // JS end
