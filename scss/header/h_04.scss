@@ -9,8 +9,10 @@
           height: 90vh;
           background-repeat: no-repeat;
           background-size: cover;
-          background-attachment: fixed;
           background-position: 50%;
+        }
+        @include screen(pcLarge) {
+          background-attachment: fixed;
         }
         img {
           width: 100%;
@@ -25,6 +27,9 @@
       width: 100%;
       position: absolute;
       bottom: 0;
+      @include screen(pcSmall) {
+        display: none;
+      }
       .scrollIcon {
         width: 20px;
         height: 35px;

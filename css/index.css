@@ -2252,8 +2252,10 @@ img {
       height: 90vh;
       background-repeat: no-repeat;
       background-size: cover;
-      background-attachment: fixed;
       background-position: 50%; } }
+  @media screen and (min-width: 1280px) {
+    .header_04 .headerWrap .visualBg .picture {
+      background-attachment: fixed; } }
   .header_04 .headerWrap .visualBg .picture img {
     width: 100%;
     display: block; }
@@ -2264,6 +2266,9 @@ img {
     width: 100%;
     position: absolute;
     bottom: 0; }
+    @media screen and (min-width: 1024px) {
+      .header_04 .headerWrap .iconWrap {
+        display: none; } }
     .header_04 .headerWrap .iconWrap .scrollIcon {
       width: 20px;
       height: 35px;
