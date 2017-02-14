@@ -34,6 +34,7 @@
         position: relative;
         transform-style: preserve-3d;
         perspective: 1000px;
+        overflow: hidden;
         @include screen(pcSmall) {
           margin-bottom: 30px;
         }

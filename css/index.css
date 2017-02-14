@@ -4220,7 +4220,8 @@ img {
       -webkit-transform-style: preserve-3d;
       transform-style: preserve-3d;
       -webkit-perspective: 1000px;
-      perspective: 1000px; }
+      perspective: 1000px;
+      overflow: hidden; }
       @media screen and (min-width: 1024px) {
         .list_07 .layoutWrap ul.article li {
           margin-bottom: 30px; } }
