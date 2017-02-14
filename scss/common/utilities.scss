@@ -8,3 +8,9 @@
 .custom_fadeinup {
   	@include animation(custom_fadeinup 1s cubic-bezier(0.165, 0.84, 0.44, 1));
 }
+.custom_tiltinup {
+  	@include animation(custom_tiltinup 1s ease);
+}
+.custom_R2Lflow {
+  	@include animation(custom_R2Lflow 1s ease);
+}

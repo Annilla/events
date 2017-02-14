@@ -19,7 +19,7 @@
     // Configure webfont
     window.WebFontConfig = {
       google: {
-        families: ['Roboto+Condensed:400,400italic,700,700italic:latin']
+        families: ['Roboto+Condensed:400,400italic,700,700italic:latin', 'Source+Sans+Pro:400,400i,900,900i']
       }
     };
 
@@ -423,6 +423,7 @@
     var $window = $(window);
 
     function fixedBtnShow() {
+      if (!$('#footer').length) return;/* fixed for no footer */
       var st = $(this).scrollTop(),
         ft = $('#footer').offset().top - $window.height() - 300,
         $fixedBtn = $('.fixedBtn_01');

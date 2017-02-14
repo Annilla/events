@@ -1,4 +1,4 @@
-//animation for modules
+//animation for modules wow
 @mixin cus_fadeInUp {
     0% {
         @include transform(translate(0,20px));
@@ -11,6 +11,36 @@
 }
 @include keyframes(custom_fadeinup) {
     @include cus_fadeInUp;
+}
+
+@mixin cus_tiltInUp {
+    0% {
+        @include transform(rotate3d(1,0,0,30deg)  translate3d(0px,20px,0px));
+        @include transform-origin(0% 50%);
+        opacity:0;
+    }
+    100% {
+        @include transform(rotate3d(1,0,0,0deg) translate3d(0px,0px,0px));
+        @include transform-origin(0% 50%);
+        opacity:1;
+    }
+}
+@include keyframes(custom_tiltinup) {
+    @include cus_tiltInUp;
+}
+
+@mixin cus_R2Lflow {
+    0% {
+        @include transform(translateX(300px));
+        opacity:0;
+    }
+    100% {
+        @include transform(translateX(0));
+        opacity:1;
+    }
+}
+@include keyframes(custom_R2Lflow) {
+    @include cus_R2Lflow;
 }
 
 //animation scrollIcon for header01~03
@@ -90,7 +120,7 @@
     @include header03_bullet;
 }
 
-//animation arrow for layouts
+//animation arrow for lists1~6
 @mixin ar_move {
     0% {
         @include transform(none);
@@ -106,7 +136,7 @@
     @include ar_move;
 }
 
-//animation down img for layout_01
+//animation down img for list_01
 @mixin translateY0 {
     @include transform(translateY(0));
 }
@@ -162,7 +192,7 @@
     @include img_down2;
 }
 
-//animation for btnfixed
+//animation for btnfixed01
 @include keyframes(anim-in) {
     0% {
         width: 100%;
