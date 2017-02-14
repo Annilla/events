@@ -48,7 +48,9 @@
           }
           .linkWrap {
             height: calc(320px*0.33);
-            background-color: rgba(0,0,0,0.3);
+            @include screen(pcSmall) {
+              background-color: rgba(0,0,0,0.3);
+            }
           	@include transition;
             @include screen(mLarge) {
               height: calc(414px*0.33);

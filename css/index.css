@@ -4240,11 +4240,13 @@ img {
           background-size: 103% auto; }
         .list_07 .layoutWrap ul.article li a.img .linkWrap {
           height: calc(320px*0.33);
-          background-color: rgba(0, 0, 0, 0.3);
           -webkit-transition: all 0.5s ease 0s;
           -moz-transition: all 0.5s ease 0s;
           -o-transition: all 0.5s ease 0s;
           transition: all 0.5s ease 0s; }
+          @media screen and (min-width: 1024px) {
+            .list_07 .layoutWrap ul.article li a.img .linkWrap {
+              background-color: rgba(0, 0, 0, 0.3); } }
           @media screen and (min-width: 414px) {
             .list_07 .layoutWrap ul.article li a.img .linkWrap {
               height: calc(414px*0.33); } }
@@ -4281,14 +4283,14 @@ img {
 
 .list_08 {
   background-color: #000;
-  color: #fff;
   font-family: "Source Sans Pro", "Microsoft JhengHei", sans-serif; }
   .list_08 .layoutWrap .title {
     font-size: 28px;
     line-height: 1.5em;
     font-weight: bold;
     letter-spacing: 2px;
-    padding: 50px 20px 0 20px; }
+    padding: 50px 20px 0 20px;
+    color: #fff; }
     @media screen and (min-width: 768px) {
       .list_08 .layoutWrap .title {
         padding: 50px 40px 0 40px; } }
@@ -4302,7 +4304,8 @@ img {
       display: block;
       border-bottom: 1px solid #fff; }
   .list_08 .layoutWrap ul.article {
-    margin-top: 30px; }
+    margin-top: 30px;
+    padding: 0 20px; }
     .list_08 .layoutWrap ul.article li {
       list-style: none;
       display: block;
@@ -4311,7 +4314,8 @@ img {
       transform-style: preserve-3d;
       -webkit-perspective: 1000px;
       perspective: 1000px;
-      overflow: hidden; }
+      overflow: hidden;
+      background-color: #fff; }
       .list_08 .layoutWrap ul.article li a.img {
         display: block;
         background-size: cover;
