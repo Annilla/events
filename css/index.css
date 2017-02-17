@@ -4724,7 +4724,7 @@ img {
           height: calc(100% - 48px); } }
       @media screen and (min-width: 1024px) {
         .gallery_01 ul.slider li .img {
-          height: auto;
+          height: 100%;
           background-color: transparent; } }
       .gallery_01 ul.slider li .img img {
         display: block;

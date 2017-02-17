@@ -172,7 +172,7 @@
           height: calc(100% - 48px); //576(img)+48(txt)
         }
         @include screen(pcSmall) {
-          height: auto;
+          height: 100%;
           background-color: transparent;
         }
         img {

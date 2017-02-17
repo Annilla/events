@@ -77,6 +77,23 @@ body {
 
 .header_02 {
   .headerWrap {
+    // 調整敘述高度
+    // height: calc(568*0.9px + 305px - 31px); // visual + detail - triangle(30)
+    // @include screen(mMedium) {
+    //   height: calc(667*0.9px + 278px - 31px);
+    // }
+    // @include screen(mLarge) {
+    //   height: calc(736*0.9px + 277px - 31px);
+    // }
+    // @include screen(tb) {
+    //   height: calc(1024*0.9px + 295px - 31px);
+    // }
+    // @include screen(pcSmall) {
+    //   height: calc(768*0.9px + 180px - 31px);
+    // }
+    // @include screen(pcLarge) {
+    //   height: calc(900*0.9px + 180px - 31px);
+    // }
     .visualBg {
       //手機主視覺
       //background-image: url('../img/visual_m.jpg');
@@ -112,6 +129,20 @@ body {
         .txtBg {
           //描述背景色
           background-color: rgba(0, 0, 0, 1);
+          // 調整敘述高度
+          // height: 305px; //equal to .detailWrap height
+          // @include screen(mMedium) {
+          //   height: 278px;
+          // }
+          // @include screen(mLarge) {
+          //   height: 277px;
+          // }
+          // @include screen(tb) {
+          //   height: 295px;
+          // }
+          // @include screen(pcSmall) {
+          //   height: 180px;
+          // }
         }
         .txtInner {
           a.link {
