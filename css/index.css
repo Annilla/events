@@ -4249,7 +4249,8 @@ img {
     @media screen and (min-width: 1024px) {
       .list_07 .layoutWrap ul.article {
         width: 970px;
-        margin: 30px auto 0 auto; } }
+        margin: 30px auto 0 auto;
+        padding-bottom: 30px; } }
     .list_07 .layoutWrap ul.article li {
       list-style: none;
       display: block;
@@ -4261,7 +4262,9 @@ img {
       overflow: hidden; }
       @media screen and (min-width: 1024px) {
         .list_07 .layoutWrap ul.article li {
-          margin-bottom: 30px; } }
+          margin-bottom: 30px; }
+          .list_07 .layoutWrap ul.article li:last-child {
+            margin-bottom: 0; } }
       .list_07 .layoutWrap ul.article li a.img {
         display: block;
         background-size: cover;
@@ -4980,6 +4983,84 @@ img {
         left: 0;
         width: 100%;
         height: 100%; }
+
+.video_02 {
+  position: relative;
+  background-color: #000;
+  color: #fff; }
+  @media screen and (min-width: 1024px) {
+    .video_02 {
+      background-color: transparent; } }
+  @media screen and (min-width: 1024px) {
+    .video_02 .videoWrap .titleWrap {
+      background-color: #000;
+      padding-bottom: 30px; } }
+  .video_02 .videoWrap .titleWrap .title {
+    font-size: 28px;
+    line-height: 1.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 50px 20px 0 20px; }
+    @media screen and (min-width: 768px) {
+      .video_02 .videoWrap .titleWrap .title {
+        padding: 50px 40px 0 40px; } }
+    @media screen and (min-width: 1024px) {
+      .video_02 .videoWrap .titleWrap .title {
+        padding: 50px 0 0 0;
+        width: 970px;
+        margin: 0 auto; } }
+    .video_02 .videoWrap .titleWrap .title:after {
+      content: "";
+      display: block;
+      border-bottom: 1px solid #fff; }
+  .video_02 .videoWrap .parallax {
+    display: none; }
+    @media screen and (min-width: 1024px) {
+      .video_02 .videoWrap .parallax {
+        display: block;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        bottom: 0;
+        height: auto;
+        min-height: 100%;
+        min-width: 100%;
+        -webkit-perspective: 1000;
+        perspective: 1000;
+        position: fixed;
+        right: 0;
+        width: auto; }
+        .video_02 .videoWrap .parallax .parallaxWrap {
+          width: 100%;
+          height: 100vh; }
+        .video_02 .videoWrap .parallax .videoWrapper {
+          position: relative;
+          padding-bottom: 56.25%;
+          height: 0; }
+          .video_02 .videoWrap .parallax .videoWrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%; } }
+  @media screen and (min-width: 1024px) {
+    .video_02 .videoWrap .parallaxContent {
+      height: 100vh;
+      cursor: pointer; } }
+  .video_02 .videoWrap .mobile {
+    position: relative;
+    margin-top: 30px;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    height: 0; }
+    @media screen and (min-width: 1024px) {
+      .video_02 .videoWrap .mobile {
+        display: none; } }
+    .video_02 .videoWrap .mobile iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
 
 .footer_01 {
   display: block;

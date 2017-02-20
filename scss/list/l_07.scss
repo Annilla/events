@@ -28,6 +28,7 @@
       @include screen(pcSmall) {
       	width: $pc_max_width;
       	margin: 30px auto 0 auto;
+        padding-bottom: 30px;
       }
       li {
         @include list_style_none;
@@ -37,6 +38,9 @@
         overflow: hidden;
         @include screen(pcSmall) {
           margin-bottom: 30px;
+          &:last-child {
+            margin-bottom: 0;
+          }
         }
         a.img {
           @include a_img;
