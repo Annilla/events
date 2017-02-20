@@ -1220,27 +1220,32 @@
     background: rgba(255, 255, 255, 0); } }
 
 @-webkit-keyframes background_diff {
-  0% { }
+  0% {
+    background-position: 0 30%, 0 0; }
   50% {
     background-position: 100% 70%, 0 0; }
   100% {
     background-position: 0 30%, 0 0; } }
 
 @-moz-keyframes background_diff {
-  0% { }
+  0% {
+    background-position: 0 30%, 0 0; }
   50% {
     background-position: 100% 70%, 0 0; }
   100% {
     background-position: 0 30%, 0 0; } }
 
 @-ms-keyframes background_diff {
+  0% {
+    background-position: 0 30%, 0 0; }
   50% {
     background-position: 100% 70%, 0 0; }
   100% {
     background-position: 0 30%, 0 0; } }
 
 @keyframes background_diff {
-  0% { }
+  0% {
+    background-position: 0 30%, 0 0; }
   50% {
     background-position: 100% 70%, 0 0; }
   100% {
@@ -1290,6 +1295,11 @@ img {
 
 .hide {
   display: none; }
+
+.showOnScroll {
+  opacity: 0; }
+  .showOnScroll.animated {
+    opacity: 1; }
 
 .custom_fadeinup {
   -webkit-animation: custom_fadeinup 1s cubic-bezier(0.165, 0.84, 0.44, 1);

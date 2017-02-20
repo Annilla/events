@@ -4,13 +4,22 @@
 }
 
 // plugin wow = scroll to animation
-// animation fadeinup for all elements
+// plugin showOnScroll = scroll to infinite animation
+.showOnScroll {
+	opacity: 0;
+	&.animated {
+		opacity: 1;
+	}
+}
+// animation fade in and up
 .custom_fadeinup {
   	@include animation(custom_fadeinup 1s cubic-bezier(0.165, 0.84, 0.44, 1));
 }
+// animation tilt in and up
 .custom_tiltinup {
   	@include animation(custom_tiltinup 1s ease);
 }
+// animation come in right to left
 .custom_R2Lflow {
   	@include animation(custom_R2Lflow 1s ease);
 }

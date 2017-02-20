@@ -229,7 +229,9 @@
 
 //animation for list08
 @mixin bg_difference {
-    0% {}
+    0% {
+        background-position: 0 30%, 0 0;
+    }
     50% {
         background-position: 100% 70%, 0 0;
     }
