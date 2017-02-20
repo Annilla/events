@@ -4,7 +4,6 @@ body {
 }
 
 .nav_01 {
-  display: none;
   .navWrap {
     @include screen(pcSmall) {
       //桌機-導覽列顏色
