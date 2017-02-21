@@ -1,6 +1,7 @@
 .video_02 {
   position: relative;
   background-color: $black;
+  font-family: $font_module;
   color: $white;
   @include screen(pcLarge) {
     background-color: transparent;
