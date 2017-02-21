@@ -2,12 +2,12 @@
   position: relative;
   background-color: $black;
   color: $white;
-  @include screen(pcSmall) {
+  @include screen(pcLarge) {
     background-color: transparent;
   }
   .videoWrap {
     .titleWrap {
-    	@include screen(pcSmall) {
+    	@include screen(pcLarge) {
     		background-color: $black;
     		padding-bottom: 30px; 
     	}
@@ -64,7 +64,7 @@
       }
     }
     .parallaxContent {
-    	@include screen(pcSmall) {
+    	@include screen(pcLarge) {
         height: 100vh;
         cursor: pointer;
       }
@@ -75,7 +75,7 @@
       padding-bottom: 56.25%;
       /* 16:9 */
       height: 0;
-      @include screen(pcSmall) {
+      @include screen(pcLarge) {
         display: none;
       }
       iframe {

@@ -4988,10 +4988,10 @@ img {
   position: relative;
   background-color: #000;
   color: #fff; }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1280px) {
     .video_02 {
       background-color: transparent; } }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1280px) {
     .video_02 .videoWrap .titleWrap {
       background-color: #000;
       padding-bottom: 30px; } }
@@ -5042,7 +5042,7 @@ img {
             left: 0;
             width: 100%;
             height: 100%; } }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1280px) {
     .video_02 .videoWrap .parallaxContent {
       height: 100vh;
       cursor: pointer; } }
@@ -5052,7 +5052,7 @@ img {
     padding-bottom: 56.25%;
     /* 16:9 */
     height: 0; }
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1280px) {
       .video_02 .videoWrap .mobile {
         display: none; } }
     .video_02 .videoWrap .mobile iframe {
