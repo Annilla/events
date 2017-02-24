@@ -147,6 +147,7 @@
       width: 100%;
       height: 306px; //240(img)+66(txt)
       overflow: hidden;
+      background-color: $black;
       @include screen(mMedium) {
         height: 347.25px; //281.25(img)+66(txt)
       }
@@ -158,6 +159,7 @@
       }
       @include screen(pcSmall) {
         height: 600px; //600(img)
+        background-color: transparent;
       }
       .img {
         display: -webkit-flex;

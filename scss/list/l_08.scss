@@ -1,6 +1,7 @@
 .list_08 {
   background-color: $black;
   font-family: $font_module;
+  padding-top: 30px;
   .layoutWrap {
     .title {
       font-size: 28px;
@@ -29,7 +30,11 @@
       transform-style: preserve-3d;
       perspective: 1000px;
       overflow: hidden;
+      @include screen(tb) {
+        padding: 0 $tb_gap;
+      }
       @include screen(pcSmall) {
+        padding: 0;
         width: $pc_max_width;
         margin: 30px auto 0 auto;
       }

@@ -31,7 +31,7 @@
 
 @mixin cus_R2Lflow {
     0% {
-        @include transform(translateX(300px));
+        @include transform(translateX(50px));
         opacity:0;
     }
     100% {
