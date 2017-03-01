@@ -81,9 +81,10 @@
           background-color: $white;
           padding: 15px;
           position: relative;
-          height: 32px;
           width: 227px;
-          line-height: 30px;
+          height: 32px;
+          line-height: 32px;
+          letter-spacing: 2px;
           @include screen(tb) {
             width: 280px;
           }
@@ -102,7 +103,7 @@
               z-index: 0;
             }
             .date {
-              font-size: 48px;
+              font-size: 40px;
               float: left;
             }
             .month {

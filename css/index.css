@@ -4597,9 +4597,10 @@ img {
         background-color: #fff;
         padding: 15px;
         position: relative;
-        height: 32px;
         width: 227px;
-        line-height: 30px; }
+        height: 32px;
+        line-height: 32px;
+        letter-spacing: 2px; }
         @media screen and (min-width: 768px) {
           .list_09 .layoutWrap .article .txt ul.dateWrap {
             width: 280px; } }
@@ -4618,7 +4619,7 @@ img {
             opacity: 1;
             z-index: 0; }
           .list_09 .layoutWrap .article .txt ul.dateWrap li .date {
-            font-size: 48px;
+            font-size: 40px;
             float: left; }
           .list_09 .layoutWrap .article .txt ul.dateWrap li .month {
             font-size: 12px;
