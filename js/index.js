@@ -908,6 +908,8 @@
           onReady: function(e) {
             var $video02 = $('#video_02_player'),
                 $window = $(window);
+            // mobile don't active
+            if ($window.width() < 1024) return;
             // set video high quality
             e.target.setPlaybackQuality('hd1080');
             // control video play and pause
@@ -924,10 +926,8 @@
               var in_position = $video02.parents().find('.title').offset().top,
                   window_position = $window.scrollTop(),
                   status = $video02.data('vplay');
-              console.log(in_position, window_position);
               if (status == 'true') return;
               if (in_position < window_position) {
-                console.log(status);
                 e.target.playVideo();
                 $video02.data('vplay', 'true');
               }
