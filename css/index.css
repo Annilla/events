@@ -5393,6 +5393,123 @@ img {
         .footer_01 .footerWrap .copyright .line1 {
           display: inline-block; } }
 
+.footer_02 {
+  display: block;
+  font-family: "Open Sans", "Microsoft JhengHei", sans-serif;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  padding-bottom: 60px; }
+  .footer_02 .footerWrap {
+    padding: 50px 20px; }
+    @media screen and (min-width: 1024px) {
+      .footer_02 .footerWrap {
+        padding: 30px 20px 50px 20px; } }
+    .footer_02 .footerWrap .socialWrap {
+      overflow: hidden; }
+      @media screen and (min-width: 768px) {
+        .footer_02 .footerWrap .socialWrap {
+          width: 415px;
+          margin: 0 auto; } }
+      @media screen and (min-width: 1024px) {
+        .footer_02 .footerWrap .socialWrap {
+          width: 100%;
+          overflow: hidden; } }
+      .footer_02 .footerWrap .socialWrap a.logo {
+        display: block;
+        width: 150px;
+        display: none; }
+        @media screen and (min-width: 1024px) {
+          .footer_02 .footerWrap .socialWrap a.logo {
+            display: block;
+            float: left; } }
+        .footer_02 .footerWrap .socialWrap a.logo svg .st0 {
+          fill: #FFFFFF; }
+      @media screen and (min-width: 1024px) {
+        .footer_02 .footerWrap .socialWrap .followWrap {
+          float: right; } }
+      .footer_02 .footerWrap .socialWrap .followWrap .title {
+        font-size: 30px;
+        letter-spacing: 0px; }
+        @media screen and (min-width: 768px) {
+          .footer_02 .footerWrap .socialWrap .followWrap .title {
+            float: left;
+            line-height: 50px; } }
+        @media screen and (min-width: 1024px) {
+          .footer_02 .footerWrap .socialWrap .followWrap .title {
+            line-height: 40px; } }
+      .footer_02 .footerWrap .socialWrap .followWrap ul.social {
+        overflow: hidden;
+        width: 200px;
+        margin: 20px auto; }
+        @media screen and (min-width: 768px) {
+          .footer_02 .footerWrap .socialWrap .followWrap ul.social {
+            float: left;
+            margin-left: 20px;
+            margin-top: 0; } }
+        @media screen and (min-width: 1024px) {
+          .footer_02 .footerWrap .socialWrap .followWrap ul.social {
+            width: 130px; } }
+        .footer_02 .footerWrap .socialWrap .followWrap ul.social li {
+          list-style: none;
+          display: block;
+          float: left;
+          margin-right: 5px; }
+          .footer_02 .footerWrap .socialWrap .followWrap ul.social li:last-child {
+            margin-right: 0; }
+          @media screen and (min-width: 1024px) {
+            .footer_02 .footerWrap .socialWrap .followWrap ul.social li.juksy {
+              display: none; } }
+          .footer_02 .footerWrap .socialWrap .followWrap ul.social li a {
+            display: block;
+            width: 45px;
+            height: 45px;
+            overflow: hidden;
+            position: relative; }
+            @media screen and (min-width: 1024px) {
+              .footer_02 .footerWrap .socialWrap .followWrap ul.social li a {
+                width: 40px;
+                height: 40px; } }
+            .footer_02 .footerWrap .socialWrap .followWrap ul.social li a svg {
+              position: absolute;
+              left: 0; }
+              .footer_02 .footerWrap .socialWrap .followWrap ul.social li a svg .st0 {
+                fill: #fff;
+                -webkit-transition: all 0.5s ease 0s;
+                -moz-transition: all 0.5s ease 0s;
+                -o-transition: all 0.5s ease 0s;
+                transition: all 0.5s ease 0s; }
+            .footer_02 .footerWrap .socialWrap .followWrap ul.social li a .borderAnimate {
+              float: left;
+              position: relative;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              border: 2px solid #fff;
+              border-radius: 50%;
+              box-sizing: border-box;
+              -webkit-transition: all 0.5s ease 0s;
+              -moz-transition: all 0.5s ease 0s;
+              -o-transition: all 0.5s ease 0s;
+              transition: all 0.5s ease 0s; }
+            .footer_02 .footerWrap .socialWrap .followWrap ul.social li a:hover svg .st0 {
+              fill: #000; }
+            .footer_02 .footerWrap .socialWrap .followWrap ul.social li a:hover .borderAnimate {
+              border: 2px solid transparent;
+              background-color: #fff; }
+    .footer_02 .footerWrap .copyright {
+      font-weight: bold;
+      padding-top: 30px;
+      clear: both; }
+      @media screen and (min-width: 1024px) {
+        .footer_02 .footerWrap .copyright {
+          padding-top: 60px; } }
+      @media screen and (min-width: 768px) {
+        .footer_02 .footerWrap .copyright .line1 {
+          display: inline-block; } }
+
 ul.fixedBtn_01 {
   display: block;
   -webkit-transform: translate(0, 100px);
