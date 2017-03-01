@@ -4546,7 +4546,8 @@ img {
         min-height: 600px; } }
     .list_09 .layoutWrap .article ul.pic {
       position: relative;
-      height: 60vh; }
+      height: 60vh;
+      overflow: hidden; }
       @media screen and (min-width: 1024px) {
         .list_09 .layoutWrap .article ul.pic {
           width: 75vh;
