@@ -4225,12 +4225,12 @@ img {
 .list_07 {
   background-color: #000;
   color: #fff;
-  font-family: "Source Sans Pro", "Microsoft JhengHei", sans-serif;
+  font-family: "Open Sans", "Microsoft JhengHei", sans-serif;
   padding-top: 30px; }
   .list_07 .layoutWrap .title {
     font-size: 28px;
     line-height: 1.5em;
-    font-weight: bold;
+    font-weight: 800;
     letter-spacing: 2px;
     padding: 50px 20px 0 20px; }
     @media screen and (min-width: 768px) {
@@ -4324,12 +4324,12 @@ img {
 
 .list_08 {
   background-color: #000;
-  font-family: "Source Sans Pro", "Microsoft JhengHei", sans-serif;
+  font-family: "Open Sans", "Microsoft JhengHei", sans-serif;
   padding-top: 30px; }
   .list_08 .layoutWrap .title {
     font-size: 28px;
     line-height: 1.5em;
-    font-weight: bold;
+    font-weight: 800;
     letter-spacing: 2px;
     padding: 50px 20px 0 20px;
     color: #fff; }
@@ -4516,12 +4516,12 @@ img {
 
 .list_09 {
   background-color: #000;
-  font-family: "Source Sans Pro", "Microsoft JhengHei", sans-serif;
+  font-family: "Open Sans", "Microsoft JhengHei", sans-serif;
   padding-top: 30px; }
   .list_09 .layoutWrap .title {
     font-size: 28px;
     line-height: 1.5em;
-    font-weight: bold;
+    font-weight: 800;
     letter-spacing: 2px;
     padding: 50px 20px 0 20px;
     color: #fff; }
@@ -5222,7 +5222,7 @@ img {
 .video_02 {
   position: relative;
   background-color: #000;
-  font-family: "Source Sans Pro", "Microsoft JhengHei", sans-serif;
+  font-family: "Open Sans", "Microsoft JhengHei", sans-serif;
   color: #fff; }
   @media screen and (min-width: 1280px) {
     .video_02 {
@@ -5234,7 +5234,7 @@ img {
   .video_02 .videoWrap .titleWrap .title {
     font-size: 28px;
     line-height: 1.5em;
-    font-weight: bold;
+    font-weight: 800;
     letter-spacing: 2px;
     padding: 50px 20px 0 20px; }
     @media screen and (min-width: 768px) {

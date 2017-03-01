@@ -19,7 +19,7 @@
     // Configure webfont
     window.WebFontConfig = {
       google: {
-        families: ['Roboto+Condensed:400,400italic,700,700italic:latin', 'Source+Sans+Pro:400,400i,900,900i']
+        families: ['Roboto+Condensed:400,400italic,700,700italic:latin', 'Open+Sans:400,700,800']
       }
     };
 
@@ -906,8 +906,12 @@
         },
         events: {
           onReady: function(e) {
+            var $video02 = $('#video_02_player'),
+                $window = $(window);
+            // set video high quality
             e.target.setPlaybackQuality('hd1080');
-            $('#video_02_player').parents().find('.parallaxContent').click(function() {
+            // control video play and pause
+            $video02.parents().find('.parallaxContent').click(function() {
               if (e.target.getPlayerState() == 1) {
                 e.target.pauseVideo();
               }
@@ -915,6 +919,20 @@
                 e.target.playVideo();
               }
             });
+            // scroll to auto play
+            function vPlay() {
+              var in_position = $video02.parents().find('.title').offset().top,
+                  window_position = $window.scrollTop(),
+                  status = $video02.data('vplay');
+              console.log(in_position, window_position);
+              if (status == 'true') return;
+              if (in_position < window_position) {
+                console.log(status);
+                e.target.playVideo();
+                $video02.data('vplay', 'true');
+              }
+            }
+            $window.scroll(_.throttle(vPlay, 250));
           }
         }
       });

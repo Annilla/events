@@ -597,6 +597,18 @@ body {
         }
       }
     }
+    ul.lSGallery {
+      li.active {
+        a {
+          &:after {
+            // 縮圖覆蓋顏色
+            // background-color: rgba(69, 30, 193, 0.4);
+            // 縮圖覆蓋邊框顏色
+            // border: 10px solid rgba(69, 30, 193, 1);
+          }
+        }
+      }
+    }
   }
   ul.slider {
     li {
