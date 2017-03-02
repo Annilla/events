@@ -1008,7 +1008,7 @@
                 $video02.data('vplay', 'true');
               }
             }
-            // $window.scroll(_.throttle(vPlay, 250));
+            $window.scroll(_.throttle(vPlay, 250));
           }
         }
       });
