@@ -38,6 +38,37 @@ body {
   }
 }
 
+.nav_02_line {
+  @include screen(pcSmall) {
+    ul.list {
+      // 調整各個 tooltip 寬度
+      li {
+        &:nth-child(1) {
+          a.tooltip {
+            .tooltiptext {
+              width: 70px;
+            }
+          }
+        }
+        &:nth-child(2) {
+          a.tooltip {
+            .tooltiptext {
+              width: 110px;
+            }
+          }
+        }
+        &:nth-child(3) {
+          a.tooltip {
+            .tooltiptext {
+              width: 140px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .header_01 {
   .headerWrap {
     .visualBg {

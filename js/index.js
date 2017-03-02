@@ -171,6 +171,81 @@
     }
   };
 
+  // nav_02
+  var nav_02 = function() {
+    var $window = $(window),
+        $menuBtn = $('.nav_02_btn'),
+        $body = $('body'),
+        $nav_02 = $('.nav_02'),
+        $list = $nav_02.find('ul.list li'),
+        $nav_02_line = $('.nav_02_line'),
+        $list_line = $nav_02_line.find('.listWrap ul.list li'),
+        list_animate = $nav_02_line.find('.listWrap .line'),
+        $menu = $('[data-menu="true"]'),
+        open = 'open',
+        noscroll = 'noscroll';
+    /*
+    -------------------------------------
+    open menu
+    -------------------------------------
+    */
+    $menuBtn.click(function(){
+      $(this).toggleClass(open);
+      $nav_02.toggleClass(open);
+      $nav_02_line.toggleClass(open);
+      if ($window.width() < 1024) {
+        $body.toggleClass(noscroll);
+      }
+    });
+    /*
+    -------------------------------------
+    page scroll
+    -------------------------------------
+    */
+    function goPosition(index) {
+      var scrollPosition;
+      scrollPosition = $menu.eq(index).offset().top;
+      $('html,body').animate({ scrollTop: scrollPosition }, 1000);
+    }
+    $list.click(function(){
+      var nowIndex = $(this).index();
+      goPosition(nowIndex);
+      $menuBtn.trigger('click');
+    });
+    $list_line.click(function(){
+      var nowIndex = $(this).index();
+      goPosition(nowIndex);
+    });
+    /*
+    -------------------------------------
+    scroll animation
+    -------------------------------------
+    */
+    function lineMove() {
+      var offset = [],
+          length = $menu.length,
+          window_position = $window.scrollTop();
+      for (var i = 0; i < length ; i++) {
+        if (i == length - 1) continue;
+        var yset = $menu.eq(i).offset().top;
+        if (window_position + 100 > yset) {
+          list_animate.css({
+            'transform': 'translateY(' + 72*i + 'px)'
+          });
+        }
+        if (window_position == 0) {
+          list_animate.css({
+            'transform': 'translateY(0)'
+          });
+        }
+        // offset.push(yset);
+      }
+    }
+    if ($window.width() >= 1024) {
+      $window.scroll(_.throttle(lineMove, 250));
+    }
+  };
+
   // header_03
   var header_03 = function() {
     /*---------------------
@@ -496,6 +571,7 @@
   // render content first
   init();
   nav_01();
+  nav_02();
   header_03_slider();
   list_04();
   list_09();
@@ -932,7 +1008,7 @@
                 $video02.data('vplay', 'true');
               }
             }
-            $window.scroll(_.throttle(vPlay, 250));
+            // $window.scroll(_.throttle(vPlay, 250));
           }
         }
       });

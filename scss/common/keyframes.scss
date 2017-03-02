@@ -13,6 +13,20 @@
     @include cus_fadeInUp;
 }
 
+@mixin cus_fadeInLeft {
+    0% {
+        @include transform(translate(-20px,0));
+        opacity:0;
+    }
+    100% {
+        @include transform(translate(0,0));
+        opacity: 1;
+    }
+}
+@include keyframes(custom_fadeinleft) {
+    @include cus_fadeInLeft;
+}
+
 @mixin cus_tiltInUp {
     0% {
         @include transform(rotate3d(1,0,0,30deg)  translate3d(0px,20px,0px));
