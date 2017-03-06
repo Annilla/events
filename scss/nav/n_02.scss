@@ -31,9 +31,11 @@
             /* Tooltip line */
             &:before {
               content: "";
+              display: block;
               position: absolute;
               width: 1px;
               height: 100%;
+              left: 50%;
               background-color: $grey;
             }
             /* Tooltip circle */
@@ -89,7 +91,7 @@
               /* Tooltip line */
               &:before {
                 height: 50%;
-                align-self: flex-end;
+                bottom: 0; // safari has problem with align-self: flex-end
               }
             }
           }
@@ -98,7 +100,7 @@
               /* Tooltip line */
               &:before {
                 height: 50%;
-                align-self: flex-start;
+                top: 0;
               }
             }
           }

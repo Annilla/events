@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
 	gulpSass = require('gulp-sass'),
+	autoprefixer = require('gulp-autoprefixer'),
 	concat = require('gulp-concat'),
 	uglify = require('gulp-uglify'),
 	uglifycss = require('gulp-uglifycss');
@@ -8,6 +9,10 @@ var gulp = require('gulp'),
 gulp.task('make:scss',function(){
 	return gulp.src('scss/index.scss')
         .pipe(gulpSass())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(gulp.dest('css'));
 }); 
 

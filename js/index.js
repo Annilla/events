@@ -218,12 +218,37 @@
     });
     /*
     -------------------------------------
+    menu number change
+    -------------------------------------
+    */
+    // Adding extra zeros in front of a number
+    function pad (str, max) {
+      str = str.toString();
+      return str.length < max ? pad("0" + str, max) : str;
+    }
+    // listen number
+    function numChange () {
+      var length = $menu.length,
+          window_position = $window.scrollTop();
+      // set total number
+      $nav_02_line.find('.number .total').text(pad(length, 2));
+      for (var i = 0; i < length ; i++) {
+        var yset = $menu.eq(i).offset().top;
+        if (window_position + 100 > yset) {
+          $nav_02_line.find('.number .now').text(pad(i+1, 2));
+        }
+      }
+    }
+    if ($window.width() >= 1024) {
+      $window.scroll(_.throttle(numChange, 250));
+    }
+    /*
+    -------------------------------------
     scroll animation
     -------------------------------------
     */
     function lineMove() {
-      var offset = [],
-          length = $menu.length,
+      var length = $menu.length,
           window_position = $window.scrollTop();
       for (var i = 0; i < length ; i++) {
         if (i == length - 1) continue;
@@ -238,7 +263,6 @@
             'transform': 'translateY(0)'
           });
         }
-        // offset.push(yset);
       }
     }
     if ($window.width() >= 1024) {
