@@ -237,6 +237,9 @@
         if (window_position + 100 > yset) {
           $nav_02_line.find('.number .now').text(pad(i+1, 2));
         }
+        if (window_position == 0) {
+          $nav_02_line.find('.number .now').text(pad(1, 2));
+        }
       }
     }
     if ($window.width() >= 1024) {
