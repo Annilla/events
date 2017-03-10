@@ -41,7 +41,8 @@ gulp.task('uglify:plugin-js', ['uglify:css'], function(){
 			'node_modules/lightslider/dist/js/lightslider.js',
 			'node_modules/photoswipe/dist/photoswipe.js',
 			'node_modules/photoswipe/dist/photoswipe-ui-default.js',
-			'node_modules/clipboard/dist/clipboard.js'
+			'node_modules/clipboard/dist/clipboard.js',
+			'node_modules/jquery-touchswipe/jquery.touchSwipe.js'
 		])
 		.pipe(concat('app.assets.js'))
 		.pipe(uglify())

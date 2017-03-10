@@ -376,6 +376,33 @@
         addNow();
         changeNav();
       });
+
+      // swipe img
+      pic.swipe({
+        allowPageScroll: 'none',
+        preventDefaultEvents: false,
+        excludedElements: '',
+        swipeLeft: function(){
+          var eq = $(this).index();
+          removeNow();
+          if (nowIndex == totalLength-1) {
+            nowIndex = 0;
+          }
+          else { nowIndex ++; }
+          addNow();
+          changeNav();
+        },
+        swipeRight: function(){
+          var eq = $(this).index();
+          removeNow();
+          if (nowIndex == 0) {
+            nowIndex = totalLength-1;
+          }
+          else { nowIndex --; }
+          addNow();
+          changeNav();
+        }
+      });
     });
   };
 
