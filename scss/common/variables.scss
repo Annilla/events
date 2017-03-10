@@ -14,12 +14,13 @@ $pc_max_width: 970px;
 
 //fonts
 $font_body: 'Roboto Condensed', 'Microsoft JhengHei', sans-serif;
+$font_module: 'Open Sans', 'Microsoft JhengHei', sans-serif;
 $line-height: 1.8em;
 
 //colors
-$grey: rgba(188,202,210,1);
-$pink: rgba(242,158,173,1);
-$pink_90: rgba(242,158,173,0.9);
+$grey: rgba(51,51,51,1); // rgba(188,202,210,1)
+$pink: rgba(128,128,128,1); // rgba(242,158,173,1)
+$pink_90: rgba(0,0,0,0.5); // rgba(242,158,173,0.9)
 $white: #fff;
 $white_50: rgba(255,255,255,0.5);
 $white_90: rgba(255,255,255,0.9);

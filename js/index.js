@@ -19,7 +19,7 @@
     // Configure webfont
     window.WebFontConfig = {
       google: {
-        families: ['Roboto+Condensed:400,400italic,700,700italic:latin']
+        families: ['Roboto+Condensed:400,400italic,700,700italic:latin', 'Open+Sans:400,700,800']
       }
     };
 
@@ -171,17 +171,118 @@
     }
   };
 
+  // nav_02
+  var nav_02 = function() {
+    var $window = $(window),
+        $menuBtn = $('.nav_02_btn'),
+        $body = $('body'),
+        $nav_02 = $('.nav_02'),
+        $list = $nav_02.find('ul.list li'),
+        $nav_02_line = $('.nav_02_line'),
+        $list_line = $nav_02_line.find('.listWrap ul.list li'),
+        list_animate = $nav_02_line.find('.listWrap .line'),
+        $menu = $('[data-menu="true"]'),
+        open = 'open',
+        noscroll = 'noscroll';
+    /*
+    -------------------------------------
+    open menu
+    -------------------------------------
+    */
+    $menuBtn.click(function(){
+      $(this).toggleClass(open);
+      $nav_02.toggleClass(open);
+      $nav_02_line.toggleClass(open);
+      if ($window.width() < 1024) {
+        $body.toggleClass(noscroll);
+      }
+    });
+    /*
+    -------------------------------------
+    page scroll
+    -------------------------------------
+    */
+    function goPosition(index) {
+      var scrollPosition;
+      scrollPosition = $menu.eq(index).offset().top;
+      $('html,body').animate({ scrollTop: scrollPosition }, 1000);
+    }
+    $list.click(function(){
+      var nowIndex = $(this).index();
+      goPosition(nowIndex);
+      $menuBtn.trigger('click');
+    });
+    $list_line.click(function(){
+      var nowIndex = $(this).index();
+      goPosition(nowIndex);
+    });
+    /*
+    -------------------------------------
+    menu number change
+    -------------------------------------
+    */
+    // Adding extra zeros in front of a number
+    function pad (str, max) {
+      str = str.toString();
+      return str.length < max ? pad("0" + str, max) : str;
+    }
+    // listen number
+    function numChange () {
+      var length = $menu.length,
+          window_position = $window.scrollTop();
+      // set total number
+      $nav_02_line.find('.number .total').text(pad(length, 2));
+      for (var i = 0; i < length ; i++) {
+        var yset = $menu.eq(i).offset().top;
+        if (window_position + 100 > yset) {
+          $nav_02_line.find('.number .now').text(pad(i+1, 2));
+        }
+        if (window_position == 0) {
+          $nav_02_line.find('.number .now').text(pad(1, 2));
+        }
+      }
+    }
+    if ($window.width() >= 1024) {
+      $window.scroll(_.throttle(numChange, 250));
+    }
+    /*
+    -------------------------------------
+    scroll animation
+    -------------------------------------
+    */
+    function lineMove() {
+      var length = $menu.length,
+          window_position = $window.scrollTop();
+      for (var i = 0; i < length ; i++) {
+        if (i == length - 1) continue;
+        var yset = $menu.eq(i).offset().top;
+        if (window_position + 100 > yset) {
+          list_animate.css({
+            'transform': 'translateY(' + 72*i + 'px)'
+          });
+        }
+        if (window_position == 0) {
+          list_animate.css({
+            'transform': 'translateY(0)'
+          });
+        }
+      }
+    }
+    if ($window.width() >= 1024) {
+      $window.scroll(_.throttle(lineMove, 250));
+    }
+  };
+
   // header_03
   var header_03 = function() {
     /*---------------------
     文字三角形凹槽高度
     -----------------------*/
     var $headerWrap = $('.header_03 .headerWrap'),
-      $visualBg = $headerWrap.find('.visualBg'),
       $txtBg = $headerWrap.find('.detail .detailWrap .txtBg'),
       $txtWrap = $headerWrap.find('.detail .detailWrap');
     $txtBg.height($txtWrap.height());
-    $headerWrap.height($txtBg.height() + $visualBg.height() - 31);
+    $headerWrap.height($txtBg.height() + $headerWrap.find('.banner li .picture img').height() - 31);
   };
   var header_03_slider = function() {
     var $header_03_banner = $("#header_03_banner");
@@ -205,11 +306,11 @@
     });
   };
 
-  // layout_04
-  var layout_04 = function() {
+  // list_04
+  var list_04 = function() {
     // Slider
-    var $layout04 = $('.layout_04');
-    $layout04.each(function() {
+    var $list04 = $('.list_04');
+    $list04.each(function() {
       var $this = $(this),
         $slideW = $this.find('ul.slides').width(),
         $windowW = $(window).width();
@@ -218,6 +319,90 @@
         var $center = ($slideW - 20 - $windowW) / 2;
         $this.find('.slidesWrap').scrollLeft($center);
       }
+    });
+  };
+
+  // list_09
+  var list_09 = function() {
+    var $list09 = $('.list_09');
+    $list09.each(function() {
+      var $this = $(this),
+          nowIndex = 0;
+          pic = $this.find('ul.pic li'),
+          date = $this.find('ul.dateWrap li'),
+          article = $this.find('ul.main li'),
+          totalLength = $this.find('.article ul.pic li').length,
+          nowNum = $this.find('.nav span.now'),
+          totalNum = $this.find('.nav span.total'),
+          navBtn = $this.find('.nav .btn'),
+          rightBtn = $this.find('.nav .btn.right'),
+          leftBtn = $this.find('.nav .btn.left');
+
+      function changeNav() {
+        nowNum.text(nowIndex+1);
+        if (nowIndex == totalLength-1) {rightBtn.addClass('end');}
+        else {rightBtn.removeClass('end');}
+        if (nowIndex == 0) {leftBtn.addClass('end');}
+        else {leftBtn.removeClass('end');}
+      }
+
+      function removeNow() {
+        pic.eq(nowIndex).removeClass('now');
+        date.eq(nowIndex).removeClass('now');
+        article.eq(nowIndex).removeClass('now');
+      }
+
+      function addNow() {
+        pic.eq(nowIndex).addClass('now');
+        date.eq(nowIndex).addClass('now');
+        article.eq(nowIndex).addClass('now');
+      }
+
+      // set total number
+      totalNum.text(totalLength);
+
+      // click nav button
+      navBtn.click(function () {
+        var eq = $(this).index();
+        removeNow();
+        switch (eq) {
+          case 0:
+            if (nowIndex !== 0) {nowIndex --;}
+            break;
+          case 2:
+            if (nowIndex !== totalLength-1) {nowIndex ++;}
+            break;
+        }
+        addNow();
+        changeNav();
+      });
+
+      // swipe img
+      pic.swipe({
+        allowPageScroll: 'none',
+        preventDefaultEvents: false,
+        excludedElements: '',
+        swipeLeft: function(){
+          var eq = $(this).index();
+          removeNow();
+          if (nowIndex == totalLength-1) {
+            nowIndex = 0;
+          }
+          else { nowIndex ++; }
+          addNow();
+          changeNav();
+        },
+        swipeRight: function(){
+          var eq = $(this).index();
+          removeNow();
+          if (nowIndex == 0) {
+            nowIndex = totalLength-1;
+          }
+          else { nowIndex --; }
+          addNow();
+          changeNav();
+        }
+      });
     });
   };
 
@@ -356,10 +541,10 @@
   };
 
   // gallery_02
-  var gallery_02 = function() {
-    var $gallery02 = $('.gallery_02'),
+  var social_02 = function() {
+    var $social02 = $('.social_02'),
       $windowW = $(window).width();
-    $gallery02.each(function() {
+    $social02.each(function() {
       var $iframe = $(this).find('.photo iframe'),
         mUrl = $iframe.data('msrc'),
         pcUrl = $iframe.data('pcsrc');
@@ -424,6 +609,7 @@
     var $window = $(window);
 
     function fixedBtnShow() {
+      if (!$('#footer').length) return;/* fixed for no footer */
       var st = $(this).scrollTop(),
         ft = $('#footer').offset().top - $window.height() - 300,
         $fixedBtn = $('.fixedBtn_01');
@@ -439,14 +625,50 @@
   // render content first
   init();
   nav_01();
+  nav_02();
   header_03_slider();
-  layout_04();
+  list_04();
+  list_09();
   gallery_01();
-  gallery_02();
+  social_02();
   fixedBtn_01();
 
   // plugin wow = scroll to animation
   new WOW().init();
+
+  // plugin showOnScroll for infinite times doing animation
+  $(function() {
+    $(document).on('showOnScroll', function() {
+      var $window = $(window);
+      function showOnScroll() {
+        var scrolled = $window.scrollTop(),
+            wHeight = $window.height();
+        // show
+        $('.showOnScroll:not(.animated)').each(function(){
+          var $this = $(this),
+              offsetTop = $this.offset().top,
+              offset = $this.data('show-offset');
+          if (scrolled + wHeight - offset > offsetTop) {
+            $this.addClass('animated ' + $this.data('show-animation'));
+          }
+        });
+        // hide
+        $(".showOnScroll.animated").each(function() {
+          var $this     = $(this),
+              offsetTop = $this.offset().top,
+              offset = $this.data('show-offset'),
+              oHeight = $(this).height();
+          if (scrolled + wHeight + offset < offsetTop || scrolled > offsetTop + oHeight + offset) {
+            $(this).removeClass('animated');
+            $(this).removeClass($this.data('show-animation'));
+          }
+        });
+      }
+      showOnScroll();
+      $window.scroll(_.throttle(showOnScroll, 250));
+    });
+    $(document).trigger('showOnScroll');
+  });
 
   // plugin img_lazyLoad
   $(function() {
@@ -517,10 +739,10 @@
     $(document).trigger('parallax');
   });
 
-  // plugin layout_03 infinite scroll
+  // plugin list_03 infinite scroll
   $(function() {
-    var $layout03infinit = $('.layout_03_infinit');
-    $layout03infinit.each(function() {
+    var $list03infinit = $('.list_03_infinit');
+    $list03infinit.each(function() {
       var $layout = $(this).find('.layoutWrap'),
         moreBtn = '.moreBtn',
         countFrom = 0,
@@ -535,7 +757,7 @@
           $(this).remove();
           // get new data
           countFrom += countSize;
-          layout_03_ajax(countFrom, countSize);
+          list_03_ajax(countFrom, countSize);
           // append article
           addArticle();
         });
@@ -550,7 +772,7 @@
       }
 
       // ajax
-      var layout_03_ajax = function(ifrom, isize) {
+      var list_03_ajax = function(ifrom, isize) {
         // clear article content
         article = '';
         var items = {
@@ -595,14 +817,14 @@
       }
 
       //init loading ajax
-      layout_03_ajax(countFrom, countSize);
+      list_03_ajax(countFrom, countSize);
     });
   });
 
-  // plugin layout_05_tag auto loading
+  // plugin list_05_tag auto loading
   $(function() {
-    var $layout05_tag = $('.layout_05_tag');
-    $layout05_tag.each(function() {
+    var $list05_tag = $('.list_05_tag');
+    $list05_tag.each(function() {
       var $layout = $(this).find('.layoutWrap'),
         engtitle = $layout.data('engtitle'),
         title = $layout.data('title'),
@@ -624,7 +846,7 @@
       }
 
       // ajax
-      var layout_05_ajax = function(ifrom, isize) {
+      var list_05_ajax = function(ifrom, isize) {
         // clear article content
         article = '';
         var items = {
@@ -665,14 +887,14 @@
       }
 
       //init loading ajax
-      layout_05_ajax(countFrom, countSize);
+      list_05_ajax(countFrom, countSize);
     });
   });
 
-  // plugin layout_06 auto loading
+  // plugin list_06 auto loading
   $(function() {
-    var $layout06 = $('.layout_06');
-    $layout06.each(function() {
+    var $list06 = $('.list_06');
+    $list06.each(function() {
       var $layout = $(this).find('.layoutWrap'),
         engtitle = $layout.data('engtitle'),
         title = $layout.data('title'),
@@ -694,7 +916,7 @@
       }
 
       // ajax
-      var layout_06_ajax = function(ifrom, isize) {
+      var list_06_ajax = function(ifrom, isize) {
         // clear article content
         article = '';
         var items = {
@@ -735,11 +957,11 @@
       }
 
       //init loading ajax
-      layout_06_ajax(countFrom, countSize);
+      list_06_ajax(countFrom, countSize);
     });
   });
 
-  // Youtube api
+  // Youtube api for header_02
   // create deferred object
   var YTdeferred = $.Deferred();
   window.onYouTubeIframeAPIReady = function() {
@@ -760,7 +982,10 @@
     var player,
       header_02_player = $('#header_02_player'),
       header_02_videoId = header_02_player.data('videoid'),
-      header_02_start = header_02_player.data('start');
+      header_02_start = header_02_player.data('start'),
+      video_02_player = $('#video_02_player'),
+      video_02_videoId = video_02_player.data('videoid'),
+      video_02_start = video_02_player.data('start');
     // whenever youtube callback was called = deferred resolved
     // your custom function will be executed with YT as an argument
     YTdeferred.done(function(YT) {
@@ -787,6 +1012,57 @@
         events: {
           onReady: function(e) {
             e.target.mute(); // 靜音
+          }
+        }
+      });
+
+      player = new YT.Player('video_02_player', {
+        videoId: video_02_videoId, // YouTube 影片ID
+        width: 1280, // 播放器寬度 (px)
+        height: 720, // 播放器高度 (px)
+        playerVars: {
+          rel: 0, // 播放結束後推薦其他影片
+          controls: 0, // 在播放器顯示暫停／播放按鈕
+          start: video_02_start, //指定起始播放秒數
+          autoplay: 0, // 在讀取時自動播放影片
+          loop: 1, // 讓影片循環播放
+          playlist: video_02_videoId,
+          showinfo: 0, // 隱藏影片標題
+          modestbranding: 1, // 隱藏YouTube Logo
+          fs: 0, // 隱藏全螢幕按鈕
+          cc_load_policty: 0, // 隱藏字幕
+          iv_load_policy: 3, // 隱藏影片註解
+          autohide: 0 // 當播放影片時隱藏影片控制列
+        },
+        events: {
+          onReady: function(e) {
+            var $video02 = $('#video_02_player'),
+                $window = $(window);
+            // mobile don't active
+            if ($window.width() < 1024) return;
+            // set video high quality
+            e.target.setPlaybackQuality('hd1080');
+            // control video play and pause
+            $video02.parents().find('.parallaxContent').click(function() {
+              if (e.target.getPlayerState() == 1) {
+                e.target.pauseVideo();
+              }
+              else {
+                e.target.playVideo();
+              }
+            });
+            // scroll to auto play
+            function vPlay() {
+              var in_position = $video02.parents().find('.title').offset().top,
+                  window_position = $window.scrollTop(),
+                  status = $video02.data('vplay');
+              if (status == 'true') return;
+              if (in_position < window_position) {
+                e.target.playVideo();
+                $video02.data('vplay', 'true');
+              }
+            }
+            $window.scroll(_.throttle(vPlay, 250));
           }
         }
       });

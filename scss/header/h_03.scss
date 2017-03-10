@@ -4,6 +4,7 @@
     height: auto; //js visual + detail - triangle(30)
     .visualBg {
       width: 100%;
+      min-height: 80vh;
       position: relative;
       background-color: $white;
       .header_03_banner {
@@ -139,6 +140,8 @@
             height: 3px;
             margin: 0 auto;
             opacity: 0;
+            font-size: 16px;
+            line-height: 1.8em;
             @include animation(scroll_arrow $scr_circle_time linear infinite);
             svg {
               .st0 {

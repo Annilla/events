@@ -38,6 +38,37 @@ body {
   }
 }
 
+.nav_02_line {
+  @include screen(pcSmall) {
+    ul.list {
+      // 調整各個 tooltip 寬度
+      li {
+        &:nth-child(1) {
+          a.tooltip {
+            .tooltiptext {
+              width: 70px;
+            }
+          }
+        }
+        &:nth-child(2) {
+          a.tooltip {
+            .tooltiptext {
+              width: 110px;
+            }
+          }
+        }
+        &:nth-child(3) {
+          a.tooltip {
+            .tooltiptext {
+              width: 140px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .header_01 {
   .headerWrap {
     .visualBg {
@@ -77,6 +108,23 @@ body {
 
 .header_02 {
   .headerWrap {
+    // 調整敘述高度
+    // height: calc(568*0.9px + 305px - 31px); // visual + detail - triangle(30)
+    // @include screen(mMedium) {
+    //   height: calc(667*0.9px + 278px - 31px);
+    // }
+    // @include screen(mLarge) {
+    //   height: calc(736*0.9px + 277px - 31px);
+    // }
+    // @include screen(tb) {
+    //   height: calc(1024*0.9px + 295px - 31px);
+    // }
+    // @include screen(pcSmall) {
+    //   height: calc(768*0.9px + 180px - 31px);
+    // }
+    // @include screen(pcLarge) {
+    //   height: calc(900*0.9px + 180px - 31px);
+    // }
     .visualBg {
       //手機主視覺
       //background-image: url('../img/visual_m.jpg');
@@ -112,6 +160,20 @@ body {
         .txtBg {
           //描述背景色
           background-color: rgba(0, 0, 0, 1);
+          // 調整敘述高度
+          // height: 305px; //equal to .detailWrap height
+          // @include screen(mMedium) {
+          //   height: 278px;
+          // }
+          // @include screen(mLarge) {
+          //   height: 277px;
+          // }
+          // @include screen(tb) {
+          //   height: 295px;
+          // }
+          // @include screen(pcSmall) {
+          //   height: 180px;
+          // }
         }
         .txtInner {
           a.link {
@@ -150,9 +212,17 @@ body {
           a.link {
             //馬上閱讀背景色
             background-color: rgba(7, 208, 0, 1);
+            // 文字顏色
+            // color: $black;
             &:hover {
               //馬上閱讀背景色－滑過
               background-color: rgba(7, 208, 0, 0.9);
+            }
+            .linkWrap {
+              @include screen(pcSmall) {
+                // 連結框線顏色
+                // border: 1px solid $black;
+              }
             }
           }
         }
@@ -161,20 +231,7 @@ body {
   }
 }
 
-.header_04 {
-  .headerWrap {
-    .detail {
-      .detailWrap {
-        .txtBg {
-          //描述背景色
-          background-color: rgba(0, 34, 45, 1);
-        }
-      }
-    }
-  }
-}
-
-.layout_01 {
+.list_01 {
   //背景色
   //background-color: $white;
   .layoutWrap {
@@ -223,7 +280,7 @@ body {
   }
 }
 
-.layout_02 {
+.list_02 {
   //背景色
   //background-color: $white;
   .layoutWrap {
@@ -292,7 +349,7 @@ body {
   }
 }
 
-.layout_03 {
+.list_03 {
   //背景色
   //background-color: $white;
   .layoutWrap {
@@ -399,7 +456,7 @@ body {
   }
 }
 
-.layout_04 {
+.list_04 {
   //模板背景色
   //background-color: $black;
   .layoutWrap {
@@ -448,7 +505,7 @@ body {
   }
 }
 
-.layout_05 {
+.list_05 {
   .layoutWrap {
     ul.article {
       li {
@@ -473,7 +530,7 @@ body {
   }
 }
 
-.layout_06 {
+.list_06 {
   //模板背景色
   //background-color: $black;
   .layoutWrap {
@@ -511,45 +568,6 @@ body {
                 //@include linear-gradient(to right, transparent 50%, $black 50%);
               }
             }
-          }
-        }
-      }
-    }
-  }
-}
-
-.article_01 {
-  //模板背景色
-  //background-color: darken($grey, 50%);
-  @include screen(pcSmall) {
-    //模板背景色－桌機
-    //background-color: rgba(0,0,0,0.5);
-  }
-  .articleWrap {
-    .txtWrap {
-      @include screen(pcSmall) {
-        //框線顏色
-        //border: 1px solid rgba(250,141,41,1);
-      }
-      .btnWrap {
-        a.btn {
-          //按鈕顏色
-          //background-color: $pink;
-          &:before {
-            //按鈕框線顏色
-            //border: 1px solid rgba(123,156,188,1);
-          }
-          .icon {
-            svg {
-              .st0 {
-                //按鈕facebook svg 顏色
-                //fill: rgba(123,156,188,1);
-              }
-            }
-          }
-          .icontext {
-            //按鈕文字顏色
-            //color: rgba(123,156,188,1);
           }
         }
       }
@@ -610,10 +628,95 @@ body {
         }
       }
     }
+    ul.lSGallery {
+      li.active {
+        a {
+          &:after {
+            // 縮圖覆蓋顏色
+            // background-color: rgba(69, 30, 193, 0.4);
+            // 縮圖覆蓋邊框顏色
+            // border: 10px solid rgba(69, 30, 193, 1);
+          }
+        }
+      }
+    }
+  }
+  ul.slider {
+    li {
+      // 隱藏照片描述(調整高度)
+      // height: 240px; //240(img)+66(txt)
+      @include screen(mMedium) {
+        // 隱藏照片描述(調整高度)
+        // height: 281.25px; //281.25(img)+66(txt)
+      }
+      @include screen(mLarge) {
+        // 隱藏照片描述(調整高度)
+        // height: 310.5px; //310.5(img)+66(txt)
+      }
+      @include screen(tb) {
+        // 隱藏照片描述(調整高度)
+        // height: 576px; //576(img)+48(txt)
+      }
+      .img {
+        // 隱藏照片描述(調整高度)
+        // height: 100%; //240(img)+66(txt)
+        @include screen(tb) {
+          // 隱藏照片描述(調整高度)
+          // height: 100%; //576(img)+48(txt)
+        }
+      }
+      .txt {
+        // 隱藏文字描述
+        // display: none;
+        // 描述顏色
+        // color: $white;
+        // 描述背景色
+        // background-color: rgba(0, 0, 0, 0.5);
+      }
+    }
   }
 }
 
-.gallery_02 {
+.social_01 {
+  //模板背景色
+  //background-color: darken($grey, 50%);
+  @include screen(pcSmall) {
+    //模板背景色－桌機
+    //background-color: rgba(0,0,0,0.5);
+  }
+  .articleWrap {
+    .txtWrap {
+      @include screen(pcSmall) {
+        //框線顏色
+        //border: 1px solid rgba(250,141,41,1);
+      }
+      .btnWrap {
+        a.btn {
+          //按鈕顏色
+          //background-color: $pink;
+          &:before {
+            //按鈕框線顏色
+            //border: 1px solid rgba(123,156,188,1);
+          }
+          .icon {
+            svg {
+              .st0 {
+                //按鈕facebook svg 顏色
+                //fill: rgba(123,156,188,1);
+              }
+            }
+          }
+          .icontext {
+            //按鈕文字顏色
+            //color: rgba(123,156,188,1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.social_02 {
   //模板背景色
   //background-color: $black;
   .layoutWrap {
