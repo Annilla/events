@@ -670,12 +670,12 @@
     $(document).trigger('showOnScroll');
   });
 
-  // plugin img_lazyLoad
+  // plugin lazy_image
   $(function() {
-    $(document).on('img_lazyLoad', function() {
+    $(document).on('lazy_image', function() {
       var $window = $(window),
-        target = $('.imgLoading'),
-        complete = 'complete';
+        target = $('[data-module="lazy_image"]'),
+        complete = 'lazyImgComplete';
 
       function addComplete() {
         var length = target.length;
@@ -684,7 +684,7 @@
           var in_position = target.eq(i).offset().top + 100;
           var window_bottom_position = $window.scrollTop() + $window.height() + 150;
           if (in_position < window_bottom_position) {
-            var targeturl = target.eq(i).data('imgload');
+            var targeturl = target.eq(i).data('lazyimg');
             target.eq(i).css('background-image', 'url(' + targeturl + ')');
             target.eq(i).addClass(complete);
           }
@@ -693,13 +693,13 @@
       addComplete();
       $window.scroll(_.throttle(addComplete, 250));
     });
-    $(document).trigger('img_lazyLoad');
+    $(document).trigger('lazy_image');
   });
 
   // plugin dotdotdot
   $(function() {
     $(document).on('dotdotdot', function() {
-      $('[data-dotdotdot="true"]').dotdotdot({
+      $('[data-module="dotdotdot"]').dotdotdot({
         wrap: 'letter'
       });
     });
@@ -709,7 +709,7 @@
   // plugin parallax
   $(function() {
     $(document).on('parallax', function() {
-      var $parallax = $('.parallax');
+      var $parallax = $('[data-module="parallax"]');
       $parallax.each(function(index, element) {
         var i = index;
         // z-index set for each parallax
@@ -766,7 +766,7 @@
       // add article
       var addArticle = function() {
         $layout.append('<div class="articleWrap">' + article + '</div>');
-        $(document).trigger('img_lazyLoad');
+        $(document).trigger('lazy_image');
         $(document).trigger('dotdotdot');
         btnClick();
       }
@@ -841,7 +841,7 @@
         $layout.find('.title').html(engtitle);
         $layout.find('.detail').html(title);
         $layout.find('p.subTitle').html(description);
-        $(document).trigger('img_lazyLoad');
+        $(document).trigger('lazy_image');
         $(document).trigger('dotdotdot');
       }
 
@@ -888,76 +888,6 @@
 
       //init loading ajax
       list_05_ajax(countFrom, countSize);
-    });
-  });
-
-  // plugin list_06 auto loading
-  $(function() {
-    var $list06 = $('.list_06');
-    $list06.each(function() {
-      var $layout = $(this).find('.layoutWrap'),
-        engtitle = $layout.data('engtitle'),
-        title = $layout.data('title'),
-        description = $layout.data('description'),
-        countFrom = 0,
-        countSize = 8,
-        source,
-        template,
-        article;
-
-      // add article
-      var addArticle = function() {
-        $layout.append(article);
-        $layout.find('.title').html(engtitle);
-        $layout.find('.detail').html(title);
-        $layout.find('p.subTitle').html(description);
-        $(document).trigger('img_lazyLoad');
-        $(document).trigger('dotdotdot');
-      }
-
-      // ajax
-      var list_06_ajax = function(ifrom, isize) {
-        // clear article content
-        article = '';
-        var items = {
-          from: ifrom,
-          size: isize,
-          tags: $layout.data('tags'),
-          filter: $layout.data('filter')
-        };
-        $.ajax({
-          url: JUKSY.apiUri + '/v1.0/search/articles',
-          data: { tags: items.tags, filter: items.filter, from: items.from, size: items.size },
-          type: 'GET',
-          dataType: 'json',
-          success: function(Jdata) {
-            console.log('AJAX layout_06 SUCCESS!!!');
-
-            // no data
-            if (!Jdata.length) return;
-
-            // has data
-            source = $("#template-l06-start").html();
-            template = Handlebars.compile(source);
-            article += template();
-            for (var n = 0; n < Jdata.length; n++) {
-              source = $("#template-l06").html();
-              template = Handlebars.compile(source);
-              article += template(Jdata[n]);
-            }
-            source = $("#template-l06-end").html();
-            template = Handlebars.compile(source);
-            article += template();
-            addArticle();
-          },
-          error: function() {
-            console.log('AJAX layout_06 ERROR!!!');
-          }
-        });
-      }
-
-      //init loading ajax
-      list_06_ajax(countFrom, countSize);
     });
   });
 
