@@ -274,16 +274,6 @@
   };
 
   // header_03
-  var header_03 = function() {
-    /*---------------------
-    文字三角形凹槽高度
-    -----------------------*/
-    var $headerWrap = $('.header_03 .headerWrap'),
-      $txtBg = $headerWrap.find('.detail .detailWrap .txtBg'),
-      $txtWrap = $headerWrap.find('.detail .detailWrap');
-    $txtBg.height($txtWrap.height());
-    $headerWrap.height($txtBg.height() + $headerWrap.find('.banner li .picture img').height() - 31);
-  };
   var header_03_slider = function() {
     var $header_03_banner = $("#header_03_banner");
     var slider = $header_03_banner.lightSlider({
@@ -298,7 +288,6 @@
       galleryMargin: 0,
       pager: $header_03_banner.data('pager'),
       onSliderLoad: function (e) {
-        header_03();
         e.parents().find('ul.lSpg >li').click(function(){
           slider.pause();
         });
