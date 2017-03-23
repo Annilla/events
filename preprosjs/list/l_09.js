@@ -3,7 +3,7 @@ var list_09 = function() {
   var $list09 = $('.list_09');
   $list09.each(function() {
     var $this = $(this),
-        nowIndex = 0;
+        nowIndex = 0,
         pic = $this.find('ul.pic li'),
         date = $this.find('ul.dateWrap li'),
         article = $this.find('ul.main li'),
