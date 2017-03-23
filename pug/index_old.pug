@@ -1,0 +1,49 @@
+doctype html
+html(lang='zh-TW')
+  head
+    include ./base/head.pug
+  body
+    #fb-root
+    h1.hide 夏日穿搭特輯 - JUKSY 街星
+    include ./nav/n_01.pug
+    include ./header/h_01.pug
+    include ./header/h_02.pug
+    include ./header/h_03.pug
+    include ./list/l_04.pug
+    include ./social/s_01.pug
+    include ./list/l_06.pug
+    include ./list/l_05.pug
+    include ./list/l_05_tag.pug
+    include ./article/a_02.pug
+    include ./social/s_02.pug
+    include ./gallery/g_01.pug
+    include ./video/v_01.pug
+    include ./list/l_01.pug
+    include ./list/l_03.pug
+    include ./list/l_02.pug
+    include ./list/l_03_infinite.pug
+    include ./footer/f_01.pug
+    include ./btnfixed/b_01.pug
+    include ./plugin/photoswipe_ui.pug
+
+    // JS start
+    include ./nav/n_01_tem.pug
+    include ./list/l_03_infinite_script.pug
+    include ./list/l_05_tag_script.pug
+    include ./list/l_06_script.pug
+
+    // JS cdn
+    script(src="//embedsocial.com/js/iframe.js")
+
+    // JS DEV FILE
+    include ./base/devjs.pug
+
+    // JS MIN FILE
+    //- include ./base/minjs.pug
+
+    // JS third party
+    script(type='text/javascript')
+      include ./js/foot.js
+    // JS third party end
+
+    // JS end

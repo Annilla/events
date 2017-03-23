@@ -1,0 +1,33 @@
+doctype html
+html(lang='zh-TW')
+  head
+    include ./base/head.pug
+  body
+    #fb-root
+    h1.hide 夏日穿搭特輯 - JUKSY 街星
+    include ./nav/n_02.pug
+    include ./header/h_04.pug
+    include ./list/l_09.pug
+    include ./video/v_02.pug
+    include ./list/l_08.pug
+    include ./list/l_07.pug
+    include ./footer/f_02.pug
+    include ./btnfixed/b_01.pug
+
+    // JS start
+
+    // JS cdn
+    include ./base/cdnjs.pug
+
+    // JS DEV FILE
+    include ./base/devjs.pug
+
+    // JS MIN FILE
+    //- include ./base/minjs.pug
+
+    // JS third party
+    script(type='text/javascript')
+      include ./js/foot.js
+    // JS third party end
+
+    // JS end
