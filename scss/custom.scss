@@ -40,32 +40,84 @@ body {
 
 .nav_02_line {
   @include screen(pcSmall) {
-    ul.list {
-      // 調整各個 tooltip 寬度
-      li {
-        &:nth-child(1) {
+    .number {
+      // 數字顏色
+      color: $white;
+    }
+    .listWrap {
+      ul.list {
+        // 調整各個 tooltip 寬度
+        li {
           a.tooltip {
-            .tooltiptext {
-              width: 70px;
+            &:before {
+              // Tooltip line
+              background-color: $white;
+            }
+            &:after {
+              // Tooltip circle
+              background-color: $white;
+            }
+          }
+          &:nth-child(1) {
+            a.tooltip {
+              .tooltiptext {
+                width: 100px;
+              }
+            }
+          }
+          &:nth-child(2) {
+            a.tooltip {
+              .tooltiptext {
+                width: 160px;
+              }
+            }
+          }
+          &:nth-child(3) {
+            a.tooltip {
+              .tooltiptext {
+                width: 150px;
+              }
+            }
+          }
+          &:nth-child(4) {
+            a.tooltip {
+              .tooltiptext {
+                width: 110px;
+              }
             }
           }
         }
-        &:nth-child(2) {
-          a.tooltip {
-            .tooltiptext {
-              width: 110px;
-            }
-          }
-        }
-        &:nth-child(3) {
-          a.tooltip {
-            .tooltiptext {
-              width: 140px;
+      }
+      .line {
+        // 調整線顏色
+        background-color: rgba(255, 155, 127, 1);
+      }
+    }
+    &.open {
+      .listWrap {
+        ul.list {
+          li {
+            a.tooltip {
+              /* Tooltip line */
+              &:before {
+                background-color: $white;
+              }
+              /* Tooltip circle */
+              &:after {
+                background-color: $white;
+              }
             }
           }
         }
       }
     }
+  }
+}
+
+a.nav_02_btn {
+  .line {
+    // 選單三條線顏色
+    border-bottom: 3px solid rgba(255, 155, 127, 1);
   }
 }
 
@@ -344,6 +396,18 @@ body {
               }
             }
           }
+        }
+      }
+    }
+  }
+}
+
+.list_09 {
+  .layoutWrap {
+    .article {
+      .navWrap {
+        .nav {
+          background-color: rgba(255, 155, 127, 1);
         }
       }
     }

@@ -82,12 +82,12 @@
           background-color: $white;
           padding: 15px;
           position: relative;
-          width: 227px;
+          width: 250px;
           height: 32px;
           line-height: 32px;
           letter-spacing: 2px;
           @include screen(tb) {
-            width: 280px;
+            width: 300px;
           }
           @include screen(pcSmall) {
             width: 510px;
