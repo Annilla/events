@@ -219,11 +219,17 @@ a.nav_02_btn {
     }
     .detail {
       .detailWrap {
-        .txtBg {
-          //描述背景色
-          background-color: rgba(0, 34, 45, 1);
-        }
+        //描述背景色
+        // background-color: rgba(0, 34, 45, 1);
         .txtInner {
+          .txtWrap {
+            .txtWidth {
+              .txt {
+                // 描述文字顏色
+                // color: rgba(0, 0, 0,1);
+              }
+            }
+          }
           a.link {
             //馬上閱讀背景色
             background-color: rgba(7, 208, 0, 1);
@@ -237,6 +243,11 @@ a.nav_02_btn {
               @include screen(pcSmall) {
                 // 連結框線顏色
                 // border: 1px solid $black;
+                // box-shadow: 10px 10px 0 $black;
+                // transition: .5s;
+                // &:hover {
+                //   box-shadow: 5px 5px 0 $black;
+                // }
               }
             }
           }
@@ -407,6 +418,7 @@ a.nav_02_btn {
     .article {
       .navWrap {
         .nav {
+          // 文章導覽按鈕背景顏色
           background-color: rgba(255, 155, 127, 1);
         }
       }

@@ -125,9 +125,14 @@
             display: block;
             max-height: $line-height*3;
             overflow: hidden;
-            text-align: center;
+            text-align: left;
+            letter-spacing: normal;
             @include screen(tb) {
               max-height: $line-height*2;
+            }
+            @include screen(pcSmall) {
+              text-align: center;
+              letter-spacing: 2px;
             }
             h3 {
               font-weight: bold;
@@ -188,6 +193,10 @@
           padding: 10px 20px;
           width: auto;
           float: none;
+          a.txt {
+            text-align: center;
+            letter-spacing: 2px;
+          }
         }
         .date {
           display: block;
